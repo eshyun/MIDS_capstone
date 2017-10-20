@@ -1,0 +1,505 @@
+{"sector": "Industrials", "industry": "Industrial Conglomerates", "symbol": "MMM", "company": "3M Company", "headquarters": "St. Paul, Minnesota"}
+{"sector": "Health Care", "industry": "Health Care Equipment", "symbol": "ABT", "company": "Abbott Laboratories", "headquarters": "North Chicago, Illinois"}
+{"sector": "Health Care", "industry": "Pharmaceuticals", "symbol": "ABBV", "company": "AbbVie Inc.", "headquarters": "North Chicago, Illinois"}
+{"sector": "Information Technology", "industry": "IT Consulting & Other Services", "symbol": "ACN", "company": "Accenture plc", "headquarters": "Dublin, Ireland"}
+{"sector": "Information Technology", "industry": "Home Entertainment Software", "symbol": "ATVI", "company": "Activision Blizzard", "headquarters": "Santa Monica, California"}
+{"sector": "Industrials", "industry": "Electrical Components & Equipment", "symbol": "AYI", "company": "Acuity Brands Inc", "headquarters": "Atlanta, Georgia"}
+{"sector": "Information Technology", "industry": "Application Software", "symbol": "ADBE", "company": "Adobe Systems Inc", "headquarters": "San Jose, California"}
+{"sector": "Information Technology", "industry": "Semiconductors", "symbol": "AMD", "company": "Advanced Micro Devices Inc", "headquarters": "Sunnyvale, California"}
+{"sector": "Consumer Discretionary", "industry": "Automotive Retail", "symbol": "AAP", "company": "Advance Auto Parts", "headquarters": "Roanoke, Virginia"}
+{"sector": "Utilities", "industry": "Independent Power Producers & Energy Traders", "symbol": "AES", "company": "AES Corp", "headquarters": "Arlington, Virginia"}
+{"sector": "Health Care", "industry": "Managed Health Care", "symbol": "AET", "company": "Aetna Inc", "headquarters": "Hartford, Connecticut"}
+{"sector": "Financials", "industry": "Asset Management & Custody Banks", "symbol": "AMG", "company": "Affiliated Managers Group Inc", "headquarters": "Beverly, Massachusetts"}
+{"sector": "Financials", "industry": "Life & Health Insurance", "symbol": "AFL", "company": "AFLAC Inc", "headquarters": "Columbus, Georgia"}
+{"sector": "Health Care", "industry": "Health Care Equipment", "symbol": "A", "company": "Agilent Technologies Inc", "headquarters": "Santa Clara, California"}
+{"sector": "Materials", "industry": "Industrial Gases", "symbol": "APD", "company": "Air Products & Chemicals Inc", "headquarters": "Allentown, Pennsylvania"}
+{"sector": "Information Technology", "industry": "Internet Software & Services", "symbol": "AKAM", "company": "Akamai Technologies Inc", "headquarters": "Cambridge, Massachusetts"}
+{"sector": "Industrials", "industry": "Airlines", "symbol": "ALK", "company": "Alaska Air Group Inc", "headquarters": "Seattle, Washington"}
+{"sector": "Materials", "industry": "Specialty Chemicals", "symbol": "ALB", "company": "Albemarle Corp", "headquarters": "Baton Rouge, Louisiana"}
+{"sector": "Real Estate", "industry": "Office REITs", "symbol": "ARE", "company": "Alexandria Real Estate Equities Inc", "headquarters": "Pasadena, California"}
+{"sector": "Health Care", "industry": "Biotechnology", "symbol": "ALXN", "company": "Alexion Pharmaceuticals", "headquarters": "Cheshire, Connecticut"}
+{"sector": "Health Care", "industry": "Health Care Supplies", "symbol": "ALGN", "company": "Align Technology", "headquarters": "San Jose, California"}
+{"sector": "Industrials", "industry": "Building Products", "symbol": "ALLE", "company": "Allegion", "headquarters": "Dublin, Ireland"}
+{"sector": "Health Care", "industry": "Pharmaceuticals", "symbol": "AGN", "company": "Allergan, Plc", "headquarters": "Dublin, Ireland"}
+{"sector": "Information Technology", "industry": "Data Processing & Outsourced Services", "symbol": "ADS", "company": "Alliance Data Systems", "headquarters": "Plano, Texas"}
+{"sector": "Utilities", "industry": "Electric Utilities", "symbol": "LNT", "company": "Alliant Energy Corp", "headquarters": "Madison, Wisconsin"}
+{"sector": "Financials", "industry": "Property & Casualty Insurance", "symbol": "ALL", "company": "Allstate Corp", "headquarters": "Northfield Township, Illinois"}
+{"sector": "Information Technology", "industry": "Internet Software & Services", "symbol": "GOOGL", "company": "Alphabet Inc Class A", "headquarters": "Mountain View, California"}
+{"sector": "Information Technology", "industry": "Internet Software & Services", "symbol": "GOOG", "company": "Alphabet Inc Class C", "headquarters": "Mountain View, California"}
+{"sector": "Consumer Staples", "industry": "Tobacco", "symbol": "MO", "company": "Altria Group Inc", "headquarters": "Richmond, Virginia"}
+{"sector": "Consumer Discretionary", "industry": "Internet & Direct Marketing Retail", "symbol": "AMZN", "company": "Amazon.com Inc", "headquarters": "Seattle, Washington"}
+{"sector": "Utilities", "industry": "Multi-Utilities", "symbol": "AEE", "company": "Ameren Corp", "headquarters": "St. Louis, Missouri"}
+{"sector": "Industrials", "industry": "Airlines", "symbol": "AAL", "company": "American Airlines Group", "headquarters": "Fort Worth, Texas"}
+{"sector": "Utilities", "industry": "Electric Utilities", "symbol": "AEP", "company": "American Electric Power", "headquarters": "Columbus, Ohio"}
+{"sector": "Financials", "industry": "Consumer Finance", "symbol": "AXP", "company": "American Express Co", "headquarters": "New York, New York"}
+{"sector": "Financials", "industry": "Property & Casualty Insurance", "symbol": "AIG", "company": "American International Group, Inc.", "headquarters": "New York, New York"}
+{"sector": "Real Estate", "industry": "Specialized REITs", "symbol": "AMT", "company": "American Tower Corp A", "headquarters": "Boston, Massachusetts"}
+{"sector": "Utilities", "industry": "Water Utilities", "symbol": "AWK", "company": "American Water Works Company Inc", "headquarters": "Voorhees, New Jersey"}
+{"sector": "Financials", "industry": "Asset Management & Custody Banks", "symbol": "AMP", "company": "Ameriprise Financial", "headquarters": "Minneapolis, Minnesota"}
+{"sector": "Health Care", "industry": "Health Care Distributors", "symbol": "ABC", "company": "AmerisourceBergen Corp", "headquarters": "Chesterbrook, Pennsylvania"}
+{"sector": "Industrials", "industry": "Electrical Components & Equipment", "symbol": "AME", "company": "AMETEK Inc", "headquarters": "Berwyn, Pennsylvania"}
+{"sector": "Health Care", "industry": "Biotechnology", "symbol": "AMGN", "company": "Amgen Inc", "headquarters": "Thousand Oaks, California"}
+{"sector": "Information Technology", "industry": "Electronic Components", "symbol": "APH", "company": "Amphenol Corp", "headquarters": "Wallingford, Connecticut"}
+{"sector": "Energy", "industry": "Oil & Gas Exploration & Production", "symbol": "APC", "company": "Anadarko Petroleum Corp", "headquarters": "The Woodlands, Texas"}
+{"sector": "Information Technology", "industry": "Semiconductors", "symbol": "ADI", "company": "Analog Devices, Inc.", "headquarters": "Norwood, Massachusetts"}
+{"sector": "Energy", "industry": "Oil & Gas Refining & Marketing", "symbol": "ANDV", "company": "Andeavor", "headquarters": "San Antonio, Texas"}
+{"sector": "Information Technology", "industry": "Application Software", "symbol": "ANSS", "company": "ANSYS", "headquarters": "Canonsburg, Pennsylvania"}
+{"sector": "Health Care", "industry": "Managed Health Care", "symbol": "ANTM", "company": "Anthem Inc.", "headquarters": "Indianapolis, Indiana"}
+{"sector": "Financials", "industry": "Insurance Brokers", "symbol": "AON", "company": "Aon plc", "headquarters": "London, United Kingdom"}
+{"sector": "Industrials", "industry": "Building Products", "symbol": "AOS", "company": "A.O. Smith Corp", "headquarters": "Milwaukee, Wisconsin"}
+{"sector": "Energy", "industry": "Oil & Gas Exploration & Production", "symbol": "APA", "company": "Apache Corporation", "headquarters": "Houston, Texas"}
+{"sector": "Real Estate", "industry": "Residential REITs", "symbol": "AIV", "company": "Apartment Investment & Management", "headquarters": "Denver, Colorado"}
+{"sector": "Information Technology", "industry": "Technology Hardware, Storage & Peripherals", "symbol": "AAPL", "company": "Apple Inc.", "headquarters": "Cupertino, California"}
+{"sector": "Information Technology", "industry": "Semiconductor Equipment", "symbol": "AMAT", "company": "Applied Materials Inc", "headquarters": "Santa Clara, California"}
+{"sector": "Consumer Staples", "industry": "Agricultural Products", "symbol": "ADM", "company": "Archer-Daniels-Midland Co", "headquarters": "Decatur, Illinois"}
+{"sector": "Industrials", "industry": "Aerospace & Defense", "symbol": "ARNC", "company": "Arconic Inc", "headquarters": "New York, New York"}
+{"sector": "Financials", "industry": "Insurance Brokers", "symbol": "AJG", "company": "Arthur J. Gallagher & Co.", "headquarters": "Itasca, Illinois"}
+{"sector": "Financials", "industry": "Multi-line Insurance", "symbol": "AIZ", "company": "Assurant Inc", "headquarters": "New York, New York"}
+{"sector": "Telecommunication Services", "industry": "Integrated Telecommunication Services", "symbol": "T", "company": "AT&T Inc", "headquarters": "Dallas, Texas"}
+{"sector": "Information Technology", "industry": "Application Software", "symbol": "ADSK", "company": "Autodesk Inc", "headquarters": "San Rafael, California"}
+{"sector": "Information Technology", "industry": "Internet Software & Services", "symbol": "ADP", "company": "Automatic Data Processing", "headquarters": "Roseland, New Jersey"}
+{"sector": "Consumer Discretionary", "industry": "Specialty Stores", "symbol": "AZO", "company": "AutoZone Inc", "headquarters": "Memphis, Tennessee"}
+{"sector": "Real Estate", "industry": "Residential REITs", "symbol": "AVB", "company": "AvalonBay Communities, Inc.", "headquarters": "Arlington, Virginia[3]"}
+{"sector": "Materials", "industry": "Paper Packaging", "symbol": "AVY", "company": "Avery Dennison Corp", "headquarters": "Glendale, California"}
+{"sector": "Energy", "industry": "Oil & Gas Equipment & Services", "symbol": "BHGE", "company": "Baker Hughes, a GE Company", "headquarters": "Houston, Texas"}
+{"sector": "Materials", "industry": "Metal & Glass Containers", "symbol": "BLL", "company": "Ball Corp", "headquarters": "Broomfield, Colorado"}
+{"sector": "Financials", "industry": "Diversified Banks", "symbol": "BAC", "company": "Bank of America Corp", "headquarters": "Charlotte, North Carolina"}
+{"sector": "Financials", "industry": "Asset Management & Custody Banks", "symbol": "BK", "company": "The Bank of New York Mellon Corp.", "headquarters": "New York, New York"}
+{"sector": "Health Care", "industry": "Health Care Equipment", "symbol": "BCR", "company": "Bard (C.R.) Inc.", "headquarters": "Murray Hill, New Jersey"}
+{"sector": "Health Care", "industry": "Health Care Equipment", "symbol": "BAX", "company": "Baxter International Inc.", "headquarters": "Deerfield, Illinois"}
+{"sector": "Financials", "industry": "Regional Banks", "symbol": "BBT", "company": "BB&T Corporation", "headquarters": "Winston-Salem, North Carolina"}
+{"sector": "Health Care", "industry": "Health Care Equipment", "symbol": "BDX", "company": "Becton Dickinson", "headquarters": "Franklin Lakes, New Jersey"}
+{"sector": "Financials", "industry": "Multi-Sector Holdings", "symbol": "BRK.B", "company": "Berkshire Hathaway", "headquarters": "Omaha, Nebraska"}
+{"sector": "Consumer Discretionary", "industry": "Computer & Electronics Retail", "symbol": "BBY", "company": "Best Buy Co. Inc.", "headquarters": "Richfield, Minnesota"}
+{"sector": "Health Care", "industry": "Biotechnology", "symbol": "BIIB", "company": "Biogen Inc.", "headquarters": "Weston, Massachusetts"}
+{"sector": "Financials", "industry": "Asset Management & Custody Banks", "symbol": "BLK", "company": "BlackRock", "headquarters": "New York, New York"}
+{"sector": "Financials", "industry": "Consumer Finance", "symbol": "HRB", "company": "Block H&R", "headquarters": "Kansas City, Missouri"}
+{"sector": "Industrials", "industry": "Aerospace & Defense", "symbol": "BA", "company": "Boeing Company", "headquarters": "Chicago, Illinois"}
+{"sector": "Consumer Discretionary", "industry": "Auto Parts & Equipment", "symbol": "BWA", "company": "BorgWarner", "headquarters": "Auburn Hills, Michigan"}
+{"sector": "Real Estate", "industry": "Office REITs", "symbol": "BXP", "company": "Boston Properties", "headquarters": "Boston, Massachusetts"}
+{"sector": "Health Care", "industry": "Health Care Equipment", "symbol": "BSX", "company": "Boston Scientific", "headquarters": "Marlborough, Massachusetts[4]"}
+{"sector": "Financials", "industry": "Life & Health Insurance", "symbol": "BHF", "company": "Brighthouse Financial Inc", "headquarters": "Charlotte, North Carolina"}
+{"sector": "Health Care", "industry": "Health Care Distributors", "symbol": "BMY", "company": "Bristol-Myers Squibb", "headquarters": "New York, New York"}
+{"sector": "Information Technology", "industry": "Semiconductors", "symbol": "AVGO", "company": "Broadcom", "headquarters": "San Jose, California"}
+{"sector": "Consumer Staples", "industry": "Distillers & Vintners", "symbol": "BF.B", "company": "Brown-Forman Corp.", "headquarters": "Louisville, Kentucky"}
+{"sector": "Industrials", "industry": "Air Freight & Logistics", "symbol": "CHRW", "company": "C. H. Robinson Worldwide", "headquarters": "Eden Prairie, Minnesota"}
+{"sector": "Information Technology", "industry": "Systems Software", "symbol": "CA", "company": "CA, Inc.", "headquarters": "Islandia, New York"}
+{"sector": "Energy", "industry": "Oil & Gas Exploration & Production", "symbol": "COG", "company": "Cabot Oil & Gas", "headquarters": "Houston, Texas"}
+{"sector": "Information Technology", "industry": "Application Software", "symbol": "CDNS", "company": "Cadence Design Systems", "headquarters": "San Jose, California"}
+{"sector": "Consumer Staples", "industry": "Packaged Foods & Meats", "symbol": "CPB", "company": "Campbell Soup", "headquarters": "Camden, New Jersey"}
+{"sector": "Financials", "industry": "Consumer Finance", "symbol": "COF", "company": "Capital One Financial", "headquarters": "Tysons Corner, Virginia"}
+{"sector": "Health Care", "industry": "Health Care Distributors", "symbol": "CAH", "company": "Cardinal Health Inc.", "headquarters": "Dublin, Ohio"}
+{"sector": "Financials", "industry": "Financial Exchanges & Data", "symbol": "CBOE", "company": "CBOE Holdings", "headquarters": "Chicago, Illinois"}
+{"sector": "Consumer Discretionary", "industry": "Specialty Stores", "symbol": "KMX", "company": "Carmax Inc", "headquarters": "Richmond, Virginia"}
+{"sector": "Consumer Discretionary", "industry": "Hotels, Resorts & Cruise Lines", "symbol": "CCL", "company": "Carnival Corp.", "headquarters": "Miami, Florida"}
+{"sector": "Industrials", "industry": "Construction Machinery & Heavy Trucks", "symbol": "CAT", "company": "Caterpillar Inc.", "headquarters": "Peoria, Illinois"}
+{"sector": "Real Estate", "industry": "Real Estate Services", "symbol": "CBG", "company": "CBRE Group", "headquarters": "Los Angeles, California"}
+{"sector": "Consumer Discretionary", "industry": "Broadcasting", "symbol": "CBS", "company": "CBS Corp.", "headquarters": "New York, New York"}
+{"sector": "Health Care", "industry": "Biotechnology", "symbol": "CELG", "company": "Celgene Corp.", "headquarters": "Summit, New Jersey"}
+{"sector": "Health Care", "industry": "Managed Health Care", "symbol": "CNC", "company": "Centene Corporation", "headquarters": "St Louis, Missouri"}
+{"sector": "Utilities", "industry": "Multi-Utilities", "symbol": "CNP", "company": "CenterPoint Energy", "headquarters": "Houston, Texas"}
+{"sector": "Telecommunication Services", "industry": "Integrated Telecommunication Services", "symbol": "CTL", "company": "CenturyLink Inc", "headquarters": "Monroe, Louisiana"}
+{"sector": "Health Care", "industry": "Health Care Technology", "symbol": "CERN", "company": "Cerner", "headquarters": "North Kansas City, Missouri"}
+{"sector": "Materials", "industry": "Fertilizers & Agricultural Chemicals", "symbol": "CF", "company": "CF Industries Holdings Inc", "headquarters": "Deerfield, Illinois"}
+{"sector": "Financials", "industry": "Investment Banking & Brokerage", "symbol": "SCHW", "company": "Charles Schwab Corporation", "headquarters": "San Francisco, California"}
+{"sector": "Consumer Discretionary", "industry": "Cable & Satellite", "symbol": "CHTR", "company": "Charter Communications", "headquarters": "Stamford, Connecticut"}
+{"sector": "Energy", "industry": "Oil & Gas Exploration & Production", "symbol": "CHK", "company": "Chesapeake Energy", "headquarters": "Oklahoma City, Oklahoma"}
+{"sector": "Energy", "industry": "Integrated Oil & Gas", "symbol": "CVX", "company": "Chevron Corp.", "headquarters": "San Ramon, California"}
+{"sector": "Consumer Discretionary", "industry": "Restaurants", "symbol": "CMG", "company": "Chipotle Mexican Grill", "headquarters": "Denver, Colorado"}
+{"sector": "Financials", "industry": "Property & Casualty Insurance", "symbol": "CB", "company": "Chubb Limited", "headquarters": "Zurich, Switzerland"}
+{"sector": "Consumer Staples", "industry": "Household Products", "symbol": "CHD", "company": "Church & Dwight", "headquarters": "Ewing, New Jersey"}
+{"sector": "Health Care", "industry": "Managed Health Care", "symbol": "CI", "company": "CIGNA Corp.", "headquarters": "Philadelphia, Pennsylvania"}
+{"sector": "Energy", "industry": "Oil & Gas Exploration & Production", "symbol": "XEC", "company": "Cimarex Energy", "headquarters": "Denver, Colorado"}
+{"sector": "Financials", "industry": "Property & Casualty Insurance", "symbol": "CINF", "company": "Cincinnati Financial", "headquarters": "Fairfield, Ohio"}
+{"sector": "Industrials", "industry": "Diversified Support Services", "symbol": "CTAS", "company": "Cintas Corporation", "headquarters": "Mason, Ohio"}
+{"sector": "Information Technology", "industry": "Communications Equipment", "symbol": "CSCO", "company": "Cisco Systems", "headquarters": "San Jose, California"}
+{"sector": "Financials", "industry": "Diversified Banks", "symbol": "C", "company": "Citigroup Inc.", "headquarters": "New York, New York"}
+{"sector": "Financials", "industry": "Regional Banks", "symbol": "CFG", "company": "Citizens Financial Group", "headquarters": "Providence, Rhode Island"}
+{"sector": "Information Technology", "industry": "Internet Software & Services", "symbol": "CTXS", "company": "Citrix Systems", "headquarters": "Fort Lauderdale, Florida"}
+{"sector": "Consumer Staples", "industry": "Household Products", "symbol": "CLX", "company": "The Clorox Company", "headquarters": "Oakland, California"}
+{"sector": "Financials", "industry": "Financial Exchanges & Data", "symbol": "CME", "company": "CME Group Inc.", "headquarters": "Chicago, Illinois"}
+{"sector": "Utilities", "industry": "Multi-Utilities", "symbol": "CMS", "company": "CMS Energy", "headquarters": "Jackson, Michigan"}
+{"sector": "Consumer Discretionary", "industry": "Apparel, Accessories & Luxury Goods", "symbol": "COH", "company": "Coach Inc.", "headquarters": "New York, New York"}
+{"sector": "Consumer Staples", "industry": "Soft Drinks", "symbol": "KO", "company": "Coca-Cola Company (The)", "headquarters": "Atlanta, Georgia"}
+{"sector": "Information Technology", "industry": "IT Consulting & Other Services", "symbol": "CTSH", "company": "Cognizant Technology Solutions", "headquarters": "Teaneck, New Jersey"}
+{"sector": "Consumer Staples", "industry": "Household Products", "symbol": "CL", "company": "Colgate-Palmolive", "headquarters": "New York, New York"}
+{"sector": "Consumer Discretionary", "industry": "Cable & Satellite", "symbol": "CMCSA", "company": "Comcast Corp.", "headquarters": "Philadelphia, Pennsylvania"}
+{"sector": "Financials", "industry": "Diversified Banks", "symbol": "CMA", "company": "Comerica Inc.", "headquarters": "Dallas, Texas"}
+{"sector": "Consumer Staples", "industry": "Packaged Foods & Meats", "symbol": "CAG", "company": "Conagra Brands", "headquarters": "Chicago, Illinois"}
+{"sector": "Energy", "industry": "Oil & Gas Exploration & Production", "symbol": "CXO", "company": "Concho Resources", "headquarters": "Midland, Texas"}
+{"sector": "Energy", "industry": "Oil & Gas Exploration & Production", "symbol": "COP", "company": "ConocoPhillips", "headquarters": "Houston, Texas"}
+{"sector": "Utilities", "industry": "Electric Utilities", "symbol": "ED", "company": "Consolidated Edison", "headquarters": "New York, New York"}
+{"sector": "Consumer Staples", "industry": "Distillers & Vintners", "symbol": "STZ", "company": "Constellation Brands", "headquarters": "Victor, New York"}
+{"sector": "Health Care", "industry": "Health Care Supplies", "symbol": "COO", "company": "The Cooper Companies", "headquarters": "Pleasanton, California"}
+{"sector": "Information Technology", "industry": "Electronic Components", "symbol": "GLW", "company": "Corning Inc.", "headquarters": "Corning, New York"}
+{"sector": "Consumer Staples", "industry": "Hypermarkets & Super Centers", "symbol": "COST", "company": "Costco Wholesale Corp.", "headquarters": "Issaquah, Washington"}
+{"sector": "Consumer Staples", "industry": "Personal Products", "symbol": "COTY", "company": "Coty, Inc", "headquarters": "New York, NY"}
+{"sector": "Real Estate", "industry": "Specialized REITs", "symbol": "CCI", "company": "Crown Castle International Corp.", "headquarters": "Houston, Texas"}
+{"sector": "Information Technology", "industry": "IT Consulting & Other Services", "symbol": "CSRA", "company": "CSRA Inc.", "headquarters": "Falls Church, Virginia"}
+{"sector": "Industrials", "industry": "Railroads", "symbol": "CSX", "company": "CSX Corp.", "headquarters": "Jacksonville, Florida"}
+{"sector": "Industrials", "industry": "Industrial Machinery", "symbol": "CMI", "company": "Cummins Inc.", "headquarters": "Columbus, Indiana"}
+{"sector": "Consumer Staples", "industry": "Drug Retail", "symbol": "CVS", "company": "CVS Health", "headquarters": "Woonsocket, Rhode Island"}
+{"sector": "Consumer Discretionary", "industry": "Homebuilding", "symbol": "DHI", "company": "D. R. Horton", "headquarters": "Fort Worth, Texas"}
+{"sector": "Health Care", "industry": "Health Care Equipment", "symbol": "DHR", "company": "Danaher Corp.", "headquarters": "Washington, D.C."}
+{"sector": "Consumer Discretionary", "industry": "Restaurants", "symbol": "DRI", "company": "Darden Restaurants", "headquarters": "Orlando, Florida"}
+{"sector": "Health Care", "industry": "Health Care Facilities", "symbol": "DVA", "company": "DaVita Inc.", "headquarters": "Denver, Colorado"}
+{"sector": "Industrials", "industry": "Agricultural & Farm Machinery", "symbol": "DE", "company": "Deere & Co.", "headquarters": "Moline, Illinois"}
+{"sector": "Consumer Discretionary", "industry": "Auto Parts & Equipment", "symbol": "DLPH", "company": "Delphi Automotive PLC", "headquarters": "Gillingham, Kent, United Kingdom"}
+{"sector": "Industrials", "industry": "Airlines", "symbol": "DAL", "company": "Delta Air Lines Inc.", "headquarters": "Atlanta, Georgia"}
+{"sector": "Health Care", "industry": "Health Care Supplies", "symbol": "XRAY", "company": "Dentsply Sirona", "headquarters": "York, Pennsylvania"}
+{"sector": "Energy", "industry": "Oil & Gas Exploration & Production", "symbol": "DVN", "company": "Devon Energy Corp.", "headquarters": "Oklahoma City, Oklahoma"}
+{"sector": "Real Estate", "industry": "Specialized REITs", "symbol": "DLR", "company": "Digital Realty Trust Inc", "headquarters": "San Francisco, California"}
+{"sector": "Financials", "industry": "Consumer Finance", "symbol": "DFS", "company": "Discover Financial Services", "headquarters": "Riverwoods, Illinois"}
+{"sector": "Consumer Discretionary", "industry": "Cable & Satellite", "symbol": "DISCA", "company": "Discovery Communications-A", "headquarters": "Silver Spring, Maryland"}
+{"sector": "Consumer Discretionary", "industry": "Cable & Satellite", "symbol": "DISCK", "company": "Discovery Communications-C", "headquarters": "Silver Spring, Maryland"}
+{"sector": "Consumer Discretionary", "industry": "Cable & Satellite", "symbol": "DISH", "company": "Dish Network", "headquarters": "Meridian, Colorado"}
+{"sector": "Consumer Discretionary", "industry": "General Merchandise Stores", "symbol": "DG", "company": "Dollar General", "headquarters": "Goodlettsville, Tennessee"}
+{"sector": "Consumer Discretionary", "industry": "General Merchandise Stores", "symbol": "DLTR", "company": "Dollar Tree", "headquarters": "Chesapeake, Virginia"}
+{"sector": "Utilities", "industry": "Electric Utilities", "symbol": "D", "company": "Dominion Energy", "headquarters": "Richmond, Virginia"}
+{"sector": "Industrials", "industry": "Industrial Machinery", "symbol": "DOV", "company": "Dover Corp.", "headquarters": "Downers Grove, Illinois"}
+{"sector": "Materials", "industry": "Diversified Chemicals", "symbol": "DWDP", "company": "DowDuPont", "headquarters": "Midland, Michigan"}
+{"sector": "Consumer Staples", "industry": "Soft Drinks", "symbol": "DPS", "company": "Dr Pepper Snapple Group", "headquarters": "Plano, Texas"}
+{"sector": "Utilities", "industry": "Multi-Utilities", "symbol": "DTE", "company": "DTE Energy Co.", "headquarters": "Detroit, Michigan"}
+{"sector": "Real Estate", "industry": "Industrial REITs", "symbol": "DRE", "company": "Duke Realty Corp", "headquarters": "Indianapolis, Indiana"}
+{"sector": "Utilities", "industry": "Electric Utilities", "symbol": "DUK", "company": "Duke Energy", "headquarters": "Charlotte, North Carolina"}
+{"sector": "Information Technology", "industry": "IT Consulting & Other Services", "symbol": "DXC", "company": "DXC Technology", "headquarters": "Tysons Corner, Virginia"}
+{"sector": "Financials", "industry": "Investment Banking & Brokerage", "symbol": "ETFC", "company": "E*Trade", "headquarters": "New York, New York"}
+{"sector": "Materials", "industry": "Diversified Chemicals", "symbol": "EMN", "company": "Eastman Chemical", "headquarters": "Kingsport, Tennessee"}
+{"sector": "Industrials", "industry": "Electrical Components & Equipment", "symbol": "ETN", "company": "Eaton Corporation", "headquarters": "Dublin, Ireland"}
+{"sector": "Information Technology", "industry": "Internet Software & Services", "symbol": "EBAY", "company": "eBay Inc.", "headquarters": "San Jose, California"}
+{"sector": "Materials", "industry": "Specialty Chemicals", "symbol": "ECL", "company": "Ecolab Inc.", "headquarters": "St. Paul, Minnesota"}
+{"sector": "Utilities", "industry": "Electric Utilities", "symbol": "EIX", "company": "Edison Int'l", "headquarters": "Rosemead, California"}
+{"sector": "Health Care", "industry": "Health Care Equipment", "symbol": "EW", "company": "Edwards Lifesciences", "headquarters": "Irvine, California"}
+{"sector": "Information Technology", "industry": "Home Entertainment Software", "symbol": "EA", "company": "Electronic Arts", "headquarters": "Redwood City, California"}
+{"sector": "Industrials", "industry": "Electrical Components & Equipment", "symbol": "EMR", "company": "Emerson Electric Company", "headquarters": "Ferguson, Missouri"}
+{"sector": "Utilities", "industry": "Electric Utilities", "symbol": "ETR", "company": "Entergy Corp.", "headquarters": "New Orleans, Louisiana"}
+{"sector": "Health Care", "industry": "Health Care Services", "symbol": "EVHC", "company": "Envision Healthcare", "headquarters": "Nashville, Tennessee"}
+{"sector": "Energy", "industry": "Oil & Gas Exploration & Production", "symbol": "EOG", "company": "EOG Resources", "headquarters": "Houston, Texas"}
+{"sector": "Energy", "industry": "Oil & Gas Exploration & Production", "symbol": "EQT", "company": "EQT Corporation", "headquarters": "Pittsburgh, Pennsylvania"}
+{"sector": "Industrials", "industry": "Research & Consulting Services", "symbol": "EFX", "company": "Equifax Inc.", "headquarters": "Atlanta, Georgia"}
+{"sector": "Real Estate", "industry": "Specialized REITs", "symbol": "EQIX", "company": "Equinix", "headquarters": "Redwood City, California"}
+{"sector": "Real Estate", "industry": "Residential REITs", "symbol": "EQR", "company": "Equity Residential", "headquarters": "Chicago, Illinois"}
+{"sector": "Real Estate", "industry": "Residential REITs", "symbol": "ESS", "company": "Essex Property Trust, Inc.", "headquarters": "Palo Alto, California"}
+{"sector": "Consumer Staples", "industry": "Personal Products", "symbol": "EL", "company": "Estee Lauder Cos.", "headquarters": "New York, New York"}
+{"sector": "Utilities", "industry": "Multi-Utilities", "symbol": "ES", "company": "Eversource Energy", "headquarters": "Springfield, Massachusetts"}
+{"sector": "Financials", "industry": "Reinsurance", "symbol": "RE", "company": "Everest Re Group Ltd", "headquarters": "Hamilton, Bermuda"}
+{"sector": "Utilities", "industry": "Multi-Utilities", "symbol": "EXC", "company": "Exelon Corp.", "headquarters": "Chicago, Illinois"}
+{"sector": "Consumer Discretionary", "industry": "Internet & Direct Marketing Retail", "symbol": "EXPE", "company": "Expedia Inc.", "headquarters": "Bellevue, Washington"}
+{"sector": "Industrials", "industry": "Air Freight & Logistics", "symbol": "EXPD", "company": "Expeditors International", "headquarters": "Seattle, Washington"}
+{"sector": "Health Care", "industry": "Health Care Distributors", "symbol": "ESRX", "company": "Express Scripts", "headquarters": "Cool Valley, Missouri"}
+{"sector": "Real Estate", "industry": "Specialized REITs", "symbol": "EXR", "company": "Extra Space Storage", "headquarters": "Salt Lake City, Utah"}
+{"sector": "Energy", "industry": "Integrated Oil & Gas", "symbol": "XOM", "company": "Exxon Mobil Corp.", "headquarters": "Irving, Texas"}
+{"sector": "Information Technology", "industry": "Communications Equipment", "symbol": "FFIV", "company": "F5 Networks", "headquarters": "Seattle, Washington"}
+{"sector": "Information Technology", "industry": "Internet Software & Services", "symbol": "FB", "company": "Facebook, Inc.", "headquarters": "Menlo Park, California"}
+{"sector": "Industrials", "industry": "Building Products", "symbol": "FAST", "company": "Fastenal Co", "headquarters": "Winona, Minnesota"}
+{"sector": "Real Estate", "industry": "Retail REITs", "symbol": "FRT", "company": "Federal Realty Investment Trust", "headquarters": "Rockville, Maryland"}
+{"sector": "Industrials", "industry": "Air Freight & Logistics", "symbol": "FDX", "company": "FedEx Corporation", "headquarters": "Memphis, Tennessee"}
+{"sector": "Information Technology", "industry": "Internet Software & Services", "symbol": "FIS", "company": "Fidelity National Information Services", "headquarters": "Jacksonville, Florida"}
+{"sector": "Financials", "industry": "Regional Banks", "symbol": "FITB", "company": "Fifth Third Bancorp", "headquarters": "Cincinnati, Ohio"}
+{"sector": "Utilities", "industry": "Electric Utilities", "symbol": "FE", "company": "FirstEnergy Corp", "headquarters": "Akron, Ohio"}
+{"sector": "Information Technology", "industry": "Internet Software & Services", "symbol": "FISV", "company": "Fiserv Inc", "headquarters": "Brookfield, Wisconsin"}
+{"sector": "Information Technology", "industry": "Electronic Equipment & Instruments", "symbol": "FLIR", "company": "FLIR Systems", "headquarters": "Wilsonville, Oregon"}
+{"sector": "Industrials", "industry": "Industrial Machinery", "symbol": "FLS", "company": "Flowserve Corporation", "headquarters": "Irving, Texas"}
+{"sector": "Industrials", "industry": "Construction & Engineering", "symbol": "FLR", "company": "Fluor Corp.", "headquarters": "Irving, Texas"}
+{"sector": "Materials", "industry": "Fertilizers & Agricultural Chemicals", "symbol": "FMC", "company": "FMC Corporation", "headquarters": "Philadelphia, Pennsylvania"}
+{"sector": "Consumer Discretionary", "industry": "Apparel Retail", "symbol": "FL", "company": "Foot Locker Inc", "headquarters": "New York, New York"}
+{"sector": "Consumer Discretionary", "industry": "Automobile Manufacturers", "symbol": "F", "company": "Ford Motor", "headquarters": "Dearborn, Michigan"}
+{"sector": "Industrials", "industry": "Industrial Machinery", "symbol": "FTV", "company": "Fortive Corp", "headquarters": "Everett, Washington"}
+{"sector": "Industrials", "industry": "Building Products", "symbol": "FBHS", "company": "Fortune Brands Home & Security", "headquarters": "Deerfield, Illinois"}
+{"sector": "Financials", "industry": "Asset Management & Custody Banks", "symbol": "BEN", "company": "Franklin Resources", "headquarters": "San Mateo, California"}
+{"sector": "Materials", "industry": "Copper", "symbol": "FCX", "company": "Freeport-McMoRan Inc.", "headquarters": "Phoenix, Arizona"}
+{"sector": "Consumer Discretionary", "industry": "Apparel Retail", "symbol": "GPS", "company": "Gap Inc.", "headquarters": "San Francisco, California"}
+{"sector": "Consumer Discretionary", "industry": "Consumer Electronics", "symbol": "GRMN", "company": "Garmin Ltd.", "headquarters": "Schaffhausen, Switzerland"}
+{"sector": "Information Technology", "industry": "IT Consulting & Other Services", "symbol": "IT", "company": "Gartner Inc", "headquarters": "Stamford, Connecticut"}
+{"sector": "Industrials", "industry": "Aerospace & Defense", "symbol": "GD", "company": "General Dynamics", "headquarters": "Falls Church, Virginia"}
+{"sector": "Industrials", "industry": "Industrial Conglomerates", "symbol": "GE", "company": "General Electric", "headquarters": "Fairfield, Connecticut"}
+{"sector": "Real Estate", "industry": "Retail REITs", "symbol": "GGP", "company": "General Growth Properties Inc.", "headquarters": "Chicago, Illinois"}
+{"sector": "Consumer Staples", "industry": "Packaged Foods & Meats", "symbol": "GIS", "company": "General Mills", "headquarters": "Golden Valley, Minnesota"}
+{"sector": "Consumer Discretionary", "industry": "Automobile Manufacturers", "symbol": "GM", "company": "General Motors", "headquarters": "Detroit, Michigan"}
+{"sector": "Consumer Discretionary", "industry": "Specialty Stores", "symbol": "GPC", "company": "Genuine Parts", "headquarters": "Atlanta, Georgia"}
+{"sector": "Health Care", "industry": "Biotechnology", "symbol": "GILD", "company": "Gilead Sciences", "headquarters": "Foster City, California"}
+{"sector": "Information Technology", "industry": "Data Processing & Outsourced Services", "symbol": "GPN", "company": "Global Payments Inc", "headquarters": "Atlanta, Georgia"}
+{"sector": "Financials", "industry": "Investment Banking & Brokerage", "symbol": "GS", "company": "Goldman Sachs Group", "headquarters": "New York, New York"}
+{"sector": "Consumer Discretionary", "industry": "Tires & Rubber", "symbol": "GT", "company": "Goodyear Tire & Rubber", "headquarters": "Akron, Ohio"}
+{"sector": "Industrials", "industry": "Industrial Machinery", "symbol": "GWW", "company": "Grainger (W.W.) Inc.", "headquarters": "Lake Forest, Illinois"}
+{"sector": "Energy", "industry": "Oil & Gas Equipment & Services", "symbol": "HAL", "company": "Halliburton Co.", "headquarters": "Houston, Texas"}
+{"sector": "Consumer Discretionary", "industry": "Apparel, Accessories & Luxury Goods", "symbol": "HBI", "company": "Hanesbrands Inc", "headquarters": "Winston-Salem, North Carolina"}
+{"sector": "Consumer Discretionary", "industry": "Motorcycle Manufacturers", "symbol": "HOG", "company": "Harley-Davidson", "headquarters": "Milwaukee, Wisconsin"}
+{"sector": "Information Technology", "industry": "Communications Equipment", "symbol": "HRS", "company": "Harris Corporation", "headquarters": "Melbourne, Florida"}
+{"sector": "Financials", "industry": "Property & Casualty Insurance", "symbol": "HIG", "company": "Hartford Financial Svc.Gp.", "headquarters": "Hartford, Connecticut"}
+{"sector": "Consumer Discretionary", "industry": "Leisure Products", "symbol": "HAS", "company": "Hasbro Inc.", "headquarters": "Pawtucket, Rhode Island"}
+{"sector": "Health Care", "industry": "Health Care Facilities", "symbol": "HCA", "company": "HCA Holdings", "headquarters": "Nashville, Tennessee"}
+{"sector": "Real Estate", "industry": "Health Care REITs", "symbol": "HCP", "company": "HCP Inc.", "headquarters": "Long Beach, California"}
+{"sector": "Energy", "industry": "Oil & Gas Drilling", "symbol": "HP", "company": "Helmerich & Payne", "headquarters": "Tulsa, Oklahoma[5]"}
+{"sector": "Health Care", "industry": "Health Care Distributors", "symbol": "HSIC", "company": "Henry Schein", "headquarters": "Melville, New York"}
+{"sector": "Consumer Staples", "industry": "Packaged Foods & Meats", "symbol": "HSY", "company": "The Hershey Company", "headquarters": "Hershey, Pennsylvania"}
+{"sector": "Energy", "industry": "Integrated Oil & Gas", "symbol": "HES", "company": "Hess Corporation", "headquarters": "New York, New York"}
+{"sector": "Information Technology", "industry": "Technology Hardware, Storage & Peripherals", "symbol": "HPE", "company": "Hewlett Packard Enterprise", "headquarters": "Palo Alto, California"}
+{"sector": "Consumer Discretionary", "industry": "Hotels, Resorts & Cruise Lines", "symbol": "HLT", "company": "Hilton Worldwide Holdings Inc", "headquarters": "Tysons Corner, Virginia"}
+{"sector": "Health Care", "industry": "Health Care Equipment", "symbol": "HOLX", "company": "Hologic", "headquarters": "Marlborough, Massachusetts"}
+{"sector": "Consumer Discretionary", "industry": "Home Improvement Retail", "symbol": "HD", "company": "Home Depot", "headquarters": "Atlanta, Georgia"}
+{"sector": "Industrials", "industry": "Industrial Conglomerates", "symbol": "HON", "company": "Honeywell Int'l Inc.", "headquarters": "Morristown, New Jersey"}
+{"sector": "Consumer Staples", "industry": "Packaged Foods & Meats", "symbol": "HRL", "company": "Hormel Foods Corp.", "headquarters": "Austin, Minnesota"}
+{"sector": "Real Estate", "industry": "Hotel & Resort REITs", "symbol": "HST", "company": "Host Hotels & Resorts", "headquarters": "Bethesda, Maryland"}
+{"sector": "Information Technology", "industry": "Technology Hardware, Storage & Peripherals", "symbol": "HPQ", "company": "HP Inc.", "headquarters": "Palo Alto, California"}
+{"sector": "Health Care", "industry": "Managed Health Care", "symbol": "HUM", "company": "Humana Inc.", "headquarters": "Louisville, Kentucky"}
+{"sector": "Financials", "industry": "Regional Banks", "symbol": "HBAN", "company": "Huntington Bancshares", "headquarters": "Columbus, Ohio"}
+{"sector": "Health Care", "industry": "Health Care Equipment", "symbol": "IDXX", "company": "IDEXX Laboratories", "headquarters": "Westbrook, Maine"}
+{"sector": "Industrials", "industry": "Research & Consulting Services", "symbol": "INFO", "company": "IHS Markit Ltd.", "headquarters": "London, United Kingdom"}
+{"sector": "Industrials", "industry": "Industrial Machinery", "symbol": "ITW", "company": "Illinois Tool Works", "headquarters": "Glenview, Illinois"}
+{"sector": "Health Care", "industry": "Life Sciences Tools & Services", "symbol": "ILMN", "company": "Illumina Inc", "headquarters": "San Diego, California"}
+{"sector": "Industrials", "industry": "Industrial Machinery", "symbol": "IR", "company": "Ingersoll-Rand PLC", "headquarters": "Dublin, Ireland"}
+{"sector": "Information Technology", "industry": "Semiconductors", "symbol": "INTC", "company": "Intel Corp.", "headquarters": "Santa Clara, California"}
+{"sector": "Financials", "industry": "Financial Exchanges & Data", "symbol": "ICE", "company": "Intercontinental Exchange", "headquarters": "Atlanta, Georgia"}
+{"sector": "Information Technology", "industry": "IT Consulting & Other Services", "symbol": "IBM", "company": "International Business Machines", "headquarters": "Armonk, New York"}
+{"sector": "Health Care", "industry": "Biotechnology", "symbol": "INCY", "company": "Incyte", "headquarters": "Wilmington, Delaware"}
+{"sector": "Materials", "industry": "Paper Packaging", "symbol": "IP", "company": "International Paper", "headquarters": "Memphis, Tennessee"}
+{"sector": "Consumer Discretionary", "industry": "Advertising", "symbol": "IPG", "company": "Interpublic Group", "headquarters": "New York, New York"}
+{"sector": "Materials", "industry": "Specialty Chemicals", "symbol": "IFF", "company": "Intl Flavors & Fragrances", "headquarters": "New York, New York"}
+{"sector": "Information Technology", "industry": "Internet Software & Services", "symbol": "INTU", "company": "Intuit Inc.", "headquarters": "Mountain View, California"}
+{"sector": "Health Care", "industry": "Health Care Equipment", "symbol": "ISRG", "company": "Intuitive Surgical Inc.", "headquarters": "Sunnyvale, California"}
+{"sector": "Financials", "industry": "Asset Management & Custody Banks", "symbol": "IVZ", "company": "Invesco Ltd.", "headquarters": "Atlanta, Georgia"}
+{"sector": "Real Estate", "industry": "Specialized REITs", "symbol": "IRM", "company": "Iron Mountain Incorporated", "headquarters": "Boston, Massachusetts"}
+{"sector": "Industrials", "industry": "Construction & Engineering", "symbol": "JEC", "company": "Jacobs Engineering Group", "headquarters": "Pasadena, California"}
+{"sector": "Industrials", "industry": "Trucking", "symbol": "JBHT", "company": "J. B. Hunt Transport Services", "headquarters": "Lowell, Arkansas"}
+{"sector": "Consumer Staples", "industry": "Packaged Foods & Meats", "symbol": "SJM", "company": "JM Smucker", "headquarters": "Orrville, Ohio"}
+{"sector": "Health Care", "industry": "Health Care Equipment", "symbol": "JNJ", "company": "Johnson & Johnson", "headquarters": "New Brunswick, New Jersey"}
+{"sector": "Industrials", "industry": "Building Products", "symbol": "JCI", "company": "Johnson Controls International", "headquarters": "Cork, Ireland"}
+{"sector": "Financials", "industry": "Diversified Banks", "symbol": "JPM", "company": "JPMorgan Chase & Co.", "headquarters": "New York, New York"}
+{"sector": "Information Technology", "industry": "Communications Equipment", "symbol": "JNPR", "company": "Juniper Networks", "headquarters": "Sunnyvale, California"}
+{"sector": "Industrials", "industry": "Railroads", "symbol": "KSU", "company": "Kansas City Southern", "headquarters": "Kansas City, Missouri"}
+{"sector": "Consumer Staples", "industry": "Packaged Foods & Meats", "symbol": "K", "company": "Kellogg Co.", "headquarters": "Battle Creek, Michigan"}
+{"sector": "Financials", "industry": "Regional Banks", "symbol": "KEY", "company": "KeyCorp", "headquarters": "Cleveland, Ohio"}
+{"sector": "Consumer Staples", "industry": "Household Products", "symbol": "KMB", "company": "Kimberly-Clark", "headquarters": "Irving, Texas"}
+{"sector": "Real Estate", "industry": "Retail REITs", "symbol": "KIM", "company": "Kimco Realty", "headquarters": "New Hyde Park, New York"}
+{"sector": "Energy", "industry": "Oil & Gas Storage & Transportation", "symbol": "KMI", "company": "Kinder Morgan", "headquarters": "Houston, Texas"}
+{"sector": "Information Technology", "industry": "Semiconductor Equipment", "symbol": "KLAC", "company": "KLA-Tencor Corp.", "headquarters": "Milpitas, California"}
+{"sector": "Consumer Discretionary", "industry": "General Merchandise Stores", "symbol": "KSS", "company": "Kohl's Corp.", "headquarters": "Menomonee Falls, Wisconsin"}
+{"sector": "Consumer Staples", "industry": "Packaged Foods & Meats", "symbol": "KHC", "company": "Kraft Heinz Co", "headquarters": "Pittsburgh, Pennsylvania"}
+{"sector": "Consumer Staples", "industry": "Food Retail", "symbol": "KR", "company": "Kroger Co.", "headquarters": "Cincinnati, Ohio"}
+{"sector": "Consumer Discretionary", "industry": "Apparel Retail", "symbol": "LB", "company": "L Brands Inc.", "headquarters": "Columbus, Ohio"}
+{"sector": "Industrials", "industry": "Aerospace & Defense", "symbol": "LLL", "company": "L-3 Communications Holdings", "headquarters": "New York, New York"}
+{"sector": "Health Care", "industry": "Health Care Services", "symbol": "LH", "company": "Laboratory Corp. of America Holding", "headquarters": "Burlington, North Carolina"}
+{"sector": "Information Technology", "industry": "Semiconductor Equipment", "symbol": "LRCX", "company": "Lam Research", "headquarters": "Fremont, California"}
+{"sector": "Consumer Discretionary", "industry": "Home Furnishings", "symbol": "LEG", "company": "Leggett & Platt", "headquarters": "Carthage, Missouri"}
+{"sector": "Consumer Discretionary", "industry": "Homebuilding", "symbol": "LEN", "company": "Lennar Corp.", "headquarters": "Miami, Florida"}
+{"sector": "Telecommunication Services", "industry": "Alternative Carriers", "symbol": "LVLT", "company": "Level 3 Communications", "headquarters": "Broomfield, Colorado"}
+{"sector": "Financials", "industry": "Multi-Sector Holdings", "symbol": "LUK", "company": "Leucadia National Corp.", "headquarters": "New York, New York"}
+{"sector": "Health Care", "industry": "Pharmaceuticals", "symbol": "LLY", "company": "Lilly (Eli) & Co.", "headquarters": "Indianapolis, Indiana"}
+{"sector": "Financials", "industry": "Multi-line Insurance", "symbol": "LNC", "company": "Lincoln National", "headquarters": "Radnor, Pennsylvania"}
+{"sector": "Consumer Discretionary", "industry": "Distributors", "symbol": "LKQ", "company": "LKQ Corporation", "headquarters": "Chicago, Illinois"}
+{"sector": "Industrials", "industry": "Aerospace & Defense", "symbol": "LMT", "company": "Lockheed Martin Corp.", "headquarters": "Bethesda, Maryland"}
+{"sector": "Financials", "industry": "Multi-line Insurance", "symbol": "L", "company": "Loews Corp.", "headquarters": "New York, New York"}
+{"sector": "Consumer Discretionary", "industry": "Home Improvement Retail", "symbol": "LOW", "company": "Lowe's Cos.", "headquarters": "Mooresville, North Carolina"}
+{"sector": "Materials", "industry": "Specialty Chemicals", "symbol": "LYB", "company": "LyondellBasell", "headquarters": "Rotterdam, Netherlands"}
+{"sector": "Financials", "industry": "Regional Banks", "symbol": "MTB", "company": "M&T Bank Corp.", "headquarters": "Buffalo, New York"}
+{"sector": "Real Estate", "industry": "Retail REITs", "symbol": "MAC", "company": "Macerich", "headquarters": "Santa Monica, California"}
+{"sector": "Consumer Discretionary", "industry": "Department Stores", "symbol": "M", "company": "Macy's Inc.", "headquarters": "Cincinnati, Ohio"}
+{"sector": "Energy", "industry": "Oil & Gas Exploration & Production", "symbol": "MRO", "company": "Marathon Oil Corp.", "headquarters": "Houston, Texas"}
+{"sector": "Energy", "industry": "Oil & Gas Refining & Marketing", "symbol": "MPC", "company": "Marathon Petroleum", "headquarters": "Findlay, Ohio"}
+{"sector": "Consumer Discretionary", "industry": "Hotels, Resorts & Cruise Lines", "symbol": "MAR", "company": "Marriott Int'l.", "headquarters": "Bethesda, Maryland"}
+{"sector": "Financials", "industry": "Insurance Brokers", "symbol": "MMC", "company": "Marsh & McLennan", "headquarters": "New York, New York"}
+{"sector": "Materials", "industry": "Construction Materials", "symbol": "MLM", "company": "Martin Marietta Materials", "headquarters": "Raleigh, North Carolina"}
+{"sector": "Industrials", "industry": "Building Products", "symbol": "MAS", "company": "Masco Corp.", "headquarters": "Taylor, Michigan"}
+{"sector": "Information Technology", "industry": "Internet Software & Services", "symbol": "MA", "company": "Mastercard Inc.", "headquarters": "Harrison, New York"}
+{"sector": "Consumer Discretionary", "industry": "Leisure Products", "symbol": "MAT", "company": "Mattel Inc.", "headquarters": "El Segundo, California"}
+{"sector": "Consumer Staples", "industry": "Packaged Foods & Meats", "symbol": "MKC", "company": "McCormick & Co.", "headquarters": "Sparks, Maryland"}
+{"sector": "Consumer Discretionary", "industry": "Restaurants", "symbol": "MCD", "company": "McDonald's Corp.", "headquarters": "Oak Brook, Illinois"}
+{"sector": "Health Care", "industry": "Health Care Distributors", "symbol": "MCK", "company": "McKesson Corp.", "headquarters": "San Francisco, California"}
+{"sector": "Health Care", "industry": "Health Care Equipment", "symbol": "MDT", "company": "Medtronic plc", "headquarters": "Dublin, Ireland"}
+{"sector": "Health Care", "industry": "Pharmaceuticals", "symbol": "MRK", "company": "Merck & Co.", "headquarters": "Whitehouse Station, New Jersey"}
+{"sector": "Financials", "industry": "Life & Health Insurance", "symbol": "MET", "company": "MetLife Inc.", "headquarters": "New York, New York"}
+{"sector": "Health Care", "industry": "Life Sciences Tools & Services", "symbol": "MTD", "company": "Mettler Toledo", "headquarters": "Columbus, Ohio"}
+{"sector": "Consumer Discretionary", "industry": "Casinos & Gaming", "symbol": "MGM", "company": "MGM Resorts International", "headquarters": "Paradise, Nevada"}
+{"sector": "Consumer Discretionary", "industry": "Apparel, Accessories & Luxury Goods", "symbol": "KORS", "company": "Michael Kors Holdings", "headquarters": "New York, New York"}
+{"sector": "Information Technology", "industry": "Semiconductors", "symbol": "MCHP", "company": "Microchip Technology", "headquarters": "Chandler, Arizona"}
+{"sector": "Information Technology", "industry": "Semiconductors", "symbol": "MU", "company": "Micron Technology", "headquarters": "Boise, Idaho"}
+{"sector": "Information Technology", "industry": "Systems Software", "symbol": "MSFT", "company": "Microsoft Corp.", "headquarters": "Redmond, Washington"}
+{"sector": "Real Estate", "industry": "Residential REITs", "symbol": "MAA", "company": "Mid-America Apartments", "headquarters": "Memphis, Tennessee"}
+{"sector": "Consumer Discretionary", "industry": "Home Furnishings", "symbol": "MHK", "company": "Mohawk Industries", "headquarters": "Amsterdam, New York"}
+{"sector": "Consumer Staples", "industry": "Brewers", "symbol": "TAP", "company": "Molson Coors Brewing Company", "headquarters": "Denver, Colorado"}
+{"sector": "Consumer Staples", "industry": "Packaged Foods & Meats", "symbol": "MDLZ", "company": "Mondelez International", "headquarters": "Northfield, Illinois"}
+{"sector": "Materials", "industry": "Fertilizers & Agricultural Chemicals", "symbol": "MON", "company": "Monsanto Co.", "headquarters": "Creve Coeur, Missouri"}
+{"sector": "Consumer Staples", "industry": "Soft Drinks", "symbol": "MNST", "company": "Monster Beverage", "headquarters": "Corona, California"}
+{"sector": "Financials", "industry": "Financial Exchanges & Data", "symbol": "MCO", "company": "Moody's Corp", "headquarters": "New York, New York"}
+{"sector": "Financials", "industry": "Investment Banking & Brokerage", "symbol": "MS", "company": "Morgan Stanley", "headquarters": "New York, New York"}
+{"sector": "Materials", "industry": "Fertilizers & Agricultural Chemicals", "symbol": "MOS", "company": "The Mosaic Company", "headquarters": "Plymouth, Minnesota"}
+{"sector": "Information Technology", "industry": "Communications Equipment", "symbol": "MSI", "company": "Motorola Solutions Inc.", "headquarters": "Schaumburg, Illinois"}
+{"sector": "Health Care", "industry": "Pharmaceuticals", "symbol": "MYL", "company": "Mylan N.V.", "headquarters": "Amsterdam, Netherlands"}
+{"sector": "Financials", "industry": "Financial Exchanges & Data", "symbol": "NDAQ", "company": "Nasdaq, Inc.", "headquarters": "New York, New York"}
+{"sector": "Energy", "industry": "Oil & Gas Equipment & Services", "symbol": "NOV", "company": "National Oilwell Varco Inc.", "headquarters": "Houston, Texas"}
+{"sector": "Financials", "industry": "Consumer Finance", "symbol": "NAVI", "company": "Navient", "headquarters": "Wilmington, Delaware"}
+{"sector": "Information Technology", "industry": "Internet Software & Services", "symbol": "NTAP", "company": "NetApp", "headquarters": "Sunnyvale, California"}
+{"sector": "Information Technology", "industry": "Internet Software & Services", "symbol": "NFLX", "company": "Netflix Inc.", "headquarters": "Los Gatos, California"}
+{"sector": "Consumer Discretionary", "industry": "Housewares & Specialties", "symbol": "NWL", "company": "Newell Brands", "headquarters": "Sandy Springs, Georgia"}
+{"sector": "Energy", "industry": "Oil & Gas Exploration & Production", "symbol": "NFX", "company": "Newfield Exploration Co", "headquarters": "Houston, Texas"}
+{"sector": "Materials", "industry": "Gold", "symbol": "NEM", "company": "Newmont Mining Corporation", "headquarters": "Denver, Colorado"}
+{"sector": "Consumer Discretionary", "industry": "Publishing", "symbol": "NWSA", "company": "News Corp. Class A", "headquarters": "New York, New York"}
+{"sector": "Consumer Discretionary", "industry": "Publishing", "symbol": "NWS", "company": "News Corp. Class B", "headquarters": "New York, New York"}
+{"sector": "Utilities", "industry": "Multi-Utilities", "symbol": "NEE", "company": "NextEra Energy", "headquarters": "Juno Beach, Florida"}
+{"sector": "Industrials", "industry": "Research & Consulting Services", "symbol": "NLSN", "company": "Nielsen Holdings", "headquarters": "New York, New York"}
+{"sector": "Consumer Discretionary", "industry": "Apparel, Accessories & Luxury Goods", "symbol": "NKE", "company": "Nike", "headquarters": "Washington County, Oregon"}
+{"sector": "Utilities", "industry": "Multi-Utilities", "symbol": "NI", "company": "NiSource Inc.", "headquarters": "Merrillville, Indiana"}
+{"sector": "Energy", "industry": "Oil & Gas Exploration & Production", "symbol": "NBL", "company": "Noble Energy Inc", "headquarters": "Houston, Texas"}
+{"sector": "Consumer Discretionary", "industry": "Department Stores", "symbol": "JWN", "company": "Nordstrom", "headquarters": "Seattle, Washington"}
+{"sector": "Industrials", "industry": "Railroads", "symbol": "NSC", "company": "Norfolk Southern Corp.", "headquarters": "Norfolk, Virginia"}
+{"sector": "Financials", "industry": "Asset Management & Custody Banks", "symbol": "NTRS", "company": "Northern Trust Corp.", "headquarters": "Chicago, Illinois"}
+{"sector": "Industrials", "industry": "Aerospace & Defense", "symbol": "NOC", "company": "Northrop Grumman Corp.", "headquarters": "West Falls Church, Virginia"}
+{"sector": "Utilities", "industry": "Independent Power Producers & Energy Traders", "symbol": "NRG", "company": "NRG Energy", "headquarters": "Princeton, New Jersey"}
+{"sector": "Materials", "industry": "Steel", "symbol": "NUE", "company": "Nucor Corp.", "headquarters": "Charlotte, North Carolina"}
+{"sector": "Information Technology", "industry": "Semiconductors", "symbol": "NVDA", "company": "Nvidia Corporation", "headquarters": "Santa Clara, California"}
+{"sector": "Consumer Discretionary", "industry": "Specialty Stores", "symbol": "ORLY", "company": "O'Reilly Automotive", "headquarters": "Springfield, Missouri"}
+{"sector": "Energy", "industry": "Oil & Gas Exploration & Production", "symbol": "OXY", "company": "Occidental Petroleum", "headquarters": "Los Angeles, California"}
+{"sector": "Consumer Discretionary", "industry": "Advertising", "symbol": "OMC", "company": "Omnicom Group", "headquarters": "New York, New York"}
+{"sector": "Energy", "industry": "Oil & Gas Storage & Transportation", "symbol": "OKE", "company": "ONEOK", "headquarters": "Tulsa, Oklahoma"}
+{"sector": "Information Technology", "industry": "Application Software", "symbol": "ORCL", "company": "Oracle Corp.", "headquarters": "Redwood Shores, California"}
+{"sector": "Industrials", "industry": "Construction Machinery & Heavy Trucks", "symbol": "PCAR", "company": "PACCAR Inc.", "headquarters": "Bellevue, Washington"}
+{"sector": "Materials", "industry": "Paper Packaging", "symbol": "PKG", "company": "Packaging Corporation of America", "headquarters": "Lake Forest, Illinois"}
+{"sector": "Industrials", "industry": "Industrial Machinery", "symbol": "PH", "company": "Parker-Hannifin", "headquarters": "Cleveland, Ohio"}
+{"sector": "Health Care", "industry": "Health Care Supplies", "symbol": "PDCO", "company": "Patterson Companies", "headquarters": "St. Paul, Minnesota"}
+{"sector": "Information Technology", "industry": "Internet Software & Services", "symbol": "PAYX", "company": "Paychex Inc.", "headquarters": "Penfield, New York"}
+{"sector": "Information Technology", "industry": "Data Processing & Outsourced Services", "symbol": "PYPL", "company": "PayPal", "headquarters": "San Jose, California"}
+{"sector": "Industrials", "industry": "Industrial Machinery", "symbol": "PNR", "company": "Pentair Ltd.", "headquarters": "Worsley, UK"}
+{"sector": "Financials", "industry": "Thrifts & Mortgage Finance", "symbol": "PBCT", "company": "People's United Financial", "headquarters": "Bridgeport, Connecticut"}
+{"sector": "Consumer Staples", "industry": "Soft Drinks", "symbol": "PEP", "company": "PepsiCo Inc.", "headquarters": "Purchase, New York"}
+{"sector": "Health Care", "industry": "Health Care Equipment", "symbol": "PKI", "company": "PerkinElmer", "headquarters": "Waltham, Massachusetts"}
+{"sector": "Health Care", "industry": "Pharmaceuticals", "symbol": "PRGO", "company": "Perrigo", "headquarters": "Dublin, Ireland"}
+{"sector": "Health Care", "industry": "Pharmaceuticals", "symbol": "PFE", "company": "Pfizer Inc.", "headquarters": "New York, New York"}
+{"sector": "Utilities", "industry": "Multi-Utilities", "symbol": "PCG", "company": "PG&E Corp.", "headquarters": "San Francisco, California"}
+{"sector": "Consumer Staples", "industry": "Tobacco", "symbol": "PM", "company": "Philip Morris International", "headquarters": "New York, New York"}
+{"sector": "Energy", "industry": "Oil & Gas Refining & Marketing", "symbol": "PSX", "company": "Phillips 66", "headquarters": "Houston, Texas"}
+{"sector": "Utilities", "industry": "Multi-Utilities", "symbol": "PNW", "company": "Pinnacle West Capital", "headquarters": "Phoenix, Arizona"}
+{"sector": "Energy", "industry": "Oil & Gas Exploration & Production", "symbol": "PXD", "company": "Pioneer Natural Resources", "headquarters": "Irving, Texas"}
+{"sector": "Financials", "industry": "Regional Banks", "symbol": "PNC", "company": "PNC Financial Services", "headquarters": "Pittsburgh, Pennsylvania"}
+{"sector": "Consumer Discretionary", "industry": "Apparel, Accessories & Luxury Goods", "symbol": "RL", "company": "Polo Ralph Lauren Corp.", "headquarters": "New York, New York"}
+{"sector": "Materials", "industry": "Specialty Chemicals", "symbol": "PPG", "company": "PPG Industries", "headquarters": "Pittsburgh, Pennsylvania"}
+{"sector": "Utilities", "industry": "Electric Utilities", "symbol": "PPL", "company": "PPL Corp.", "headquarters": "Allentown, Pennsylvania"}
+{"sector": "Materials", "industry": "Industrial Gases", "symbol": "PX", "company": "Praxair Inc.", "headquarters": "Danbury, Connecticut"}
+{"sector": "Consumer Discretionary", "industry": "Internet & Direct Marketing Retail", "symbol": "PCLN", "company": "Priceline.com Inc", "headquarters": "Norwalk, Connecticut"}
+{"sector": "Financials", "industry": "Life & Health Insurance", "symbol": "PFG", "company": "Principal Financial Group", "headquarters": "Des Moines, Iowa"}
+{"sector": "Consumer Staples", "industry": "Personal Products", "symbol": "PG", "company": "Procter & Gamble", "headquarters": "Cincinnati, Ohio"}
+{"sector": "Financials", "industry": "Property & Casualty Insurance", "symbol": "PGR", "company": "Progressive Corp.", "headquarters": "Mayfield Village, Ohio"}
+{"sector": "Real Estate", "industry": "Industrial REITs", "symbol": "PLD", "company": "Prologis", "headquarters": "San Francisco, California"}
+{"sector": "Financials", "industry": "Life & Health Insurance", "symbol": "PRU", "company": "Prudential Financial", "headquarters": "Newark, New Jersey"}
+{"sector": "Utilities", "industry": "Electric Utilities", "symbol": "PEG", "company": "Public Serv. Enterprise Inc.", "headquarters": "Newark, New Jersey"}
+{"sector": "Real Estate", "industry": "Specialized REITs", "symbol": "PSA", "company": "Public Storage", "headquarters": "Glendale, California"}
+{"sector": "Consumer Discretionary", "industry": "Homebuilding", "symbol": "PHM", "company": "Pulte Homes Inc.", "headquarters": "Atlanta, Georgia"}
+{"sector": "Consumer Discretionary", "industry": "Apparel, Accessories & Luxury Goods", "symbol": "PVH", "company": "PVH Corp.", "headquarters": "New York, New York"}
+{"sector": "Information Technology", "industry": "Semiconductors", "symbol": "QRVO", "company": "Qorvo", "headquarters": "Greensboro, North Carolina"}
+{"sector": "Industrials", "industry": "Construction & Engineering", "symbol": "PWR", "company": "Quanta Services Inc.", "headquarters": "Houston, Texas"}
+{"sector": "Information Technology", "industry": "Semiconductors", "symbol": "QCOM", "company": "QUALCOMM Inc.", "headquarters": "San Diego, California"}
+{"sector": "Health Care", "industry": "Health Care Services", "symbol": "DGX", "company": "Quest Diagnostics", "headquarters": "Madison, New Jersey"}
+{"sector": "Health Care", "industry": "Life Sciences Tools & Service", "symbol": "Q", "company": "Quintiles IMS Holdings, Inc", "headquarters": "Durham, North Carolina"}
+{"sector": "Energy", "industry": "Oil & Gas Exploration & Production", "symbol": "RRC", "company": "Range Resources Corp.", "headquarters": "Fort Worth, Texas"}
+{"sector": "Financials", "industry": "Investment Banking & Brokerage", "symbol": "RJF", "company": "Raymond James Financial Inc.", "headquarters": "St. Petersburg, Florida"}
+{"sector": "Industrials", "industry": "Aerospace & Defense", "symbol": "RTN", "company": "Raytheon Co.", "headquarters": "Waltham, Massachusetts"}
+{"sector": "Real Estate", "industry": "Retail REITs", "symbol": "O", "company": "Realty Income Corporation", "headquarters": "San Diego, California"}
+{"sector": "Information Technology", "industry": "Systems Software", "symbol": "RHT", "company": "Red Hat Inc.", "headquarters": "Raleigh, North Carolina"}
+{"sector": "Real Estate", "industry": "Retail REITs", "symbol": "REG", "company": "Regency Centers Corporation", "headquarters": "Jacksonville, Florida"}
+{"sector": "Health Care", "industry": "Biotechnology", "symbol": "REGN", "company": "Regeneron", "headquarters": "Tarrytown, New York"}
+{"sector": "Financials", "industry": "Regional Banks", "symbol": "RF", "company": "Regions Financial Corp.", "headquarters": "Birmingham, Alabama"}
+{"sector": "Industrials", "industry": "Environmental & Facilities Services", "symbol": "RSG", "company": "Republic Services Inc", "headquarters": "Phoenix, Arizona"}
+{"sector": "Health Care", "industry": "Health Care Equipment", "symbol": "RMD", "company": "ResMed", "headquarters": "San Diego, California"}
+{"sector": "Industrials", "industry": "Human Resource & Employment Services", "symbol": "RHI", "company": "Robert Half International", "headquarters": "Menlo Park, California"}
+{"sector": "Industrials", "industry": "Electrical Components & Equipment", "symbol": "ROK", "company": "Rockwell Automation Inc.", "headquarters": "Milwaukee, Wisconsin"}
+{"sector": "Industrials", "industry": "Aerospace & Defense", "symbol": "COL", "company": "Rockwell Collins", "headquarters": "Cedar Rapids, Iowa"}
+{"sector": "Industrials", "industry": "Industrial Conglomerates", "symbol": "ROP", "company": "Roper Technologies", "headquarters": "Sarasota, Florida"}
+{"sector": "Consumer Discretionary", "industry": "Apparel Retail", "symbol": "ROST", "company": "Ross Stores", "headquarters": "Pleasanton, California"}
+{"sector": "Consumer Discretionary", "industry": "Hotels, Resorts & Cruise Lines", "symbol": "RCL", "company": "Royal Caribbean Cruises Ltd", "headquarters": "Miami, Florida"}
+{"sector": "Information Technology", "industry": "Internet Software & Services", "symbol": "CRM", "company": "Salesforce.com", "headquarters": "San Francisco, California"}
+{"sector": "Real Estate", "industry": "Specialized REITs", "symbol": "SBAC", "company": "SBA Communications Corp", "headquarters": "Boca Raton, Florida"}
+{"sector": "Utilities", "industry": "Multi-Utilities", "symbol": "SCG", "company": "SCANA Corp", "headquarters": "Cayce, South Carolina"}
+{"sector": "Energy", "industry": "Oil & Gas Equipment & Services", "symbol": "SLB", "company": "Schlumberger Ltd.", "headquarters": "Cura\u00e7ao, Kingdom of the Netherlands"}
+{"sector": "Consumer Discretionary", "industry": "Cable & Satellite", "symbol": "SNI", "company": "Scripps Networks Interactive Inc.", "headquarters": "Cincinnati, Ohio"}
+{"sector": "Information Technology", "industry": "Technology Hardware, Storage & Peripherals", "symbol": "STX", "company": "Seagate Technology", "headquarters": "Dublin, Ireland"}
+{"sector": "Materials", "industry": "Paper Packaging", "symbol": "SEE", "company": "Sealed Air", "headquarters": "Elmwood Park, New Jersey"}
+{"sector": "Utilities", "industry": "Multi-Utilities", "symbol": "SRE", "company": "Sempra Energy", "headquarters": "San Diego, California"}
+{"sector": "Materials", "industry": "Specialty Chemicals", "symbol": "SHW", "company": "Sherwin-Williams", "headquarters": "Cleveland, Ohio"}
+{"sector": "Consumer Discretionary", "industry": "Specialty Stores", "symbol": "SIG", "company": "Signet Jewelers", "headquarters": "Hamilton, Bermuda"}
+{"sector": "Real Estate", "industry": "Retail REITs", "symbol": "SPG", "company": "Simon Property Group Inc", "headquarters": "Indianapolis, Indiana"}
+{"sector": "Information Technology", "industry": "Semiconductors", "symbol": "SWKS", "company": "Skyworks Solutions", "headquarters": "Woburn, Massachusetts"}
+{"sector": "Real Estate", "industry": "Office REITs", "symbol": "SLG", "company": "SL Green Realty", "headquarters": "New York, New York"}
+{"sector": "Consumer Discretionary", "industry": "Household Appliances", "symbol": "SNA", "company": "Snap-On Inc.", "headquarters": "Kenosha, Wisconsin"}
+{"sector": "Utilities", "industry": "Electric Utilities", "symbol": "SO", "company": "Southern Co.", "headquarters": "Atlanta, Georgia"}
+{"sector": "Industrials", "industry": "Airlines", "symbol": "LUV", "company": "Southwest Airlines", "headquarters": "Dallas, Texas"}
+{"sector": "Financials", "industry": "Financial Exchanges & Data", "symbol": "SPGI", "company": "S&P Global, Inc.", "headquarters": "New York, New York"}
+{"sector": "Consumer Discretionary", "industry": "Household Appliances", "symbol": "SWK", "company": "Stanley Black & Decker", "headquarters": "New Britain, Connecticut"}
+{"sector": "Consumer Discretionary", "industry": "Restaurants", "symbol": "SBUX", "company": "Starbucks Corp.", "headquarters": "Seattle, Washington"}
+{"sector": "Financials", "industry": "Asset Management & Custody Banks", "symbol": "STT", "company": "State Street Corp.", "headquarters": "Boston, Massachusetts"}
+{"sector": "Industrials", "industry": "Environmental & Facilities Services", "symbol": "SRCL", "company": "Stericycle Inc", "headquarters": "Lake Forest, Illinois"}
+{"sector": "Health Care", "industry": "Health Care Equipment", "symbol": "SYK", "company": "Stryker Corp.", "headquarters": "Kalamazoo, Michigan"}
+{"sector": "Financials", "industry": "Regional Banks", "symbol": "STI", "company": "SunTrust Banks", "headquarters": "Atlanta, Georgia"}
+{"sector": "Information Technology", "industry": "Application Software", "symbol": "SYMC", "company": "Symantec Corp.", "headquarters": "Mountain View, California"}
+{"sector": "Financials", "industry": "Consumer Finance", "symbol": "SYF", "company": "Synchrony Financial", "headquarters": "Stamford, Connecticut"}
+{"sector": "Information Technology", "industry": "Application Software", "symbol": "SNPS", "company": "Synopsys Inc.", "headquarters": "Mountain View, California"}
+{"sector": "Consumer Staples", "industry": "Food Distributors", "symbol": "SYY", "company": "Sysco Corp.", "headquarters": "Houston, Texas"}
+{"sector": "Financials", "industry": "Asset Management & Custody Banks", "symbol": "TROW", "company": "T. Rowe Price Group", "headquarters": "Baltimore, Maryland"}
+{"sector": "Consumer Discretionary", "industry": "General Merchandise Stores", "symbol": "TGT", "company": "Target Corp.", "headquarters": "Minneapolis, Minnesota"}
+{"sector": "Information Technology", "industry": "Electronic Manufacturing Services", "symbol": "TEL", "company": "TE Connectivity Ltd.", "headquarters": "Schaffhausen, Switzerland"}
+{"sector": "Energy", "industry": "Oil & Gas Equipment & Services", "symbol": "FTI", "company": "TechnipFMC", "headquarters": "London, United Kingdom"}
+{"sector": "Information Technology", "industry": "Semiconductors", "symbol": "TXN", "company": "Texas Instruments", "headquarters": "Dallas, Texas"}
+{"sector": "Industrials", "industry": "Aerospace & Defense", "symbol": "TXT", "company": "Textron Inc.", "headquarters": "Providence, Rhode Island"}
+{"sector": "Health Care", "industry": "Health Care Equipment", "symbol": "TMO", "company": "Thermo Fisher Scientific", "headquarters": "Waltham, Massachusetts"}
+{"sector": "Consumer Discretionary", "industry": "Apparel, Accessories & Luxury Goods", "symbol": "TIF", "company": "Tiffany & Co.", "headquarters": "New York, New York"}
+{"sector": "Consumer Discretionary", "industry": "Cable & Satellite", "symbol": "TWX", "company": "Time Warner Inc.", "headquarters": "New York, New York"}
+{"sector": "Consumer Discretionary", "industry": "Apparel Retail", "symbol": "TJX", "company": "TJX Companies Inc.", "headquarters": "Framingham, Massachusetts"}
+{"sector": "Financials", "industry": "Life & Health Insurance", "symbol": "TMK", "company": "Torchmark Corp.", "headquarters": "McKinney, Texas"}
+{"sector": "Information Technology", "industry": "Internet Software & Services", "symbol": "TSS", "company": "Total System Services", "headquarters": "Columbus, Georgia"}
+{"sector": "Consumer Discretionary", "industry": "Specialty Stores", "symbol": "TSCO", "company": "Tractor Supply Company", "headquarters": "Brentwood, Tennessee"}
+{"sector": "Industrials", "industry": "Aerospace & Defense", "symbol": "TDG", "company": "TransDigm Group", "headquarters": "Cleveland, Ohio"}
+{"sector": "Financials", "industry": "Property & Casualty Insurance", "symbol": "TRV", "company": "The Travelers Companies Inc.", "headquarters": "New York, New York"}
+{"sector": "Consumer Discretionary", "industry": "Internet & Direct Marketing Retail", "symbol": "TRIP", "company": "TripAdvisor", "headquarters": "Newton, Massachusetts"}
+{"sector": "Consumer Discretionary", "industry": "Publishing", "symbol": "FOXA", "company": "Twenty-First Century Fox Class A", "headquarters": "New York, New York"}
+{"sector": "Consumer Discretionary", "industry": "Publishing", "symbol": "FOX", "company": "Twenty-First Century Fox Class B", "headquarters": "New York, New York"}
+{"sector": "Consumer Staples", "industry": "Packaged Foods & Meats", "symbol": "TSN", "company": "Tyson Foods", "headquarters": "Springdale, Arkansas"}
+{"sector": "Real Estate", "industry": "Residential REITs", "symbol": "UDR", "company": "UDR Inc", "headquarters": "Highlands Ranch, Colorado"}
+{"sector": "Consumer Discretionary", "industry": "Specialty Stores", "symbol": "ULTA", "company": "Ulta Salon Cosmetics & Fragrance Inc", "headquarters": "Bolingbrook, Illinois"}
+{"sector": "Financials", "industry": "Diversified Banks", "symbol": "USB", "company": "U.S. Bancorp", "headquarters": "Minneapolis, Minnesota"}
+{"sector": "Consumer Discretionary", "industry": "Apparel, Accessories & Luxury Goods", "symbol": "UA", "company": "Under Armour Class C", "headquarters": "Baltimore, Maryland"}
+{"sector": "Consumer Discretionary", "industry": "Apparel, Accessories & Luxury Goods", "symbol": "UAA", "company": "Under Armour Class A", "headquarters": "Baltimore, Maryland"}
+{"sector": "Industrials", "industry": "Railroads", "symbol": "UNP", "company": "Union Pacific", "headquarters": "Omaha, Nebraska"}
+{"sector": "Industrials", "industry": "Airlines", "symbol": "UAL", "company": "United Continental Holdings", "headquarters": "Chicago, Illinois"}
+{"sector": "Health Care", "industry": "Managed Health Care", "symbol": "UNH", "company": "United Health Group Inc.", "headquarters": "Minnetonka, Minnesota"}
+{"sector": "Industrials", "industry": "Air Freight & Logistics", "symbol": "UPS", "company": "United Parcel Service", "headquarters": "Atlanta, Georgia"}
+{"sector": "Industrials", "industry": "Trading Companies & Distributors", "symbol": "URI", "company": "United Rentals, Inc.", "headquarters": "Stamford, Connecticut"}
+{"sector": "Industrials", "industry": "Aerospace & Defense", "symbol": "UTX", "company": "United Technologies", "headquarters": "Hartford, Connecticut"}
+{"sector": "Health Care", "industry": "Health Care Facilities", "symbol": "UHS", "company": "Universal Health Services, Inc.", "headquarters": "King of Prussia, Pennsylvania"}
+{"sector": "Financials", "industry": "Life & Health Insurance", "symbol": "UNM", "company": "Unum Group", "headquarters": "Chattanooga, Tennessee"}
+{"sector": "Consumer Discretionary", "industry": "Apparel, Accessories & Luxury Goods", "symbol": "VFC", "company": "V.F. Corp.", "headquarters": "Greensboro, North Carolina"}
+{"sector": "Energy", "industry": "Oil & Gas Refining & Marketing", "symbol": "VLO", "company": "Valero Energy", "headquarters": "San Antonio, Texas"}
+{"sector": "Health Care", "industry": "Health Care Equipment", "symbol": "VAR", "company": "Varian Medical Systems", "headquarters": "Palo Alto, California"}
+{"sector": "Real Estate", "industry": "Health Care REITs", "symbol": "VTR", "company": "Ventas Inc", "headquarters": "Chicago, Illinois"}
+{"sector": "Information Technology", "industry": "Internet Software & Services", "symbol": "VRSN", "company": "Verisign Inc.", "headquarters": "Dulles, Virginia"}
+{"sector": "Industrials", "industry": "Research & Consulting Services", "symbol": "VRSK", "company": "Verisk Analytics", "headquarters": "Jersey City, New Jersey"}
+{"sector": "Telecommunication Services", "industry": "Integrated Telecommunication Services", "symbol": "VZ", "company": "Verizon Communications", "headquarters": "New York, New York"}
+{"sector": "Health Care", "industry": "Biotechnology", "symbol": "VRTX", "company": "Vertex Pharmaceuticals Inc", "headquarters": "Cambridge, Massachusetts"}
+{"sector": "Consumer Discretionary", "industry": "Cable & Satellite", "symbol": "VIAB", "company": "Viacom Inc.", "headquarters": "New York, New York"}
+{"sector": "Information Technology", "industry": "Internet Software & Services", "symbol": "V", "company": "Visa Inc.", "headquarters": "San Francisco, California"}
+{"sector": "Real Estate", "industry": "Office REITs", "symbol": "VNO", "company": "Vornado Realty Trust", "headquarters": "New York, New York"}
+{"sector": "Materials", "industry": "Construction Materials", "symbol": "VMC", "company": "Vulcan Materials", "headquarters": "Birmingham, Alabama"}
+{"sector": "Consumer Staples", "industry": "Hypermarkets & Super Centers", "symbol": "WMT", "company": "Wal-Mart Stores", "headquarters": "Bentonville, Arkansas"}
+{"sector": "Consumer Staples", "industry": "Drug Retail", "symbol": "WBA", "company": "Walgreens Boots Alliance", "headquarters": "Deerfield, Illinois"}
+{"sector": "Consumer Discretionary", "industry": "Cable & Satellite", "symbol": "DIS", "company": "The Walt Disney Company", "headquarters": "Burbank, California"}
+{"sector": "Industrials", "industry": "Environmental & Facilities Services", "symbol": "WM", "company": "Waste Management Inc.", "headquarters": "Houston, Texas"}
+{"sector": "Health Care", "industry": "Health Care Distributors", "symbol": "WAT", "company": "Waters Corporation", "headquarters": "Milford, Massachusetts"}
+{"sector": "Utilities", "industry": "Electric Utilities", "symbol": "WEC", "company": "Wec Energy Group Inc", "headquarters": "Milwaukee, Wisconsin"}
+{"sector": "Financials", "industry": "Diversified Banks", "symbol": "WFC", "company": "Wells Fargo", "headquarters": "San Francisco, California"}
+{"sector": "Real Estate", "industry": "Health Care REITs", "symbol": "HCN", "company": "Welltower Inc.", "headquarters": "Toledo, Ohio"}
+{"sector": "Information Technology", "industry": "Technology Hardware, Storage & Peripherals", "symbol": "WDC", "company": "Western Digital", "headquarters": "Irvine, California"}
+{"sector": "Information Technology", "industry": "Internet Software & Services", "symbol": "WU", "company": "Western Union Co", "headquarters": "Englewood, Colorado"}
+{"sector": "Materials", "industry": "Paper Packaging", "symbol": "WRK", "company": "WestRock Company", "headquarters": "Richmond, Virginia"}
+{"sector": "Real Estate", "industry": "Specialized REITs", "symbol": "WY", "company": "Weyerhaeuser Corp.", "headquarters": "Federal Way, Washington"}
+{"sector": "Consumer Discretionary", "industry": "Household Appliances", "symbol": "WHR", "company": "Whirlpool Corp.", "headquarters": "Benton Harbor, Michigan"}
+{"sector": "Energy", "industry": "Oil & Gas Storage & Transportation", "symbol": "WMB", "company": "Williams Cos.", "headquarters": "Tulsa, Oklahoma"}
+{"sector": "Financials", "industry": "Insurance Brokers", "symbol": "WLTW", "company": "Willis Towers Watson", "headquarters": "London, United Kingdom"}
+{"sector": "Consumer Discretionary", "industry": "Hotels, Resorts & Cruise Lines", "symbol": "WYN", "company": "Wyndham Worldwide", "headquarters": "Parsippany, New Jersey"}
+{"sector": "Consumer Discretionary", "industry": "Casinos & Gaming", "symbol": "WYNN", "company": "Wynn Resorts Ltd", "headquarters": "Paradise, Nevada"}
+{"sector": "Utilities", "industry": "Multi-Utilities", "symbol": "XEL", "company": "Xcel Energy Inc", "headquarters": "Minneapolis, Minnesota"}
+{"sector": "Information Technology", "industry": "Technology Hardware, Storage & Peripherals", "symbol": "XRX", "company": "Xerox Corp.", "headquarters": "Norwalk, Connecticut"}
+{"sector": "Information Technology", "industry": "Semiconductors", "symbol": "XLNX", "company": "Xilinx Inc", "headquarters": "San Jose, California"}
+{"sector": "Financials", "industry": "Property & Casualty Insurance", "symbol": "XL", "company": "XL Capital", "headquarters": "Hamilton, Bermuda"}
+{"sector": "Industrials", "industry": "Industrial Machinery", "symbol": "XYL", "company": "Xylem Inc.", "headquarters": "White Plains, New York"}
+{"sector": "Consumer Discretionary", "industry": "Restaurants", "symbol": "YUM", "company": "Yum! Brands Inc", "headquarters": "Louisville, Kentucky"}
+{"sector": "Health Care", "industry": "Health Care Equipment", "symbol": "ZBH", "company": "Zimmer Biomet Holdings", "headquarters": "Warsaw, Indiana"}
+{"sector": "Financials", "industry": "Regional Banks", "symbol": "ZION", "company": "Zions Bancorp", "headquarters": "Salt Lake City, Utah"}
+{"sector": "Health Care", "industry": "Pharmaceuticals", "symbol": "ZTS", "company": "Zoetis", "headquarters": "Florham Park, New Jersey"}
