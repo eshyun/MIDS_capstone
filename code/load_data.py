@@ -8,6 +8,8 @@ import matplotlib.pyplot as plt
 from matplotlib import style
 from bs4 import BeautifulSoup
 import requests
+from pandas_datareader import data
+
 
 '''
 function to get the stock symbols from S&P 500
