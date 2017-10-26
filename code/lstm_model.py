@@ -36,7 +36,7 @@ days_for_prediction = 30
 source_dir='../data/samples'
 models_dir = '../models/lstm/'
 supervised_data_dir = '../data/samples2'
-prediction_data_dir = '../data/prediction'
+prediction_data_dir = '../data/prediction/samples'
 rmse_csv = '../data/rsme_ltsm.csv'
 
 
@@ -261,7 +261,7 @@ def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv):
         rmse_list += [[ticker,rmse]]
         predicted_dfs[ticker] = pd.DataFrame({'predicted': predict_inversed.reshape(len(predict_inversed)), 
                                               'actual': actual_inversed.reshape(len(actual_inversed))})
-        predicted_file = os.path.join(models_dir, ticker + "_predicted.csv")
+        predicted_file = os.path.join(predicted_dir, ticker + "_predicted.csv")
         print("Writing to", predicted_file)
         predicted_dfs[ticker].to_csv(predicted_file)
 
