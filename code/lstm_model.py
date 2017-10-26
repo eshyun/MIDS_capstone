@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[ ]:
+# In[1]:
 
 #get_ipython().system(u'jupyter nbconvert --to script lstm_model.ipynb')
 import os
@@ -30,9 +30,19 @@ from keras.callbacks import EarlyStopping
 np.random.seed(7)
 
 
+# In[2]:
+
+days_for_prediction = 30
+source_dir='../data/samples'
+models_dir = '../models/lstm/'
+supervised_data_dir = '../data/samples2'
+prediction_data_dir = '../data/prediction'
+rmse_csv = '../data/rsme_ltsm.csv'
+
+
 # # Build train and test datasets
 
-# In[2]:
+# In[3]:
 
 # frame a sequence as a supervised learning problem
 def to_supervised(df, lag, org_col_name='Adj Close', new_col_name='Adj Close+'):
@@ -87,13 +97,12 @@ def create_supervised_data(source_dir, dest_dir, days_for_prediction=30, new_col
 
 # # Use LSTM model for each stock
 
-# In[3]:
-
-days_for_prediction = 30
-dfs = create_supervised_data(source_dir='../data/samples', dest_dir='../data/samples2', days_for_prediction=days_for_prediction)
-
-
 # In[4]:
+
+dfs = create_supervised_data(source_dir=source_dir, dest_dir=supervised_data_dir, days_for_prediction=days_for_prediction)
+
+
+# In[5]:
 
 def create_lstm_model(max_features, lstm_units):
     model = Sequential()
@@ -118,7 +127,7 @@ def create_lstm_model(max_features, lstm_units):
     return model
 
 
-# In[61]:
+# In[6]:
 
 '''
 def create_train_test(data):    
@@ -208,7 +217,7 @@ def build_models(models_dir, supervised_data_dir, lstm_units):
         model.save(model_fname)  
 
 
-# In[62]:
+# In[ ]:
 
 # inverse scaling for a forecasted value
 def invert_scale(scaler, X, value):
@@ -264,8 +273,6 @@ def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv):
 
 # In[ ]:
 
-models_dir = '../models/lstm/'
-supervised_data_dir = '../data/samples2'
 build_models(models_dir, supervised_data_dir, lstm_units=[40,10])
 
 
@@ -273,8 +280,8 @@ build_models(models_dir, supervised_data_dir, lstm_units=[40,10])
 
 predicted_dfs, rmse_df = predict_evaluate(models_dir, 
                                           supervised_data_dir, 
-                                          '../data/prediction', 
-                                          '../data/rsme_ltsm.csv')
+                                          prediction_data_dir, 
+                                          rmse_csv)
 
 
 # In[ ]:
@@ -283,13 +290,30 @@ rmse_df
 
 
 # In[ ]:
-'''
+
 # Plot stocks based on rmse order (best -> worst)
+#cnt = 0
+#for index, row in rmse_df.iterrows():
+#    key = row['Stock Model']
+#    predicted_dfs[key].plot(title=key + ': predicted vs actual')
+#    plt.show()
+
+
+# In[ ]:
+'''
+cnt = 1
 for index, row in rmse_df.iterrows():
     key = row['Stock Model']
-    predicted_dfs[key].plot(title=key + ': predicted vs actual')
-    plt.show()
+    if (cnt % 2 != 0):
+        fig, axes = plt.subplots(nrows=1, ncols=2)
+        ax=axes[0]
+    else:
+        ax=axes[1]
+    predicted_dfs[key].plot(title=key + ': price vs days', figsize=(15,4), ax=ax)
+    cnt += 1
+plt.show()
 '''
+
 
 # In[ ]:
 
