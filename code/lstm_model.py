@@ -263,11 +263,11 @@ def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv):
                                               'actual': actual_inversed.reshape(len(actual_inversed))})
         predicted_file = os.path.join(predicted_dir, ticker + "_predicted.csv")
         print("Writing to", predicted_file)
-        predicted_dfs[ticker].to_csv(predicted_file)
+        predicted_dfs[ticker].to_csv(predicted_file, index=False)
 
     rmse_df = pd.DataFrame(rmse_list, columns=['Stock Model', 'rsme'])
     rmse_df = rmse_df.sort_values(by='rsme')
-    rmse_df.to_csv(rsme_csv)
+    rmse_df.to_csv(rsme_csv, index=False)
     return predicted_dfs, rmse_df
 
 
