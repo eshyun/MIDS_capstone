@@ -38,7 +38,7 @@ def create_supervised_filename(directory, ticker):
     return os.path.join(directory, ticker + "_supervised.csv")
 
 
-def create_supervised_file(filename, dest_dir):
+def create_supervised_file(filename, dest_dir, days_for_prediction):
     arr = filename.split('/')
     ticker = arr[-1].split('.')[0]
     new_file = create_supervised_filename(dest_dir, ticker)
@@ -66,7 +66,6 @@ def create_supervised_data(source_dir, dest_dir, days_for_prediction=30, new_col
         #print('After\n', df.tail())
         dfs[ticker] = df
         print(ticker, filename, new_file)
-
     return dfs
 
 '''
