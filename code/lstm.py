@@ -37,6 +37,18 @@ create filename where supervised data will be stored
 def create_supervised_filename(directory, ticker):
     return os.path.join(directory, ticker + "_supervised.csv")
 
+
+def create_supervised_file(filename, dest_dir):
+    arr = filename.split('/')
+    ticker = arr[-1].split('.')[0]
+    new_file = create_supervised_filename(dest_dir, ticker)
+
+    df = pd.read_csv(filename, index_col='Date')
+    df = to_supervised(df, days_for_prediction, new_col_name=new_col_name)
+    df.to_csv(new_file)
+    return df
+    
+
 '''
 Create supervised data by using original data from source_dir with days_for_prediction to create new_col_name.
 The new data will be stored in dest_dir
@@ -48,21 +60,7 @@ def create_supervised_data(source_dir, dest_dir, days_for_prediction=30, new_col
     csv_files = glob.glob(csv_file_pattern)
     dfs = {}
     for filename in csv_files:
-        arr = filename.split('/')
-        ticker = arr[-1].split('.')[0]
-        new_file = create_supervised_filename(dest_dir, ticker)
-        #print(ticker, df.head())        
-        #  Date, Open, High , Low , Close, Adj Close, Volume
-        #df = pd.read_csv(filename, parse_dates=[0]) #index_col='Date')       
-        #  Open, High , Low , Close, Adj Close, Volume
-        df = pd.read_csv(filename, index_col='Date')
-        
-        #print('Before\n', df[30:40])
-        #print(df.shift(2)['Adj Close'].head())
-        
-        df = to_supervised(df, days_for_prediction, new_col_name=new_col_name)
-        df.to_csv(new_file)
-
+        df =  create_supervised_file(filename, dest_dir)
 
         #print('Adding new column...\n', df[['Adj Close', new_col_name]].head(days_for_prediction+1))
         #print('After\n', df.tail())
