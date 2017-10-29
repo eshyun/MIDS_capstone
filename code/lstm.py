@@ -60,7 +60,7 @@ def create_supervised_data(source_dir, dest_dir, days_for_prediction=30, new_col
     csv_files = glob.glob(csv_file_pattern)
     dfs = {}
     for filename in csv_files:
-        df =  create_supervised_file(filename, dest_dir, new_col_name)
+        df =  create_supervised_file(filename, dest_dir, days_for_prediction, new_col_name)
 
         #print('Adding new column...\n', df[['Adj Close', new_col_name]].head(days_for_prediction+1))
         #print('After\n', df.tail())
