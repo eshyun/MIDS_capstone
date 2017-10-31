@@ -44,6 +44,11 @@ def create_supervised_file(filename, dest_dir, days_for_prediction, new_col_name
     new_file = create_supervised_filename(dest_dir, ticker)
 
     df = pd.read_csv(filename, index_col='Date')
+    # Drop these cols
+    dropped_cols = ['Open', 'High', 'Low', 'Close']
+    for col in dropped_cols:
+        df = df.drop(col, axis=1)
+
     df = to_supervised(df, days_for_prediction, new_col_name=new_col_name)
     df.to_csv(new_file)
     return df
@@ -60,12 +65,12 @@ def create_supervised_data(source_dir, dest_dir, days_for_prediction=30, new_col
     csv_files = glob.glob(csv_file_pattern)
     dfs = {}
     for filename in csv_files:
-        df =  create_supervised_file(filename, dest_dir, days_for_prediction, new_col_name)
-
+        df = create_supervised_file(filename, dest_dir, days_for_prediction, new_col_name)
+        arr = filename.split('/')
+        ticker = arr[-1].split('.')[0]
         #print('Adding new column...\n', df[['Adj Close', new_col_name]].head(days_for_prediction+1))
         #print('After\n', df.tail())
         dfs[ticker] = df
-        print(ticker, filename, new_file)
     return dfs
 
 '''
@@ -100,7 +105,7 @@ def create_lstm_model(max_features, lstm_units):
 def create_train_test2(data):    
     #X,y = data[:,0:-1], data[:, -1]     
     # Transform scale
-    scaler = MinMaxScaler(feature_range=(-1, 1))
+    scaler = MinMaxScaler(feature_range=(0, 1))
     scaled_data = scaler.fit_transform(data)
     # Now split 80/20 for train and test data
     #train_count = int(.8*len(data))
@@ -133,6 +138,7 @@ def build_models(models_dir, supervised_data_dir, lstm_units):
     csv_file_pattern = os.path.join(supervised_data_dir, "*.csv")
     csv_files = glob.glob(csv_file_pattern)
     dfs = {}
+    histories = {}
     print_first_model=True
     for filename in csv_files:
         data = pd.read_csv(filename, index_col='Date')
@@ -162,15 +168,15 @@ def build_models(models_dir, supervised_data_dir, lstm_units):
         print('Training...')
         #model.fit(x1, y1, batch_size=50, epochs=20, verbose=1, validation_split=0.2, callbacks=[early_stopping])
         # Note: Early stopping seems to give worse prediction?!! We want overfitting here?
-        model.fit(x1, y1, batch_size=5, epochs=20, verbose=1, validation_data=(x2, y2)) #, callbacks=[early_stopping])
-
+        history = model.fit(x1, y1, batch_size=5, epochs=20, verbose=1, validation_data=(x2, y2)) #, callbacks=[early_stopping])
+        histories[ticker] = history
         model_fname = os.path.join(models_dir, ticker + ".h5")
 
         print('Saving model to', model_fname)
         model.save(model_fname)  
-        
-        
-        
+         
+    return histories
+
 '''
 inverse scaling for a forecasted value
 '''
