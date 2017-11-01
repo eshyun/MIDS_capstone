@@ -113,11 +113,11 @@ def create_train_test2(data):
     # last test_days is for test; the rest is for train
     test_days = 90
     train_count = len(data) - test_days
-    
+    test_orig = data[train_count:]
     train, test = scaled_data[:train_count], scaled_data[train_count:]
     X_train, y_train = train[:,0:-1], train[:, -1]   
     X_test, y_test = test[:,0:-1], test[:, -1]
-    return scaler, X_train, y_train, X_test, y_test
+    return test_orig, scaler, X_train, y_train, X_test, y_test
 
 '''
 Each stock will have its own model and will be stored in models_dir.
@@ -148,7 +148,7 @@ def build_models(models_dir, supervised_data_dir, lstm_units):
         print('Processing', ticker)
         max_features = len(data.columns) -1
         #y_scaler, X_train, y_train, X_test, y_test = create_train_test(data.values)
-        scaler, X_train, y_train, X_test, y_test = create_train_test2(data.values)
+        test_orig, scaler, X_train, y_train, X_test, y_test = create_train_test2(data.values)
 
         model = create_lstm_model(max_features, lstm_units)
         #plot_model(model, to_file=ticker + '.png', show_shapes=True, show_layer_names=True)
@@ -174,7 +174,7 @@ def build_models(models_dir, supervised_data_dir, lstm_units):
 
         print('Saving model to', model_fname)
         model.save(model_fname)  
-         
+        
     return histories
 
 '''
@@ -192,7 +192,7 @@ def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv):
     model_file_pattern = os.path.join(models_dir, "*.h5")
     model_files = glob.glob(model_file_pattern)
     predicted_dfs = {}
-    rmse_list = list()
+    summary_list = list()
     print(model_file_pattern)
     
     for model_file in model_files:
@@ -204,7 +204,7 @@ def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv):
         '''
         supervised_filename = create_supervised_filename(supervised_data_dir, ticker)
         data = pd.read_csv(supervised_filename, index_col='Date')
-        scaler, X_train, y_train, X_test, y_test = create_train_test2(data.values)
+        test_orig, scaler, X_train, y_train, X_test, y_test = create_train_test2(data.values)
 
         # Test data
         x2 = np.reshape(X_test, (X_test.shape[0], 1, X_test.shape[1]))
@@ -218,14 +218,24 @@ def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv):
 
         rmse = sqrt(mean_squared_error(actual_inversed, predict_inversed))
         print('Test RMSE: %.3f' % rmse)
-        rmse_list += [[ticker,rmse]]
+        '''
+        Warning: I am assuming 1st column 'Adj Close' from *supervised.csv file
+        Calculate gains for 30-day prediction
+        '''       
+        print('test_orig[0][0], predict_inversed[0], actual_inversed[0]' , 
+               test_orig[0][0], predict_inversed[0], predict_inversed[0])
+        predict_gain = (predict_inversed[0] - test_orig[0][0]) / test_orig[0][0]
+        actual_gain = (actual_inversed[0] - test_orig[0][0]) / test_orig[0][0]
+
+        summary_list += [[ticker,rmse,predict_gain,actual_gain]]
         predicted_dfs[ticker] = pd.DataFrame({'predicted': predict_inversed.reshape(len(predict_inversed)), 
                                               'actual': actual_inversed.reshape(len(actual_inversed))})
         predicted_file = os.path.join(predicted_dir, ticker + "_predicted.csv")
         print("Writing to", predicted_file)
         predicted_dfs[ticker].to_csv(predicted_file, index=False)
 
-    rmse_df = pd.DataFrame(rmse_list, columns=['Stock Model', 'rsme'])
-    rmse_df = rmse_df.sort_values(by='rsme')
-    rmse_df.to_csv(rsme_csv, index=False)
-    return predicted_dfs, rmse_df
+    summary_df = pd.DataFrame(summary_list, columns=['Stock Model', 'rsme', 
+                                                  'Predicted gain', 'Actual gain'])
+    summary_df = summary_df.sort_values(by='Predicted gain', ascending=False)
+    summary_df.to_csv(rsme_csv, index=False)
+    return predicted_dfs, summary_df
