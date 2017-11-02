@@ -15,7 +15,25 @@ from keras.layers import Dense, Dropout
 from keras.layers import LSTM
 from keras.callbacks import EarlyStopping
 import numpy as np
+import ConfigParser
 
+def read_config(config_filename):
+    config = ConfigParser.RawConfigParser()
+    config.read(config_filename)
+    #print(config.sections())
+
+    source_dir = config.get('MODELS', 'stock_data_dir')
+    models_dir = config.get('MODELS', 'models_dir') 
+    supervised_data_dir = config.get('MODELS', 'supervised_data_dir') 
+    prediction_data_dir = config.get('MODELS', 'prediction_data_dir')
+    rmse_csv = config.get('MODELS', 'rmse_csv')
+    n_lags = int(config.get('MODELS', 'n_lags'))
+    n_forecast = int(config.get('MODELS', 'n_forecast'))
+    n_test = int(config.get('MODELS', 'n_test'))
+
+    print(source_dir, models_dir,  supervised_data_dir, prediction_data_dir, rmse_csv)
+    print('n_lags, n_forecast, n_test', n_lags, n_forecast, n_test)
+    return source_dir, models_dir,  supervised_data_dir, prediction_data_dir, rmse_csv,n_lags, n_forecast, n_test
  
 # convert series to supervised learning
 def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
@@ -53,7 +71,8 @@ def set_up_data(source_dir, dest_dir, n_lags, n_forecast):
     csv_file_pattern = os.path.join(source_dir, "*.csv")
     csv_files = glob.glob(csv_file_pattern)
     datasets = {}
-    for filename in csv_files:
+    n_features = 0
+    for filename in sorted(csv_files):
         '''
         df = create_supervised_file(filename, dest_dir, days_for_prediction, new_col_name)
         arr = filename.split('/')
@@ -200,7 +219,7 @@ def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv,
     summary_list = list()
     print(model_file_pattern)
     
-    for model_file in model_files:
+    for model_file in sorted(model_files):
         print('loading', model_file)
         arr = model_file.split('/')
         ticker = arr[-1].split('.')[0]
