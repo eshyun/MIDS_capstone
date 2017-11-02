@@ -210,6 +210,52 @@ def invert_scale(scaler, X, y, result_shape):
     inverted = scaler.inverse_transform(new_row)
     return inverted[:, -1]
 
+def get_predict_actual_stats(actual, predicted, current):
+    rmse = sqrt(mean_squared_error(actual, predicted))
+
+    predict_gain = (predicted[0] - current[0]) / current[0]
+    actual_gain = (actual[0] - current[0]) / current[0]
+        
+    X_avg = current.mean()
+    pred_avg = predicted.mean()
+    y_avg = actual.mean()
+    #print('X_avg, pred_avg, y_avg', X_avg, pred_avg, y_avg)
+    avg_predict_gain = (pred_avg - X_avg) / X_avg
+    avg_actual_gain = (y_avg - X_avg) / X_avg 
+    return rmse, predict_gain, actual_gain, avg_predict_gain, avg_actual_gain
+
+# After prediction files are generated, use them to build the dataframes
+def read_prediction_files(prediction_data_dir):
+    pred_files = glob.glob(os.path.join(prediction_data_dir, "*.csv"))
+    summary_list = list()
+    predicted_dfs = {}
+
+    for csv in sorted(pred_files):
+        df = read_csv(csv)
+        arr = csv.split('/')
+        ticker = arr[-1].split('.')[0].split('_')[0]
+        #print('Processing', csv, ticker)
+        '''
+        Warning: assumine the columns are in this order
+        '''
+        values = df.values
+        actual = values[:,0]
+        #print(values)
+        #print(actual)
+        predicted = values[:,1]
+        current = values[:,2]
+        
+        rmse, predict_gain, actual_gain, avg_predict_gain, avg_actual_gain = get_predict_actual_stats(actual, predicted, current)
+
+        summary_list += [[ticker,rmse,predict_gain,actual_gain, avg_predict_gain, avg_actual_gain]]
+        predicted_dfs[ticker] = df
+        
+    summary_df = DataFrame(summary_list, columns=['Stock Model', 'rsme', 
+                                                  'Day 0 predicted gain', 'Day 0 actual gain',
+                                                  'Avg predicted gain', 'Avg actual gain'
+                                                 ])
+    summary_df = summary_df.sort_values(by='Day 0 predicted gain', ascending=False)
+    return predicted_dfs, summary_df
 
 def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv, 
                      n_test, n_lags, n_features, n_forecast):
@@ -238,21 +284,30 @@ def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv,
         X_test2 = X_test.reshape((X_test.shape[0], n_lags*n_features))
         predict_inversed = invert_scale(scaler, X_test2, predicted, test_orig.shape)
         actual_inversed = invert_scale(scaler, X_test2, y_test, test_orig.shape)
+        # assuming last-featured column is 'Adj Close'
+        current_price = test_orig[:,(n_lags*n_features)-1]
+
+
         #print(predict_inversed[:10])
         #print(actual_inversed[:10])
-
-        rmse = sqrt(mean_squared_error(actual_inversed, predict_inversed))
+        #rmse = sqrt(mean_squared_error(actual_inversed, predict_inversed))
+        rmse, predict_gain, actual_gain, avg_predict_gain, avg_actual_gain = get_predict_actual_stats(
+                                    actual_inversed,
+                                    predict_inversed,
+                                    current_price)
         print('Test RMSE: %.3f' % rmse)
+        
+        
         '''
-        Warning: I am assuming last-featured column 'Adj Close' from *supervised.csv file
+        Warning: I am assuming last-featured column is 'Adj Close' from *supervised.csv file
         Calculate gains for 30-day prediction
+        '''
         '''
         current_day_price = test_orig[0][(n_lags*n_features)-1]
         print('day 0, 30-day prediction, 30-day actual' , 
                current_day_price, predict_inversed[0], actual_inversed[0])
         predict_gain = (predict_inversed[0] - current_day_price) / current_day_price
         actual_gain = (actual_inversed[0] - current_day_price) / current_day_price
-
         current_price = test_orig[:,(n_lags*n_features)-1]
         X_avg = current_price.mean()
         pred_avg = predict_inversed.mean()
@@ -260,7 +315,7 @@ def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv,
         #print('X_avg, pred_avg, y_avg', X_avg, pred_avg, y_avg)
         avg_predict_gain = (pred_avg - X_avg) / X_avg
         avg_actual_gain = (y_avg - X_avg) / X_avg
-
+        '''
         summary_list += [[ticker,rmse,predict_gain,actual_gain, avg_predict_gain, avg_actual_gain]]
         predicted_dfs[ticker] = DataFrame({'current price': current_price,
             str(n_forecast) + '-day prediction': predict_inversed.reshape(len(predict_inversed)), 
