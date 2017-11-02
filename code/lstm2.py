@@ -169,8 +169,7 @@ def build_models(supervised_data_dir, models_dir, n_test, n_lags, n_features):
         history = model.fit(train_X, train_y, epochs=30, batch_size=5, 
                             validation_data=(test_X, test_y), 
                             verbose=1,
-                            callbacks=[early_stopping])
-        
+                            callbacks=[early_stopping])       
         histories[ticker] = history
         model_fname = os.path.join(models_dir, ticker + ".h5")
 
@@ -193,7 +192,8 @@ def invert_scale(scaler, X, y, result_shape):
     return inverted[:, -1]
 
 
-def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv, n_test, n_lags, n_features):
+def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv, 
+                     n_test, n_lags, n_features, n_forecast):
     model_file_pattern = os.path.join(models_dir, "*.h5")
     model_files = glob.glob(model_file_pattern)
     predicted_dfs = {}
@@ -219,27 +219,41 @@ def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv, n
         X_test2 = X_test.reshape((X_test.shape[0], n_lags*n_features))
         predict_inversed = invert_scale(scaler, X_test2, predicted, test_orig.shape)
         actual_inversed = invert_scale(scaler, X_test2, y_test, test_orig.shape)
+        #print(predict_inversed[:10])
+        #print(actual_inversed[:10])
 
         rmse = sqrt(mean_squared_error(actual_inversed, predict_inversed))
         print('Test RMSE: %.3f' % rmse)
         '''
-        Warning: I am assuming 2nd column 'Adj Close' from *supervised.csv file
+        Warning: I am assuming last-featured column 'Adj Close' from *supervised.csv file
         Calculate gains for 30-day prediction
-        '''       
-        #print('test_orig[0][1], predict_inversed[0], actual_inversed[0]' , 
-        #       test_orig[0][1], predict_inversed[0], predict_inversed[0])
-        predict_gain = (predict_inversed[0] - test_orig[0][1]) / test_orig[0][1]
-        actual_gain = (actual_inversed[0] - test_orig[0][1]) / test_orig[0][1]
+        '''
+        current_day_price = test_orig[0][(n_lags*n_features)-1]
+        print('day 0, 30-day prediction, 30-day actual' , 
+               current_day_price, predict_inversed[0], actual_inversed[0])
+        predict_gain = (predict_inversed[0] - current_day_price) / current_day_price
+        actual_gain = (actual_inversed[0] - current_day_price) / current_day_price
 
-        summary_list += [[ticker,rmse,predict_gain,actual_gain]]
-        predicted_dfs[ticker] = DataFrame({'predicted': predict_inversed.reshape(len(predict_inversed)), 
-                                           'actual': actual_inversed.reshape(len(actual_inversed))})
+        current_price = test_orig[:,(n_lags*n_features)-1]
+        X_avg = current_price.mean()
+        pred_avg = predict_inversed.mean()
+        y_avg = actual_inversed.mean()
+        #print('X_avg, pred_avg, y_avg', X_avg, pred_avg, y_avg)
+        avg_predict_gain = (pred_avg - X_avg) / X_avg
+        avg_actual_gain = (y_avg - X_avg) / X_avg
+
+        summary_list += [[ticker,rmse,predict_gain,actual_gain, avg_predict_gain, avg_actual_gain]]
+        predicted_dfs[ticker] = DataFrame({'current price': current_price,
+            str(n_forecast) + '-day prediction': predict_inversed.reshape(len(predict_inversed)), 
+            str(n_forecast) + '-day actual': actual_inversed.reshape(len(actual_inversed))})
         predicted_file = os.path.join(predicted_dir, ticker + "_predicted.csv")
         print("Writing to", predicted_file)
         predicted_dfs[ticker].to_csv(predicted_file, index=False)
 
     summary_df = DataFrame(summary_list, columns=['Stock Model', 'rsme', 
-                                                  'Predicted gain', 'Actual gain'])
-    summary_df = summary_df.sort_values(by='Predicted gain', ascending=False)
+                                                  'Day 0 predicted gain', 'Day 0 actual gain',
+                                                  'Avg predicted gain', 'Avg actual gain'
+                                                 ])
+    summary_df = summary_df.sort_values(by='Day 0 predicted gain', ascending=False)
     summary_df.to_csv(rsme_csv, index=False)
     return predicted_dfs, summary_df
