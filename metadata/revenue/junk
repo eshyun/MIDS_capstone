@@ -1,0 +1,260 @@
+Shortest path in undirected_toy.txt
+undirected_toy_new.txt
+FILES ARE
+undirected_toy_new.txt
+NEW_undirected_toy_new.txt
+Initializing
+('4', [{u'3': 1, u'2': 1, u'5': 1}, 10000000, [], u'U'])
+TYPE
+<type 'list'>
+('5', [{u'1': 1, u'2': 1, u'4': 1}, 10000000, [], u'U'])
+TYPE
+<type 'list'>
+('1', [{u'2': 1, u'5': 1}, 0, [u'1'], u'Q'])
+TYPE
+<type 'list'>
+Initializing
+('2', [{u'1': 1, u'3': 1, u'5': 1, u'4': 1}, 10000000, [], u'U'])
+TYPE
+<type 'list'>
+('3', [{u'2': 1, u'4': 1}, 10000000, [], u'U'])
+TYPE
+<type 'list'>
+Initializing
+VISITED
+(u'1', {u'2': 1, u'5': 1}, 0, [u'1'], u'V')
+FRONTIER
+(u'2', {}, 9223372036854775807, [u'1', u'2'], u'Q')
+UNVISITED
+(u'2', {u'1': 1, u'3': 1, u'5': 1, u'4': 1}, 0, [u'1', u'2'], u'Q')
+UNVISITED
+(u'3', {u'2': 1, u'4': 1}, 9223372036854775807, [], u'U')
+Initializing
+UNVISITED
+(u'4', {u'3': 1, u'2': 1, u'5': 1}, 9223372036854775807, [], u'U')
+FRONTIER
+(u'5', {}, 9223372036854775807, [u'1', u'5'], u'Q')
+UNVISITED
+(u'5', {u'1': 1, u'2': 1, u'4': 1}, 0, [u'1', u'5'], u'Q')
+Initializing
+('4', [{u'3': 1, u'2': 1, u'5': 1}, 10000000, [], u'U'])
+TYPE
+<type 'list'>
+('5', [{u'1': 1, u'2': 1, u'4': 1}, 0, [u'1', u'5'], u'Q'])
+TYPE
+<type 'list'>
+('1', [{u'2': 1, u'5': 1}, 0, [u'1'], u'V'])
+TYPE
+<type 'list'>
+Initializing
+('2', [{u'1': 1, u'3': 1, u'5': 1, u'4': 1}, 0, [u'1', u'2'], u'Q'])
+TYPE
+<type 'list'>
+('3', [{u'2': 1, u'4': 1}, 10000000, [], u'U'])
+TYPE
+<type 'list'>
+Initializing
+FRONTIER
+(u'1', {}, 9223372036854775807, [u'1', u'2', u'1'], u'Q')
+FRONTIER
+(u'1', {}, 0, [u'1', u'5', u'1'], u'Q')
+FRONTIER
+(u'2', {}, 9223372036854775807, [u'1', u'5', u'2'], u'Q')
+VISITED
+(u'2', {u'1': 1, u'3': 1, u'5': 1, u'4': 1}, 0, [u'1', u'2'], u'V')
+FRONTIER
+(u'3', {}, 9223372036854775807, [u'1', u'2', u'3'], u'Q')
+UNVISITED
+(u'3', {u'2': 1, u'4': 1}, 0, [u'1', u'2', u'3'], u'Q')
+Initializing
+FRONTIER
+(u'4', {}, 9223372036854775807, [u'1', u'2', u'4'], u'Q')
+FRONTIER
+(u'4', {}, 0, [u'1', u'5', u'4'], u'Q')
+UNVISITED
+(u'4', {u'3': 1, u'2': 1, u'5': 1}, 0, [u'1', u'5', u'4'], u'Q')
+FRONTIER
+(u'5', {}, 9223372036854775807, [u'1', u'2', u'5'], u'Q')
+VISITED
+(u'5', {u'1': 1, u'2': 1, u'4': 1}, 0, [u'1', u'5'], u'V')
+Initializing
+('4', [{u'3': 1, u'2': 1, u'5': 1}, 0, [u'1', u'5', u'4'], u'Q'])
+TYPE
+<type 'list'>
+('5', [{u'1': 1, u'2': 1, u'4': 1}, 0, [u'1', u'5'], u'V'])
+TYPE
+<type 'list'>
+('1', [{}, 0, [u'1', u'5', u'1'], u'Q'])
+TYPE
+<type 'list'>
+Initializing
+('2', [{u'1': 1, u'3': 1, u'5': 1, u'4': 1}, 0, [u'1', u'2'], u'V'])
+TYPE
+<type 'list'>
+('3', [{u'2': 1, u'4': 1}, 0, [u'1', u'2', u'3'], u'Q'])
+TYPE
+<type 'list'>
+Initializing
+VISITED
+(u'1', {}, 0, [u'1', u'5', u'1'], u'V')
+FRONTIER
+(u'2', {}, 9223372036854775807, [u'1', u'2', u'3', u'2'], u'Q')
+FRONTIER
+(u'2', {}, 0, [u'1', u'5', u'4', u'2'], u'Q')
+FRONTIER
+(u'3', {}, 9223372036854775807, [u'1', u'5', u'4', u'3'], u'Q')
+VISITED
+(u'3', {u'2': 1, u'4': 1}, 0, [u'1', u'2', u'3'], u'V')
+Initializing
+FRONTIER
+(u'4', {}, 9223372036854775807, [u'1', u'2', u'3', u'4'], u'Q')
+VISITED
+(u'4', {u'3': 1, u'2': 1, u'5': 1}, 0, [u'1', u'5', u'4'], u'V')
+FRONTIER
+(u'5', {}, 9223372036854775807, [u'1', u'5', u'4', u'5'], u'Q')
+[u'1', u'5', u'4']
+
+Shortest path in directed_toy.txt
+directed_toy_new.txt
+FILES ARE
+directed_toy_new.txt
+NEW_directed_toy_new.txt
+Initializing
+('4', [{u'2': 1, u'5': 1}, 10000000, [], u'U'])
+TYPE
+<type 'list'>
+('5', [{u'1': 1, u'2': 1, u'4': 1}, 10000000, [], u'U'])
+TYPE
+<type 'list'>
+('1', [{u'2': 1, u'6': 1}, 0, [u'1'], u'Q'])
+TYPE
+<type 'list'>
+Initializing
+('2', [{u'1': 1, u'3': 1, u'4': 1}, 10000000, [], u'U'])
+TYPE
+<type 'list'>
+('3', [{u'2': 1, u'4': 1}, 10000000, [], u'U'])
+TYPE
+<type 'list'>
+Initializing
+VISITED
+(u'1', {u'2': 1, u'6': 1}, 0, [u'1'], u'V')
+FRONTIER
+(u'2', {}, 9223372036854775807, [u'1', u'2'], u'Q')
+UNVISITED
+(u'2', {u'1': 1, u'3': 1, u'4': 1}, 0, [u'1', u'2'], u'Q')
+UNVISITED
+(u'3', {u'2': 1, u'4': 1}, 9223372036854775807, [], u'U')
+Initializing
+UNVISITED
+(u'4', {u'2': 1, u'5': 1}, 9223372036854775807, [], u'U')
+UNVISITED
+(u'5', {u'1': 1, u'2': 1, u'4': 1}, 9223372036854775807, [], u'U')
+FRONTIER
+(u'6', {}, 9223372036854775807, [u'1', u'6'], u'Q')
+Initializing
+('4', [{u'2': 1, u'5': 1}, 10000000, [], u'U'])
+TYPE
+<type 'list'>
+('5', [{u'1': 1, u'2': 1, u'4': 1}, 10000000, [], u'U'])
+TYPE
+<type 'list'>
+('6', [{}, 0, [u'1', u'6'], u'Q'])
+TYPE
+<type 'list'>
+('1', [{u'2': 1, u'6': 1}, 0, [u'1'], u'V'])
+TYPE
+<type 'list'>
+Initializing
+('2', [{u'1': 1, u'3': 1, u'4': 1}, 0, [u'1', u'2'], u'Q'])
+TYPE
+<type 'list'>
+('3', [{u'2': 1, u'4': 1}, 10000000, [], u'U'])
+TYPE
+<type 'list'>
+Initializing
+FRONTIER
+(u'1', {}, 9223372036854775807, [u'1', u'2', u'1'], u'Q')
+VISITED
+(u'2', {u'1': 1, u'3': 1, u'4': 1}, 0, [u'1', u'2'], u'V')
+FRONTIER
+(u'3', {}, 9223372036854775807, [u'1', u'2', u'3'], u'Q')
+UNVISITED
+(u'3', {u'2': 1, u'4': 1}, 0, [u'1', u'2', u'3'], u'Q')
+Initializing
+FRONTIER
+(u'4', {}, 9223372036854775807, [u'1', u'2', u'4'], u'Q')
+UNVISITED
+(u'4', {u'2': 1, u'5': 1}, 0, [u'1', u'2', u'4'], u'Q')
+UNVISITED
+(u'5', {u'1': 1, u'2': 1, u'4': 1}, 9223372036854775807, [], u'U')
+VISITED
+(u'6', {}, 0, [u'1', u'6'], u'V')
+Initializing
+('4', [{u'2': 1, u'5': 1}, 0, [u'1', u'2', u'4'], u'Q'])
+TYPE
+<type 'list'>
+('5', [{u'1': 1, u'2': 1, u'4': 1}, 10000000, [], u'U'])
+TYPE
+<type 'list'>
+('6', [{}, 0, [u'1', u'6'], u'V'])
+TYPE
+<type 'list'>
+('1', [{}, 0, [u'1', u'2', u'1'], u'Q'])
+TYPE
+<type 'list'>
+Initializing
+('2', [{u'1': 1, u'3': 1, u'4': 1}, 0, [u'1', u'2'], u'V'])
+TYPE
+<type 'list'>
+('3', [{u'2': 1, u'4': 1}, 0, [u'1', u'2', u'3'], u'Q'])
+TYPE
+<type 'list'>
+Initializing
+VISITED
+(u'1', {}, 0, [u'1', u'2', u'1'], u'V')
+FRONTIER
+(u'2', {}, 9223372036854775807, [u'1', u'2', u'3', u'2'], u'Q')
+FRONTIER
+(u'2', {}, 0, [u'1', u'2', u'4', u'2'], u'Q')
+VISITED
+(u'3', {u'2': 1, u'4': 1}, 0, [u'1', u'2', u'3'], u'V')
+FRONTIER
+(u'4', {}, 9223372036854775807, [u'1', u'2', u'3', u'4'], u'Q')
+VISITED
+(u'4', {u'2': 1, u'5': 1}, 0, [u'1', u'2', u'4'], u'V')
+Initializing
+FRONTIER
+(u'5', {}, 9223372036854775807, [u'1', u'2', u'4', u'5'], u'Q')
+UNVISITED
+(u'5', {u'1': 1, u'2': 1, u'4': 1}, 0, [u'1', u'2', u'4', u'5'], u'Q')
+Initializing
+('5', [{u'1': 1, u'2': 1, u'4': 1}, 0, [u'1', u'2', u'4', u'5'], u'Q'])
+TYPE
+<type 'list'>
+('1', [{}, 0, [u'1', u'2', u'1'], u'V'])
+TYPE
+<type 'list'>
+('2', [{}, 0, [u'1', u'2', u'4', u'2'], u'Q'])
+TYPE
+<type 'list'>
+Initializing
+('3', [{u'2': 1, u'4': 1}, 0, [u'1', u'2', u'3'], u'V'])
+TYPE
+<type 'list'>
+('4', [{u'2': 1, u'5': 1}, 0, [u'1', u'2', u'4'], u'V'])
+TYPE
+<type 'list'>
+Initializing
+FRONTIER
+(u'1', {}, 9223372036854775807, [u'1', u'2', u'4', u'5', u'1'], u'Q')
+FRONTIER
+(u'2', {}, 9223372036854775807, [u'1', u'2', u'4', u'5', u'2'], u'Q')
+VISITED
+(u'2', {}, 0, [u'1', u'2', u'4', u'2'], u'V')
+Initializing
+FRONTIER
+(u'4', {}, 9223372036854775807, [u'1', u'2', u'4', u'5', u'4'], u'Q')
+VISITED
+(u'5', {u'1': 1, u'2': 1, u'4': 1}, 0, [u'1', u'2', u'4', u'5'], u'V')
+[u'1', u'2', u'4', u'5']
