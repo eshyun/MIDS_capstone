@@ -1,9 +1,10 @@
 from math import sqrt
-import os
+import os, sys
 import glob
 
 from numpy import concatenate
 from matplotlib import pyplot
+import pandas as pd
 from pandas import read_csv
 from pandas import DataFrame
 from pandas import concat
@@ -23,6 +24,9 @@ def read_config(config_filename):
     #print(config.sections())
 
     source_dir = config.get('MODELS', 'stock_data_dir')
+    nlp_dir = config.get('MODELS', 'nlp_dir')
+    revenue_dir = config.get('MODELS', 'revenue_dir')
+
     models_dir = config.get('MODELS', 'models_dir') 
     supervised_data_dir = config.get('MODELS', 'supervised_data_dir') 
     prediction_data_dir = config.get('MODELS', 'prediction_data_dir')
@@ -31,9 +35,9 @@ def read_config(config_filename):
     n_forecast = int(config.get('MODELS', 'n_forecast'))
     n_test = int(config.get('MODELS', 'n_test'))
 
-    print(source_dir, models_dir,  supervised_data_dir, prediction_data_dir, rmse_csv)
+    print(source_dir, nlp_dir, revenue_dir, models_dir,  supervised_data_dir, prediction_data_dir, rmse_csv)
     print('n_lags, n_forecast, n_test', n_lags, n_forecast, n_test)
-    return source_dir, models_dir,  supervised_data_dir, prediction_data_dir, rmse_csv,n_lags, n_forecast, n_test
+    return source_dir, nlp_dir, revenue_dir, models_dir, supervised_data_dir, prediction_data_dir, rmse_csv,n_lags, n_forecast, n_test
  
 # convert series to supervised learning
 def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
@@ -65,12 +69,35 @@ def create_supervised_filename(directory, ticker):
     return os.path.join(directory, '{}_supervised.csv'.format(ticker))
 
 
-def set_up_data(source_dir, dest_dir, n_lags, n_forecast):
+def quarters_to_date(year, quarter):
+    #print(year, quarter)
+    day = None
+    if (quarter == 'Q1'):
+        day = '-05-01'
+    elif (quarter == 'Q2'):
+        day = '-08-01'
+    elif (quarter == 'Q3'):
+        day = '-11-01'
+    elif (quarter == 'Q4'):
+        day = '-02-01'
+        year += 1
+    elif (quarter == 'FY'):
+        day = '-06-01'
+        year += 1
+
+    return str(year) + day
+        
+    
+'''
+nlp_dir: If nlp_dir == None, don't use nlp data
+'''
+def set_up_data(source_dir, nlp_dir, revenue_dir, dest_dir, n_lags, n_forecast):
     #assert (days_for_prediction >= 30), "days_for_prediction must be >= 30"
 
     csv_file_pattern = os.path.join(source_dir, "*.csv")
     csv_files = glob.glob(csv_file_pattern)
     datasets = {}
+    orig_dfs = {}
     n_features = 0
     for filename in sorted(csv_files):
         '''
@@ -85,6 +112,7 @@ def set_up_data(source_dir, dest_dir, n_lags, n_forecast):
         ticker = arr[-1].split('.')[0]
         
         df = read_csv(filename, header=0, parse_dates=[0], index_col=0, squeeze=True) #, date_parser=parser)
+        
         print(ticker)
         cols = list(df)
         # Move 'Adj Close' (predicted column) to last column
@@ -94,8 +122,73 @@ def set_up_data(source_dir, dest_dir, n_lags, n_forecast):
         dropped_cols = ['Open', 'High', 'Low', 'Close']
         for col in dropped_cols:
             dataset = dataset.drop(col, axis=1)
-        #print(dataset.head())
+        print('%s has %s rows' % (filename, len(dataset)))
+        print(dataset.head())
+
+        # Process revenue data
+        if (revenue_dir != None):
+            revenue_csv = revenue_dir + '/' + ticker + "_Financials_by_Quarter.csv"
+            print('Reading', revenue_csv)
+            rev_df = read_csv(revenue_csv, header=0, parse_dates=[0], index_col=0, squeeze=True)
+            '''
+            Warning: We are guessing the dates for the reports
+            '''
+            rev_df['Date'] = rev_df.apply(lambda row: quarters_to_date(row.year, row.quarter), axis=1).astype('datetime64[ns]')
+            rev_df.index = rev_df['Date']
+
+            # Shankar choice: basiceps, netincome, totalreveue
+            # operatingrevenue, totalgrossprofit: 0s so we decided not to use them
+            rev_df = rev_df[['basiceps', 'netincome', 'totalrevenue']]
+            #print(rev_df.head())
+            result = pd.merge(rev_df, dataset, left_index=True, right_index=True, how='right')
+            result.fillna(0.0, inplace=True)
+            #print(result.head())
+
+            print('Process revenue data', len(result), len(dataset))
+            dataset = result
+
+        # Process news data
+        if (nlp_dir != None):
+            # Now read corresponding NLP file
+            nlp_filename = nlp_dir + '/' + ticker + '.csv'
+            print('Reading', nlp_filename)
+            nlp_df = read_csv(nlp_filename, header=0, parse_dates=[0], index_col=0, squeeze=True)
+            
+            # scandal, decline are 0s so we don't use them?
+            nlp_df = nlp_df.drop('scandal', axis=1)
+            nlp_df = nlp_df.drop('decline', axis=1)
+
+            # Convert boolean columns to int
+            nlp_df = nlp_df.applymap(lambda x: 1 if x else 0)
+            #print(dataset.head())
+            #print(nlp_df.head())
+            result = pd.merge(nlp_df, dataset, left_index=True, right_index=True, how='right')
+            result.fillna(0.0, inplace=True)
+
+            print(result.head())
+            print(len(result), len(dataset))
+            dataset = result
         
+        '''
+        # Find out why len(result) != len(dataset)
+        df1 = result[['Volume', 'Adj Close']]
+        print('df1', df1.head())
+        df = pd.concat([df1, dataset])
+        df_gpby = df.groupby(list(df.columns))
+        idx = [x[0] for x in df_gpby.groups.values() if len(x) == 1]
+        print(df.reindex(idx))
+        '''
+        
+        #assert(len(result) == len(dataset))
+        
+        '''
+        print('Count =', len(result))
+        print("result[result['positivity'] > 0].head()")
+        print(result[result['positivity'] > 0].head())
+        print("result[result['buy'] == True].head()")
+        print(result[result['buy'] == True].head())
+        '''
+            
         n_features = len(dataset.columns)
 
         #print(dataset.values.shape)
@@ -110,9 +203,9 @@ def set_up_data(source_dir, dest_dir, n_lags, n_forecast):
         print("Generating", new_file)
         reframed.to_csv(new_file, index=False)
 
-        datasets[ticker] = scaler.fit_transform(reframed.values)
-     
-    return n_features, datasets
+        datasets[ticker] = scaler.fit_transform(reframed.values) 
+        orig_dfs[ticker] = dataset
+    return n_features, orig_dfs, datasets
 
 
 
@@ -254,7 +347,7 @@ def read_prediction_files(prediction_data_dir):
                                                   'Day 0 predicted gain', 'Day 0 actual gain',
                                                   'Avg predicted gain', 'Avg actual gain'
                                                  ])
-    summary_df = summary_df.sort_values(by='Day 0 predicted gain', ascending=False)
+    summary_df = summary_df.sort_values(by='Avg predicted gain', ascending=False)
     return predicted_dfs, summary_df
 
 def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv, 
@@ -328,6 +421,6 @@ def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv,
                                                   'Day 0 predicted gain', 'Day 0 actual gain',
                                                   'Avg predicted gain', 'Avg actual gain'
                                                  ])
-    summary_df = summary_df.sort_values(by='Day 0 predicted gain', ascending=False)
+    summary_df = summary_df.sort_values(by='Avg predicted gain', ascending=False)
     summary_df.to_csv(rsme_csv, index=False)
     return predicted_dfs, summary_df
