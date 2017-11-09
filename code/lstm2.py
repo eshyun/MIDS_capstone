@@ -145,6 +145,8 @@ def set_up_data(source_dir, nlp_dir, revenue_dir, dest_dir, n_lags, n_forecast):
             #print(result.head())
 
             print('Process revenue data', len(result), len(dataset))
+            assert(len(result) == len(dataset))
+
             dataset = result
 
         # Process news data
@@ -166,7 +168,9 @@ def set_up_data(source_dir, nlp_dir, revenue_dir, dest_dir, n_lags, n_forecast):
             result.fillna(0.0, inplace=True)
 
             print(result.head())
-            print(len(result), len(dataset))
+            print('Process news data', len(result), len(dataset))
+            assert(len(result) == len(dataset))
+
             dataset = result
         
         '''
@@ -179,8 +183,7 @@ def set_up_data(source_dir, nlp_dir, revenue_dir, dest_dir, n_lags, n_forecast):
         print(df.reindex(idx))
         '''
         
-        #assert(len(result) == len(dataset))
-        
+
         '''
         print('Count =', len(result))
         print("result[result['positivity'] > 0].head()")
