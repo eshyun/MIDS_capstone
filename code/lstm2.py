@@ -130,6 +130,8 @@ def set_up_data(source_dir, nlp_dir, revenue_dir, dest_dir, n_lags, n_forecast):
             revenue_csv = revenue_dir + '/' + ticker + "_Financials_by_Quarter.csv"
             print('Reading', revenue_csv)
             rev_df = read_csv(revenue_csv, header=0, parse_dates=[0], index_col=0, squeeze=True)
+            print(rev_df[['year','quarter','basiceps', 'netincome', 'totalrevenue']].tail())
+
             '''
             Warning: We are guessing the dates for the reports
             '''
@@ -138,9 +140,18 @@ def set_up_data(source_dir, nlp_dir, revenue_dir, dest_dir, n_lags, n_forecast):
 
             # Shankar choice: basiceps, netincome, totalreveue
             # operatingrevenue, totalgrossprofit: 0s so we decided not to use them
-            rev_df = rev_df[['basiceps', 'netincome', 'totalrevenue']]
+            revenue_cols = ['basiceps', 'netincome', 'totalrevenue', 'totalgrossprofit']
+            rev_df = rev_df[revenue_cols]
+            
+            # fill forward values
+
+
             #print(rev_df.head())
             result = pd.merge(rev_df, dataset, left_index=True, right_index=True, how='right')
+            #print(rev_df.tail())
+            #print('Before fill fwd\n',result.tail(10))
+            result[revenue_cols] = result[revenue_cols].fillna(method='ffill')
+            #print('After fill fwd\n',result.tail(10))
             result.fillna(0.0, inplace=True)
             #print(result.head())
 
@@ -155,15 +166,15 @@ def set_up_data(source_dir, nlp_dir, revenue_dir, dest_dir, n_lags, n_forecast):
             nlp_filename = nlp_dir + '/' + ticker + '.csv'
             print('Reading', nlp_filename)
             nlp_df = read_csv(nlp_filename, header=0, parse_dates=[0], index_col=0, squeeze=True)
-            
+            #print(nlp_df.head())
             # scandal, decline are 0s so we don't use them?
             nlp_df = nlp_df.drop('scandal', axis=1)
             nlp_df = nlp_df.drop('decline', axis=1)
 
             # Convert boolean columns to int
-            nlp_df = nlp_df.applymap(lambda x: 1 if x else 0)
+            #nlp_df = nlp_df.applymap(lambda x: 1 if x else 0)
             #print(dataset.head())
-            #print(nlp_df.head())
+            print(nlp_df.head())
             result = pd.merge(nlp_df, dataset, left_index=True, right_index=True, how='right')
             result.fillna(0.0, inplace=True)
 
@@ -241,7 +252,12 @@ def create_train_test(values, n_test, n_lags, n_features):
 
 
 # n_test = last 90 days of the data
-def build_models(supervised_data_dir, models_dir, n_test, n_lags, n_features):
+def build_models(supervised_data_dir,
+                 models_dir,
+                 n_test,
+                 n_lags,
+                 n_features,
+                 n_neurons):
     # Define early stopping
     early_stopping = EarlyStopping(monitor='val_loss', patience=3) #value=0.00001
 
@@ -274,17 +290,23 @@ def build_models(supervised_data_dir, models_dir, n_test, n_lags, n_features):
         # design network
         model = Sequential()
         #model.add(LSTM(50, input_shape=(train_X.shape[1], train_X.shape[2])))
-        model.add(LSTM(100, input_shape=(train_X.shape[1], train_X.shape[2])))
+        model.add(LSTM(n_neurons, input_shape=(train_X.shape[1], train_X.shape[2])))
         #model.add(Dropout(0.2)) # This cause higher RMSE
         model.add(Dense(1)) 
         #model.add(Dense(1, activation='tanh'))
-        model.compile(loss='mae', optimizer='adam')
+        model.compile(loss='mae', optimizer='adam') #, metrics=['accuracy'])
         # fit network
         early_stopping = EarlyStopping(monitor='val_loss', patience=2) #value=0.00001
-        history = model.fit(train_X, train_y, epochs=30, batch_size=5, 
-                            validation_data=(test_X, test_y), 
+        history = model.fit(train_X, train_y, epochs=30, batch_size=2,
+                            validation_data=(test_X, test_y),
                             verbose=1,
-                            callbacks=[early_stopping])       
+                            callbacks=[early_stopping])
+        # Evaluate performance
+        print("Evaluating test data...")
+        loss_and_metrics = model.evaluate(test_X, test_y)
+        print(model.metrics_names)
+        print(loss_and_metrics)
+
         histories[ticker] = history
         model_fname = os.path.join(models_dir, ticker + ".h5")
 
