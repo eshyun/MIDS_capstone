@@ -1,4 +1,14 @@
-ticker,year,quarter,basicdilutedeps,basiceps,cashdividendspershare,dilutedeps,incometaxexpense,netincome,netincomecontinuing,netincomediscontinued,netincometocommon,netincometononcontrollinginterest,totalcostofrevenue,operatingcostofrevenue,operatingrevenue,othercostofrevenue,otherincome,preferreddividends,sgaexpense,totalgrossprofit,totalinterestexpense,totaloperatingexpenses,totaloperatingincome,totalotherincome,totalpretaxincome,totalrevenue,weightedavebasicdilutedsharesos,weightedavebasicsharesos,weightedavedilutedsharesos
+ticker,year,quarter,basicdilutedeps,basiceps,cashdividendspershare,dilutedeps,incometaxexpense,netincome,netincomecontinuing,netincomediscontinued,netincometocommon,netincometononcontrollinginterest,operatingcostofrevenue,operatingrevenue,othercostofrevenue,otherincome,preferreddividends,sgaexpense,totalcostofrevenue,totalgrossprofit,totalinterestexpense,totaloperatingexpenses,totaloperatingincome,totalotherincome,totalpretaxincome,totalrevenue,weightedavebasicdilutedsharesos,weightedavebasicsharesos,weightedavedilutedsharesos
+RJF,2008,Q1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+RJF,2008,Q2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+RJF,2008,Q3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+RJF,2008,Q4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+RJF,2008,FY,1.95,1.95,0.0,1.93,151776000.0,230772000.0,230772000.0,0.0,235078000.0,-4306000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,392229000.0,0.0,0.0,0.0,382548000.0,2812703000.0,120600000.0,116110000.0,117140000.0
+RJF,2009,Q1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+RJF,2009,Q2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+RJF,2009,Q3,0.35,0.35,0.0,0.35,29714000.0,46976000.0,46976000.0,0.0,42595000.0,4381000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7453000.0,0.0,0.0,0.0,76690000.0,629470000.0,121700000.0,117930000.0,117951000.0
+RJF,2009,Q4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+RJF,2009,FY,1.25,1.25,0.44,1.25,96024000.0,140377000.0,140377000.0,0.0,152750000.0,-12373000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,56953000.0,0.0,0.0,0.0,236401000.0,2545566000.0,122200000.0,117188000.0,117288000.0
 RJF,2010,Q1,0.35,0.35,0.0,0.35,26485000.0,40628000.0,40628000.0,0.0,42903000.0,-2275000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,15702000.0,0.0,0.0,0.0,67113000.0,686967000.0,122600000.0,118763000.0,118983000.0
 RJF,2010,Q2,0.45,0.45,0.0,0.45,34028000.0,60180000.0,60180000.0,0.0,55628000.0,4552000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,15548000.0,0.0,0.0,0.0,94208000.0,734439000.0,123600000.0,119288000.0,119580000.0
 RJF,2010,Q3,0.49,0.49,0.11,0.48,36824000.0,58523000.0,58523000.0,0.0,60687000.0,-2164000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,16239000.0,0.0,0.0,0.0,95347000.0,747373000.0,123900000.0,119622000.0,120019000.0

@@ -1,4 +1,14 @@
-ticker,year,quarter,basicdilutedeps,basiceps,cashdividendspershare,dilutedeps,incometaxexpense,netincome,netincomecontinuing,netincomediscontinued,netincometocommon,netincometononcontrollinginterest,totalcostofrevenue,operatingcostofrevenue,operatingrevenue,othercostofrevenue,otherincome,preferreddividends,sgaexpense,totalgrossprofit,totalinterestexpense,totaloperatingexpenses,totaloperatingincome,totalotherincome,totalpretaxincome,totalrevenue,weightedavebasicdilutedsharesos,weightedavebasicsharesos,weightedavedilutedsharesos
+ticker,year,quarter,basicdilutedeps,basiceps,cashdividendspershare,dilutedeps,incometaxexpense,netincome,netincomecontinuing,netincomediscontinued,netincometocommon,netincometononcontrollinginterest,operatingcostofrevenue,operatingrevenue,othercostofrevenue,otherincome,preferreddividends,sgaexpense,totalcostofrevenue,totalgrossprofit,totalinterestexpense,totaloperatingexpenses,totaloperatingincome,totalotherincome,totalpretaxincome,totalrevenue,weightedavebasicdilutedsharesos,weightedavebasicsharesos,weightedavedilutedsharesos
+O,2008,Q1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+O,2008,Q2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+O,2008,Q3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+O,2008,Q4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+O,2008,FY,0.0,1.06,0.0,1.06,1230000.0,131841000.0,110301000.0,21540000.0,107588000.0,0.0,0.0,0.0,0.0,0.0,24253000.0,0.0,0.0,0.0,93956000.0,0.0,0.0,0.0,111531000.0,231085000.0,0.0,101178191.0,101209883.0
+O,2009,Q1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+O,2009,Q2,0.0,0.26,0.0,0.26,308000.0,32560000.0,30052000.0,2508000.0,26497000.0,0.0,0.0,0.0,0.0,0.0,6063000.0,0.0,0.0,0.0,21367000.0,0.0,0.0,0.0,30360000.0,59934000.0,0.0,103446949.0,103450457.0
+O,2009,Q3,0.0,0.26,0.0,0.26,74000.0,33152000.0,30957000.0,2195000.0,27089000.0,0.0,0.0,0.0,0.0,0.0,6063000.0,0.0,0.0,0.0,21374000.0,0.0,0.0,0.0,31031000.0,60089000.0,0.0,103470512.0,103481892.0
+O,2009,Q4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+O,2009,FY,0.0,1.03,1.706625,1.03,677000.0,131127000.0,118855000.0,12272000.0,106874000.0,0.0,0.0,0.0,0.0,0.0,24253000.0,0.0,0.0,0.0,85528000.0,0.0,0.0,0.0,119532000.0,237022000.0,0.0,103577507.0,103581053.0
 O,2010,Q1,0.0,0.23,0.0,0.23,277000.0,30205000.0,29223000.0,982000.0,24142000.0,0.0,0.0,0.0,0.0,0.0,6063000.0,0.0,0.0,0.0,21395000.0,0.0,0.0,0.0,29500000.0,61223000.0,0.0,103606241.0,103686440.0
 O,2010,Q2,0.0,0.24,0.0,0.24,0.0,31048000.0,28961000.0,2087000.0,24985000.0,0.0,0.0,0.0,0.0,0.0,6063000.0,0.0,0.0,0.0,21576000.0,0.0,0.0,0.0,28961000.0,60821000.0,0.0,103612454.0,103765828.0
 O,2010,Q3,0.0,0.25,0.0,0.25,335000.0,31654000.0,29515000.0,2139000.0,25591000.0,0.0,0.0,0.0,0.0,0.0,6063000.0,0.0,0.0,0.0,25135000.0,0.0,0.0,0.0,29850000.0,61698000.0,0.0,103830029.0,103977023.0
