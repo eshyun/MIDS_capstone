@@ -1,4 +1,14 @@
-ticker,year,quarter,basicdilutedeps,basiceps,cashdividendspershare,dilutedeps,incometaxexpense,netincome,netincomecontinuing,netincomediscontinued,netincometocommon,netincometononcontrollinginterest,totalcostofrevenue,operatingcostofrevenue,operatingrevenue,othercostofrevenue,otherincome,preferreddividends,sgaexpense,totalgrossprofit,totalinterestexpense,totaloperatingexpenses,totaloperatingincome,totalotherincome,totalpretaxincome,totalrevenue,weightedavebasicdilutedsharesos,weightedavebasicsharesos,weightedavedilutedsharesos
+ticker,year,quarter,basicdilutedeps,basiceps,cashdividendspershare,dilutedeps,incometaxexpense,netincome,netincomecontinuing,netincomediscontinued,netincometocommon,netincometononcontrollinginterest,operatingcostofrevenue,operatingrevenue,othercostofrevenue,otherincome,preferreddividends,sgaexpense,totalcostofrevenue,totalgrossprofit,totalinterestexpense,totaloperatingexpenses,totaloperatingincome,totalotherincome,totalpretaxincome,totalrevenue,weightedavebasicdilutedsharesos,weightedavebasicsharesos,weightedavedilutedsharesos
+MPC,2008,Q1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+MPC,2008,Q2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+MPC,2008,Q3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+MPC,2008,Q4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+MPC,2008,FY,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+MPC,2009,Q1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+MPC,2009,Q2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+MPC,2009,Q3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+MPC,2009,Q4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+MPC,2009,FY,1.26,1.26,0.0,1.25,236000000.0,449000000.0,449000000.0,0.0,449000000.0,0.0,43244000000.0,45530000000.0,0.0,0.0,0.0,842000000.0,43244000000.0,2361000000.0,0.0,1737000000.0,624000000.0,61000000.0,685000000.0,45605000000.0,356300000.0,356000000.0,358000000.0
 MPC,2010,Q1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 MPC,2010,Q2,1.14,1.14,0.0,1.13,235000000.0,405000000.0,405000000.0,0.0,405000000.0,0.0,14629000000.0,15795000000.0,0.0,0.0,0.0,228000000.0,14629000000.0,1176000000.0,0.0,558000000.0,618000000.0,22000000.0,640000000.0,15805000000.0,356000000.0,356000000.0,356000000.0
 MPC,2010,Q3,0.78,0.78,0.0,0.77,162000000.0,277000000.0,277000000.0,0.0,277000000.0,0.0,14966000000.0,15897000000.0,0.0,0.0,0.0,226000000.0,14966000000.0,939000000.0,0.0,514000000.0,425000000.0,14000000.0,439000000.0,15905000000.0,356000000.0,356000000.0,356000000.0

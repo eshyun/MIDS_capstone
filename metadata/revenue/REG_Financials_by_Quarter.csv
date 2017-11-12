@@ -1,4 +1,14 @@
-ticker,year,quarter,basicdilutedeps,basiceps,cashdividendspershare,dilutedeps,incometaxexpense,netincome,netincomecontinuing,netincomediscontinued,netincometocommon,netincometononcontrollinginterest,totalcostofrevenue,operatingcostofrevenue,operatingrevenue,othercostofrevenue,otherincome,preferreddividends,sgaexpense,totalgrossprofit,totalinterestexpense,totaloperatingexpenses,totaloperatingincome,totalotherincome,totalpretaxincome,totalrevenue,weightedavebasicdilutedsharesos,weightedavebasicsharesos,weightedavedilutedsharesos
+ticker,year,quarter,basicdilutedeps,basiceps,cashdividendspershare,dilutedeps,incometaxexpense,netincome,netincomecontinuing,netincomediscontinued,netincometocommon,netincometononcontrollinginterest,operatingcostofrevenue,operatingrevenue,othercostofrevenue,otherincome,preferreddividends,sgaexpense,totalcostofrevenue,totalgrossprofit,totalinterestexpense,totaloperatingexpenses,totaloperatingincome,totalotherincome,totalpretaxincome,totalrevenue,weightedavebasicdilutedsharesos,weightedavebasicsharesos,weightedavedilutedsharesos
+REG,2008,Q1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+REG,2008,Q2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+REG,2008,Q3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+REG,2008,Q4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+REG,2008,FY,1.66,1.66,2.9,1.66,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+REG,2009,Q1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+REG,2009,Q2,-0.23,-0.23,0.0,-0.23,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+REG,2009,Q3,-1.05,-1.05,0.0,-1.05,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+REG,2009,Q4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+REG,2009,FY,-0.7,-0.7,2.11,-0.7,0.0,-130273000.0,-130273000.0,0.0,-130273000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-103900000.0,0.0,186100000.0,186100000.0,186100000.0
 REG,2010,Q1,0.14,0.14,0.0,0.14,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 REG,2010,Q2,0.08,0.08,0.0,0.08,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 REG,2010,Q3,0.1,0.1,0.0,0.09,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,81167000.0,81167000.0,81167000.0

@@ -1,4 +1,14 @@
-ticker,year,quarter,basicdilutedeps,basiceps,cashdividendspershare,dilutedeps,incometaxexpense,netincome,netincomecontinuing,netincomediscontinued,netincometocommon,netincometononcontrollinginterest,totalcostofrevenue,operatingcostofrevenue,operatingrevenue,othercostofrevenue,otherincome,preferreddividends,sgaexpense,totalgrossprofit,totalinterestexpense,totaloperatingexpenses,totaloperatingincome,totalotherincome,totalpretaxincome,totalrevenue,weightedavebasicdilutedsharesos,weightedavebasicsharesos,weightedavedilutedsharesos
+ticker,year,quarter,basicdilutedeps,basiceps,cashdividendspershare,dilutedeps,incometaxexpense,netincome,netincomecontinuing,netincomediscontinued,netincometocommon,netincometononcontrollinginterest,operatingcostofrevenue,operatingrevenue,othercostofrevenue,otherincome,preferreddividends,sgaexpense,totalcostofrevenue,totalgrossprofit,totalinterestexpense,totaloperatingexpenses,totaloperatingincome,totalotherincome,totalpretaxincome,totalrevenue,weightedavebasicdilutedsharesos,weightedavebasicsharesos,weightedavedilutedsharesos
+PLD,2008,Q1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+PLD,2008,Q2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+PLD,2008,Q3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+PLD,2008,Q4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+PLD,2008,FY,-0.68,-0.68,0.0,-0.68,0.0,-6750000.0,-17919000.0,11169000.0,-66451000.0,42560000.0,0.0,0.0,0.0,0.0,15806000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-17919000.0,677659000.0,97700000.0,97403659.0,97403659.0
+PLD,2009,Q1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+PLD,2009,Q2,0.12,0.12,0.0,0.12,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,145318364.0,145318364.0,145318364.0
+PLD,2009,Q3,0.43,0.43,0.0,0.43,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,145332050.0,145332050.0,145332050.0
+PLD,2009,Q4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+PLD,2009,FY,-0.01,-0.01,1.57,-0.01,5975000.0,23929000.0,-355089000.0,379018000.0,-2650000.0,1156000.0,0.0,0.0,0.0,0.0,25423000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-349114000.0,1027171000.0,265000000.0,179966000.0,179966000.0
 PLD,2010,Q1,-0.03,-0.03,0.0,-0.03,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,148666418.0,148666418.0,148666418.0
 PLD,2010,Q2,-0.11,-0.11,0.34,-0.11,-40249000.0,-16590000.0,-37691000.0,21101000.0,-23150000.0,191000.0,0.0,0.0,0.0,0.0,6369000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-77940000.0,219146000.0,210500000.0,212840000.0,212840000.0
 PLD,2010,Q3,-0.07,-0.07,0.34,-0.07,7455000.0,-8493000.0,-35076000.0,26583000.0,-15052000.0,190000.0,0.0,0.0,0.0,0.0,6369000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-27621000.0,228614000.0,215000000.0,212945000.0,212945000.0
