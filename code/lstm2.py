@@ -227,6 +227,9 @@ def set_up_data(source_dir, nlp_dir, revenue_dir, dest_dir, n_lags, n_forecast):
 def create_train_test(values, n_test, n_lags, n_features):
     scaler = MinMaxScaler(feature_range=(0, 1))
     scaled_values = scaler.fit_transform(values)
+
+    # n_test = last 20% of dataset
+    #n_test = int(0.2 * len(values))
     n_train = len(values) - n_test
     train = scaled_values[:n_train, :]
     test = scaled_values[n_train:, :]
