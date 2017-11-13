@@ -71,18 +71,14 @@ def create_supervised_filename(directory, ticker):
 
 def quarters_to_date(year, quarter):
     #print(year, quarter)
-    day = None
-    if (quarter == 'Q1'):
-        day = '-05-01'
-    elif (quarter == 'Q2'):
-        day = '-08-01'
-    elif (quarter == 'Q3'):
-        day = '-11-01'
-    elif (quarter == 'Q4'):
-        day = '-02-01'
-        year += 1
-    elif (quarter == 'FY'):
-        day = '-06-01'
+    q2d = {'Q1': '-05-01',
+           'Q2': '-08-01',
+           'Q3': '-11-01',
+           'Q4': '-02-01',
+           'FY': '-06-01',
+           }
+    day = q2d[quarter]
+    if (quarter in ('Q4', 'FY')):
         year += 1
 
     return str(year) + day
@@ -279,7 +275,7 @@ def build_models(supervised_data_dir,
     dfs = {}
     histories = {}
     print_first_model=True
-    for filename in csv_files:
+    for filename in sorted(csv_files):
         data = read_csv(filename)
         #print(data.head())
         arr = filename.split('/')
