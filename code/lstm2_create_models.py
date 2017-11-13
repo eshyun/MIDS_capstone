@@ -24,4 +24,4 @@ n_features, orig_dfs, datasets = lstm2.set_up_data(source_dir, nlp_dir, revenue_
 '''
 Train models
 '''
-histories = lstm2.build_models(supervised_data_dir, models_dir, n_test, n_lags, n_features)
+histories = lstm2.build_models(supervised_data_dir, models_dir, n_test, n_lags, n_features,100)

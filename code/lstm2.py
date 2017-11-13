@@ -170,15 +170,18 @@ def set_up_data(source_dir, nlp_dir, revenue_dir, dest_dir, n_lags, n_forecast):
             # scandal, decline are 0s so we don't use them?
             nlp_df = nlp_df.drop('scandal', axis=1)
             nlp_df = nlp_df.drop('decline', axis=1)
+            print(nlp_df.financial_report_quarter.unique())
+            print(nlp_df.loc[nlp_df['financial_report_quarter'] > 0])
+            nlp_df = nlp_df.drop('financial_report_quarter', axis=1)
 
             # Convert boolean columns to int
             #nlp_df = nlp_df.applymap(lambda x: 1 if x else 0)
             #print(dataset.head())
-            print(nlp_df.head())
+            #print(nlp_df.head())
             result = pd.merge(nlp_df, dataset, left_index=True, right_index=True, how='right')
             result.fillna(0.0, inplace=True)
 
-            print(result.head())
+            #print(result.head())
             print('Process news data', len(result), len(dataset))
             assert(len(result) == len(dataset))
 
