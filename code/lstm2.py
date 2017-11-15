@@ -126,13 +126,13 @@ def set_up_data(source_dir, nlp_dir, revenue_dir, dest_dir, n_lags, n_forecast):
             revenue_csv = revenue_dir + '/' + ticker + "_Financials_by_Quarter.csv"
             print('Reading', revenue_csv)
             rev_df = read_csv(revenue_csv, header=0, parse_dates=[0], index_col=0, squeeze=True)
-            print(rev_df[['year','quarter','basiceps', 'netincome', 'totalrevenue']].tail())
 
             '''
             Warning: We are guessing the dates for the reports
             '''
             rev_df['Date'] = rev_df.apply(lambda row: quarters_to_date(row.year, row.quarter), axis=1).astype('datetime64[ns]')
             rev_df.index = rev_df['Date']
+            print(rev_df[['year','quarter','basiceps', 'netincome', 'totalrevenue']].tail())
 
             # Shankar choice: basiceps, netincome, totalreveue
             # operatingrevenue, totalgrossprofit: 0s so we decided not to use them
@@ -261,7 +261,7 @@ def build_models(supervised_data_dir,
                  n_features,
                  n_neurons):
     # Define early stopping
-    early_stopping = EarlyStopping(monitor='val_loss', patience=3) #value=0.00001
+    early_stopping = EarlyStopping(monitor='val_loss', patience=3) #
 
     rmse_list = list()
     models = {}
@@ -304,10 +304,10 @@ def build_models(supervised_data_dir,
                             verbose=1,
                             callbacks=[early_stopping])
         # Evaluate performance
-        print("Evaluating test data...")
-        loss_and_metrics = model.evaluate(test_X, test_y)
-        print(model.metrics_names)
-        print(loss_and_metrics)
+        #print("Evaluating test data...")
+        #loss_and_metrics = model.evaluate(test_X, test_y)
+        #print(model.metrics_names)
+        #print(loss_and_metrics)
 
         histories[ticker] = history
         model_fname = os.path.join(models_dir, ticker + ".h5")
