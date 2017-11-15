@@ -58,6 +58,49 @@ print((tickerchunks[3]))
 
 # In[6]:
 
+fy_url1 = "http://financials.morningstar.com/ajax/ReportProcess4CSV.html?t="
+fy_url2= "&reportType=is&period=12&dataType=A&order=asc&columnYear=5&number=3"
+months =["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+
+
+# In[27]:
+
+import re
+import urllib
+import time
+def get_fiscal_year_end():
+    loopCount = 0
+    with open("fy.csv", "w") as fw:
+        for company in companyList:
+            print("working on {}".format(company))
+            fy_url = fy_url1+company+fy_url2
+            f = urllib.urlopen(fy_url)
+            time.sleep(1)
+            myfile = f.read()
+            for line in myfile:
+                month = re.search("Fiscal year ends in (.*)", myfile)
+                month = str(month.groups()).split(".")[0]
+                month = re.sub(r"^\W+", "", month)
+                month = month.lower()
+            print("writing")
+            fw.write("{},FY,{}\n".format(company, month))
+            fw.write("{},Q1,{}\n".format(company, months[months.index(month) - 9]))
+            fw.write("{},Q2,{}\n".format(company, months[months.index(month) - 6]))
+            fw.write("{},Q3,{}\n".format(company, months[months.index(month) - 3]))
+            fw.write("{},Q4,{}\n".format(company, month))
+            loopCount += 1
+
+            if loopCount > 529:
+                return
+
+
+# In[28]:
+
+get_fiscal_year_end()
+
+
+# In[29]:
+
 def new_intrinio_get_company_financials(symbol, year, quarter):
         # Get the latest FY Income Statement for "symbol"
         # 'type': 'FY'
@@ -96,7 +139,7 @@ def new_intrinio_get_company_financials(symbol, year, quarter):
         return(datalist)
 
 
-# In[7]:
+# In[30]:
 
 def updated_cleanupdata(cleanedupdata):
     newData = {}
@@ -145,7 +188,7 @@ def updated_cleanupdata(cleanedupdata):
     return newData
 
 
-# In[8]:
+# In[31]:
 
 attributes = ["ticker", "year", "quarter", "basicdilutedeps", "basiceps",
               'cashdividendspershare', 'dilutedeps', 'incometaxexpense', 'netincome', 'netincomecontinuing',
@@ -161,7 +204,7 @@ xx = ",".join(attributes)
 print(xx)
 
 
-# In[9]:
+# In[32]:
 
 def updated_intrinio_get_company_financials(symbol, year, quarter):
         # Get the latest FY Income Statement for "symbol"
@@ -206,7 +249,7 @@ def updated_intrinio_get_company_financials(symbol, year, quarter):
 data = updated_intrinio_get_company_financials('GE', '2008', 'Q1')
 
 
-# In[10]:
+# In[33]:
 
 get_ipython().system('pwd')
 get_ipython().magic('cd ../data/nlp_by_company')
@@ -222,7 +265,7 @@ print(yy)
 get_ipython().magic('cd ../../metadata')
 
 
-# In[11]:
+# In[34]:
 
 company = ['COL', 'CRM', 'DGX', 'FOX', 'FOXA', 'FTI', 'JWN', 'KORS', 'LUV', 'M', 'MA', 'MAA', 
                'MAC', 'MAR', 'MAS', 'MAT', 'MCD', 'MCHP', 'MCK', 'MCO', 'MDLZ', 'MDT', 'MET', 'MGM', 
@@ -242,7 +285,7 @@ company = ['COL', 'CRM', 'DGX', 'FOX', 'FOXA', 'FTI', 'JWN', 'KORS', 'LUV', 'M',
 print(len(company))
 
 
-# In[21]:
+# In[35]:
 
 def generate_financial_data():
     SandP500 = {}
@@ -287,15 +330,16 @@ def generate_financial_data():
               'totalpretaxincome', 'totalrevenue', 'weightedavebasicdilutedsharesos', 'weightedavebasicsharesos', 'weightedavedilutedsharesos'
                  ]
     
-
+    #specific_company = ['TXN', 'TXT', 'UDR', 'ULTA', 'USB']
     print(len(attributes))
 
     xx = ",".join(attributes) + "\n"
 
     # tickerchunks[1], tickerchunks[2], tickerchunks[3] and tickerchunks[5] are done
-    # Re-doing 0 block
+    # Re-doing 0 block, 3 is complete, redo 2 today
     loopIndex = 0
-    for company in tickerchunks[0]:
+    for company in tickerchunks[2]:
+    #for company in specific_company:
     #for company in nlp_companies:
         #with open("../data/nlp_by_company/revenue/"+company+"_Financials_by_Quarter.csv", 'w') as fw:
         with open("./revenue/"+company+"_Financials_by_Quarter.csv", 'w') as fw:
@@ -330,12 +374,12 @@ def generate_financial_data():
             #return
 
 
-# In[22]:
+# In[36]:
 
 get_ipython().system('pwd')
 
 
-# In[23]:
+# In[ ]:
 
 generate_financial_data()
 
