@@ -44,16 +44,16 @@ source_dir='../data/sp500_test'
 nlp_dir = None #'../data/nlp_by_company'
 revenue_dir = None
 # Please make sure these 3 dirs exist 
-models_dir = '../models/sp500_test_45/'
-supervised_data_dir = '../data/sup_sp500_test_45'
-prediction_data_dir = '../data/prediction/sp500_test_45'
+models_dir = '../models/sp500_test_30/'
+supervised_data_dir = '../data/sup_sp500_test_30'
+prediction_data_dir = '../data/prediction/sp500_test_30'
 
 rmse_csv = '../data/rsme_ltsm_45.csv'
 # look back n days. Note: The hight n_lags is, the more overfitting it becomes 
 # because there are more features added with the fix number of data we currently have.
 # When we add more features later, we may have to cut down n_lags even more
-n_lags = 10
-n_forecast = 45
+n_lags = 10 
+n_forecast = 30 
 n_test = 90 # test = last 90 days from data
 '''
 config_file = '../config/lstm2.config'

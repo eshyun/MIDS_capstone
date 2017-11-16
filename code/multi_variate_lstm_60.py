@@ -53,7 +53,7 @@ rmse_csv = '../data/rsme_ltsm_45.csv'
 # because there are more features added with the fix number of data we currently have.
 # When we add more features later, we may have to cut down n_lags even more
 n_lags = 10
-n_forecast = 45
+n_forecast = 60 
 n_test = 90 # test = last 90 days from data
 '''
 config_file = '../config/lstm2.config'
