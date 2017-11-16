@@ -1,9 +1,4 @@
 ticker,year,quarter,basicdilutedeps,basiceps,cashdividendspershare,dilutedeps,incometaxexpense,netincome,netincomecontinuing,netincomediscontinued,netincometocommon,netincometononcontrollinginterest,operatingcostofrevenue,operatingrevenue,othercostofrevenue,otherincome,preferreddividends,sgaexpense,totalcostofrevenue,totalgrossprofit,totalinterestexpense,totaloperatingexpenses,totaloperatingincome,totalotherincome,totalpretaxincome,totalrevenue,weightedavebasicdilutedsharesos,weightedavebasicsharesos,weightedavedilutedsharesos
-TSS,2008,Q1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-TSS,2008,Q2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-TSS,2008,Q3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-TSS,2008,Q4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-TSS,2008,FY,1.26,1.26,0.28,1.26,131206000.0,251676000.0,253085000.0,-1409000.0,250100000.0,1576000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,376894000.0,1711534000.0,198500000.0,198500000.0,198500000.0
 TSS,2009,Q1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 TSS,2009,Q2,0.27,0.27,0.0,0.27,29229000.0,54018000.0,52898000.0,1120000.0,53447000.0,571000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,80501000.0,411993000.0,198000000.0,198000000.0,198000000.0
 TSS,2009,Q3,0.28,0.28,0.0,0.28,31911000.0,55326000.0,58581000.0,-3255000.0,55026000.0,300000.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,88869000.0,428917000.0,196500000.0,196500000.0,196500000.0

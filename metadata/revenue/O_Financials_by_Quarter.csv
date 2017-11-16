@@ -1,9 +1,4 @@
 ticker,year,quarter,basicdilutedeps,basiceps,cashdividendspershare,dilutedeps,incometaxexpense,netincome,netincomecontinuing,netincomediscontinued,netincometocommon,netincometononcontrollinginterest,operatingcostofrevenue,operatingrevenue,othercostofrevenue,otherincome,preferreddividends,sgaexpense,totalcostofrevenue,totalgrossprofit,totalinterestexpense,totaloperatingexpenses,totaloperatingincome,totalotherincome,totalpretaxincome,totalrevenue,weightedavebasicdilutedsharesos,weightedavebasicsharesos,weightedavedilutedsharesos
-O,2008,Q1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-O,2008,Q2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-O,2008,Q3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-O,2008,Q4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-O,2008,FY,0.0,1.06,0.0,1.06,1230000.0,131841000.0,110301000.0,21540000.0,107588000.0,0.0,0.0,0.0,0.0,0.0,24253000.0,0.0,0.0,0.0,93956000.0,0.0,0.0,0.0,111531000.0,231085000.0,0.0,101178191.0,101209883.0
 O,2009,Q1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 O,2009,Q2,0.0,0.26,0.0,0.26,308000.0,32560000.0,30052000.0,2508000.0,26497000.0,0.0,0.0,0.0,0.0,0.0,6063000.0,0.0,0.0,0.0,21367000.0,0.0,0.0,0.0,30360000.0,59934000.0,0.0,103446949.0,103450457.0
 O,2009,Q3,0.0,0.26,0.0,0.26,74000.0,33152000.0,30957000.0,2195000.0,27089000.0,0.0,0.0,0.0,0.0,0.0,6063000.0,0.0,0.0,0.0,21374000.0,0.0,0.0,0.0,31031000.0,60089000.0,0.0,103470512.0,103481892.0

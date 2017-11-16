@@ -31,7 +31,7 @@ import ast
 import requests
 
 
-# In[3]:
+# In[15]:
 
 import json 
 SandP500 = {}
@@ -42,18 +42,23 @@ with open("SandP500_symbols.txt", "r") as fr:
                     SandP500[company["symbol"]] = line
                     companyList.append(company["symbol"])
 
-tickerchunks = [companyList[x:x+90] for x in xrange(0, len(companyList), 90)]
+tickerchunks = [companyList[x:x+95] for x in xrange(0, len(companyList), 95)]
 
 
-# In[4]:
+# In[16]:
 
 print(len(tickerchunks))
 
 
-# In[5]:
+# In[26]:
 
-print(len(tickerchunks[3]))
-print((tickerchunks[3]))
+print(len(tickerchunks[1]))
+print((tickerchunks[1]))
+
+
+# In[ ]:
+
+# Stopped at EOG
 
 
 # In[6]:
@@ -63,7 +68,7 @@ fy_url2= "&reportType=is&period=12&dataType=A&order=asc&columnYear=5&number=3"
 months =["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
 
 
-# In[27]:
+# In[7]:
 
 import re
 import urllib
@@ -94,12 +99,12 @@ def get_fiscal_year_end():
                 return
 
 
-# In[28]:
+# In[8]:
 
-get_fiscal_year_end()
+#get_fiscal_year_end()
 
 
-# In[29]:
+# In[9]:
 
 def new_intrinio_get_company_financials(symbol, year, quarter):
         # Get the latest FY Income Statement for "symbol"
@@ -139,7 +144,7 @@ def new_intrinio_get_company_financials(symbol, year, quarter):
         return(datalist)
 
 
-# In[30]:
+# In[10]:
 
 def updated_cleanupdata(cleanedupdata):
     newData = {}
@@ -188,7 +193,7 @@ def updated_cleanupdata(cleanedupdata):
     return newData
 
 
-# In[31]:
+# In[11]:
 
 attributes = ["ticker", "year", "quarter", "basicdilutedeps", "basiceps",
               'cashdividendspershare', 'dilutedeps', 'incometaxexpense', 'netincome', 'netincomecontinuing',
@@ -204,7 +209,7 @@ xx = ",".join(attributes)
 print(xx)
 
 
-# In[32]:
+# In[17]:
 
 def updated_intrinio_get_company_financials(symbol, year, quarter):
         # Get the latest FY Income Statement for "symbol"
@@ -249,7 +254,7 @@ def updated_intrinio_get_company_financials(symbol, year, quarter):
 data = updated_intrinio_get_company_financials('GE', '2008', 'Q1')
 
 
-# In[33]:
+# In[18]:
 
 get_ipython().system('pwd')
 get_ipython().magic('cd ../data/nlp_by_company')
@@ -265,7 +270,7 @@ print(yy)
 get_ipython().magic('cd ../../metadata')
 
 
-# In[34]:
+# In[19]:
 
 company = ['COL', 'CRM', 'DGX', 'FOX', 'FOXA', 'FTI', 'JWN', 'KORS', 'LUV', 'M', 'MA', 'MAA', 
                'MAC', 'MAR', 'MAS', 'MAT', 'MCD', 'MCHP', 'MCK', 'MCO', 'MDLZ', 'MDT', 'MET', 'MGM', 
@@ -285,7 +290,7 @@ company = ['COL', 'CRM', 'DGX', 'FOX', 'FOXA', 'FTI', 'JWN', 'KORS', 'LUV', 'M',
 print(len(company))
 
 
-# In[35]:
+# In[27]:
 
 def generate_financial_data():
     SandP500 = {}
@@ -336,9 +341,9 @@ def generate_financial_data():
     xx = ",".join(attributes) + "\n"
 
     # tickerchunks[1], tickerchunks[2], tickerchunks[3] and tickerchunks[5] are done
-    # Re-doing 0 block, 3 is complete, redo 2 today
+    # Re-doing 0 block, 3 is complete, 2 is complete, do 1 and 5 today. 
     loopIndex = 0
-    for company in tickerchunks[2]:
+    for company in tickerchunks[1]:
     #for company in specific_company:
     #for company in nlp_companies:
         #with open("../data/nlp_by_company/revenue/"+company+"_Financials_by_Quarter.csv", 'w') as fw:
@@ -374,12 +379,12 @@ def generate_financial_data():
             #return
 
 
-# In[36]:
+# In[28]:
 
 get_ipython().system('pwd')
 
 
-# In[ ]:
+# In[29]:
 
 generate_financial_data()
 
