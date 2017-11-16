@@ -36,10 +36,11 @@ def read_config(config_filename):
     n_lags = int(config.get('MODELS', 'n_lags'))
     n_forecast = int(config.get('MODELS', 'n_forecast'))
     n_test = int(config.get('MODELS', 'n_test'))
+    n_neurons = int(config.get('MODELS', 'n_neurons'))
 
     print(source_dir, nlp_dir, revenue_dir, models_dir,  supervised_data_dir, prediction_data_dir, rmse_csv)
-    print('n_lags, n_forecast, n_test', n_lags, n_forecast, n_test)
-    return source_dir, nlp_dir, revenue_dir, models_dir, supervised_data_dir, prediction_data_dir, rmse_csv,n_lags, n_forecast, n_test
+    print('n_lags, n_forecast, n_test, n_neurons', n_lags, n_forecast, n_test, n_neurons)
+    return source_dir, nlp_dir, revenue_dir, models_dir, supervised_data_dir, prediction_data_dir, rmse_csv,n_lags, n_forecast, n_test, n_neurons
  
 # convert series to supervised learning
 def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
