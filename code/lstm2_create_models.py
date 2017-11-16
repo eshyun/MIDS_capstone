@@ -22,6 +22,6 @@ Now generate supervised data
 n_features, orig_dfs, datasets = lstm2.set_up_data(source_dir, nlp_dir, revenue_dir, supervised_data_dir, n_lags, n_forecast)
 
 '''
-Train models, use n_neurons = 20
+Train models, use n_neurons = 10
 '''
-histories = lstm2.build_models(supervised_data_dir, models_dir, n_test, n_lags, n_features,20)
+histories = lstm2.build_models(supervised_data_dir, models_dir, n_test, n_lags, n_features,10)

@@ -17,6 +17,8 @@ from keras.layers import LSTM
 from keras.callbacks import EarlyStopping
 import numpy as np
 import ConfigParser
+import dateutil.parser
+
 
 def read_config(config_filename):
     config = ConfigParser.RawConfigParser()
@@ -75,7 +77,7 @@ def quarters_to_date(year, quarter):
            'Q2': '-08-01',
            'Q3': '-11-01',
            'Q4': '-02-01',
-           'FY': '-06-01',
+           'FY': '-04-01',
            }
     day = q2d[quarter]
     if (quarter in ('Q4', 'FY')):
@@ -108,7 +110,10 @@ def set_up_data(source_dir, nlp_dir, revenue_dir, dest_dir, n_lags, n_forecast):
         ticker = arr[-1].split('.')[0]
         
         df = read_csv(filename, header=0, parse_dates=[0], index_col=0, squeeze=True) #, date_parser=parser)
-        
+        print(df.head())
+        # Only after 2015
+        df = df[df.index > dateutil.parser.parse("2015-01-01")]
+
         print(ticker)
         cols = list(df)
         # Move 'Adj Close' (predicted column) to last column
@@ -152,7 +157,7 @@ def set_up_data(source_dir, nlp_dir, revenue_dir, dest_dir, n_lags, n_forecast):
             #print(result.head())
 
             print('Process revenue data', len(result), len(dataset))
-            assert(len(result) == len(dataset))
+            #assert(len(result) == len(dataset))
 
             dataset = result
 
@@ -179,7 +184,7 @@ def set_up_data(source_dir, nlp_dir, revenue_dir, dest_dir, n_lags, n_forecast):
 
             #print(result.head())
             print('Process news data', len(result), len(dataset))
-            assert(len(result) == len(dataset))
+            #assert(len(result) == len(dataset))
 
             dataset = result
         
@@ -332,6 +337,8 @@ def invert_scale(scaler, X, y, result_shape):
 
 def get_predict_actual_stats(actual, predicted, current):
     rmse = sqrt(mean_squared_error(actual, predicted))
+    actual_std = np.std(actual)
+    predicted_std = np.std(predicted)
 
     predict_gain = (predicted[0] - current[0]) / current[0]
     actual_gain = (actual[0] - current[0]) / current[0]
@@ -342,7 +349,7 @@ def get_predict_actual_stats(actual, predicted, current):
     #print('X_avg, pred_avg, y_avg', X_avg, pred_avg, y_avg)
     avg_predict_gain = (pred_avg - X_avg) / X_avg
     avg_actual_gain = (y_avg - X_avg) / X_avg 
-    return rmse, predict_gain, actual_gain, avg_predict_gain, avg_actual_gain
+    return rmse, predicted_std, actual_std, predict_gain, actual_gain, avg_predict_gain, avg_actual_gain
 
 # After prediction files are generated, use them to build the dataframes
 def read_prediction_files(prediction_data_dir):
@@ -365,12 +372,12 @@ def read_prediction_files(prediction_data_dir):
         predicted = values[:,1]
         current = values[:,2]
         
-        rmse, predict_gain, actual_gain, avg_predict_gain, avg_actual_gain = get_predict_actual_stats(actual, predicted, current)
+        rmse, predicted_std, actual_std, predict_gain, actual_gain, avg_predict_gain, avg_actual_gain = get_predict_actual_stats(actual, predicted, current)
 
-        summary_list += [[ticker,rmse,predict_gain,actual_gain, avg_predict_gain, avg_actual_gain]]
+        summary_list += [[ticker,rmse,predicted_std, actual_std, predict_gain,actual_gain, avg_predict_gain, avg_actual_gain]]
         predicted_dfs[ticker] = df
         
-    summary_df = DataFrame(summary_list, columns=['Stock Model', 'rsme', 
+    summary_df = DataFrame(summary_list, columns=['Stock Model', 'rsme', 'predicted_std', 'actual_std',
                                                   'Day 0 predicted gain', 'Day 0 actual gain',
                                                   'Avg predicted gain', 'Avg actual gain'
                                                  ])
@@ -411,7 +418,7 @@ def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv,
         #print(predict_inversed[:10])
         #print(actual_inversed[:10])
         #rmse = sqrt(mean_squared_error(actual_inversed, predict_inversed))
-        rmse, predict_gain, actual_gain, avg_predict_gain, avg_actual_gain = get_predict_actual_stats(
+        rmse, predicted_std, actual_std, predict_gain, actual_gain, avg_predict_gain, avg_actual_gain = get_predict_actual_stats(
                                     actual_inversed,
                                     predict_inversed,
                                     current_price)
@@ -436,7 +443,7 @@ def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv,
         avg_predict_gain = (pred_avg - X_avg) / X_avg
         avg_actual_gain = (y_avg - X_avg) / X_avg
         '''
-        summary_list += [[ticker,rmse,predict_gain,actual_gain, avg_predict_gain, avg_actual_gain]]
+        summary_list += [[ticker,rmse, predicted_std, actual_std,predict_gain,actual_gain, avg_predict_gain, avg_actual_gain]]
         predicted_dfs[ticker] = DataFrame({'current price': current_price,
             str(n_forecast) + '-day prediction': predict_inversed.reshape(len(predict_inversed)), 
             str(n_forecast) + '-day actual': actual_inversed.reshape(len(actual_inversed))})
@@ -444,7 +451,7 @@ def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv,
         print("Writing to", predicted_file)
         predicted_dfs[ticker].to_csv(predicted_file, index=False)
 
-    summary_df = DataFrame(summary_list, columns=['Stock Model', 'rsme', 
+    summary_df = DataFrame(summary_list, columns=['Stock Model', 'rsme', 'predicted_std', 'actual_std',
                                                   'Day 0 predicted gain', 'Day 0 actual gain',
                                                   'Avg predicted gain', 'Avg actual gain'
                                                  ])
