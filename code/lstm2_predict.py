@@ -15,7 +15,7 @@ parser.add_argument('n_features', nargs='?', help='number of features from origi
 args = parser.parse_args()
 print('Reading' + args.config_file)
 
-source_dir, models_dir, supervised_data_dir, prediction_data_dir, rmse_csv,n_lags, n_forecast, n_test = lstm2.read_config(args.config_file)
+source_dir, nlp_dir, revenue_dir, models_dir, supervised_data_dir, prediction_data_dir, rmse_csv,n_lags, n_forecast, n_test, n_neurons = lstm2.read_config(args.config_file)
 
 n_features=int(args.n_features)
 print('n_features = ' + str(n_features))
