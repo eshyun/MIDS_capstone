@@ -1,9 +1,23 @@
 body {
-    background-color: powderblue;
+    background-color: white;
 }
 h1 {
-    color: blue;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 30px;
+}
+h2 {
+    color: Red;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 22px;
+    font-weight: bold;
 }
 p {
-    color: red;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+    font-style: normal;
+    font-size: 30px;
+
 }

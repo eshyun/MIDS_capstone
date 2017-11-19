@@ -3,16 +3,21 @@
 
 <html> 
 
-<frameset cols="*,*,*,*"> 
-<frame src="input.html"> 
-<frame src="output.html"> 
+<frameset rows="200,*">
+<frame src="title.html"> 
 
-</html> 
-<html> 
-<frameset rows="*,*"> 
-<frame src="top.html"> 
-<frame src="bottom.html"> 
-</frameset> 
+
+<frameset cols="300,*, *"> 
+	<frameset rows="700, *"> 
+		<frame src="input.html" scrolling="no"> 
+		<frame src="top.html" scrolling="no"> 
+	</frameset>
+	<frame src="output.html" scrolling="yes"> 
+		<frameset rows="200, *"> 
+			<frame src="advice.html" scrolling="no"> 
+			<frame src="bottom.html" scrolling="yes"> 
+		>/frameset>
+	<frame src="output.html"> 
 
 </html> 
 
