@@ -1,0 +1,11 @@
+.title {
+	background-color: hsla(180, 100%, 80%, 0.5);
+	text-align: center;
+	font-size: 150%;
+}
+.container {
+  display: flex;
+}
+.container > div {
+  flex: 1; /*grow*/
+}

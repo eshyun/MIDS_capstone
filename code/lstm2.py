@@ -459,3 +459,22 @@ def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv,
     summary_df = summary_df.sort_values(by='Avg predicted gain', ascending=False)
     summary_df.to_csv(rsme_csv, index=False)
     return predicted_dfs, summary_df
+
+
+'''
+Given number of days to invest and the risk, return the list of recommended stocks (or stock)
+'''
+
+def recommend_stocks(days, risk_level):
+    risks = ['low', 'medium', 'high']
+    # Validate inputs
+    assert(risk_level in risks)
+
+    config_file = '../config/sp500_' + str(days) + '.config'
+    print('Reading %s' % config_file)
+
+    source_dir, nlp_dir, revenue_dir, models_dir, supervised_data_dir, prediction_data_dir, rmse_csv, n_lags, n_forecast, n_test, n_neurons = read_config(config_file)
+
+    print('Reading prediction data from %s' % prediction_data_dir)
+    predicted_dfs, summary_df = read_prediction_files(prediction_data_dir)
+    print(summary_df)
