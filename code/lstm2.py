@@ -477,7 +477,7 @@ def recommend_stocks(days, risk_level):
     '''
     Hard-coding for now for testing
     '''
-    #prediction_data_dir = '../data/prediction/sp500_test_30'
+    prediction_data_dir = '../data/prediction/sp500_test_30'
 
     print('Reading prediction data from %s' % prediction_data_dir)
     predicted_dfs, summary_df = read_prediction_files(prediction_data_dir)
