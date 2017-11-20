@@ -1,0 +1,58 @@
+<head>
+<style>
+.title {
+	background:turquoise;
+}
+.container {
+  display: flex;
+}
+.container > div {
+  flex: 1; /*grow*/
+}
+</style>
+<head>
+<section class = "container">
+	<div class ="title"> 
+		<h1> Algorithmic Stock Recommender </h1>
+	<div>
+</section>
+<section class="container">
+    <div>
+    <h1>Enter Preferences </h1> 
+      <form action="" method="post" name="login">
+      {{ form.hidden_tag() }}
+      <p>
+          How much would you like to invest?:<br>
+          {{ form.amount(size=40) }}<br>
+      </p>
+      <p>
+          When would you like returns?:<br>
+          {{ form.date(size=40) }}<br>
+      </p>
+      <p>
+          What does your risk tolerance look like?:<br>
+          {{ form.risk_tolerance(size=40) }}<br>
+      </p>
+      <p><input type="submit" value="Get Recommendations"></p>
+      </form>
+    </div>
+    <div> 
+      <h1> Primary Recommendation: {{recommended}} </h1>
+      <h3> You want to invest {{amount}} dollars</h3>
+      <h3> You want returns in {{date}} days.</h3>
+      <h3> You are comfortable with a {{risk}} risk level.</h3>
+      <h3> Predicted Performance: </h3>
+      <img src= {{plot_name}} alt="Problem with Image" width="300" height="300">
+    </div>
+    <div> 
+	    <h2 style="color:red">** Investing is risky!! **</h2>
+		<h2>
+		    This tool is only an investment guide not an expert advisor<br>
+		    You could lose all your money<br>
+		    Invest carefully after consulting an investment professional.<br>
+		</h2>
+		<h2> An alternative recommendation: {{alternate}} <h2>
+		<img src={{alternative_plot_name}} alt="Problem with Image" width="300" height="300">
+    <div>
+</section>
+<p> c. Thong Bui, Shankar, Sarah, Zhongquio, 2017 </p/
