@@ -11,6 +11,12 @@ import sys
 sys.path.append('../code/')
 import lstm2
 
+def generate_png(predicted_df, stock):
+	fig = predicted_df[stock].plot().get_figure()
+	stock_png = 'static/' + stock + '.png'
+	fig.savefig('app/' + stock_png)
+	return '/' + stock_png
+
 def run_model(amount, days, risk):
 	'''
 	Hook this into the algorithm to return the predicitons associated with given amount, returns and tolerance
@@ -19,14 +25,15 @@ def run_model(amount, days, risk):
 	'''
 	#temporary example code, change to fill these with actual values based on model prediction
 	print(amount, days, risk)
-	recommended_stock = "Example_Stock"
-	alternative_stock = "Example_Stock_2"
-	plot_of_stock = "/static/MSFT_FORECAST.png"
-	plot_of_alternative_stock = "/static/ORCL_FORECAST.png"
 
-	lstm2.recommend_stocks(days, risk)
+	summary_df, predicted_df = lstm2.recommend_stocks(days, risk)
+	stock1 = summary_df['Stock Model'].iloc[0]
+	stock2 = summary_df['Stock Model'].iloc[1]
+	png1 = generate_png(predicted_df, stock1)
+	png2 = generate_png(predicted_df, stock2)
 
-	return recommended_stock, alternative_stock, plot_of_stock, plot_of_alternative_stock
+	print(stock1, stock2, png1, png2)
+	return stock1, stock2, png1, png2
 
 
 @app.route('/', methods=['POST', 'GET'])

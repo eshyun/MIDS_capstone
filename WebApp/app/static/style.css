@@ -9,3 +9,7 @@
 .container > div {
   flex: 1; /*grow*/
 }
+.footer {
+    height: 100px;
+    background: #eee;
+}
