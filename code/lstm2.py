@@ -474,10 +474,8 @@ def recommend_stocks(days, risk_level):
     print('Reading %s' % config_file)
 
     source_dir, nlp_dir, revenue_dir, models_dir, supervised_data_dir, prediction_data_dir, rmse_csv, n_lags, n_forecast, n_test, n_neurons = read_config(config_file)
-    '''
-    Hard-coding for now for testing
-    '''
-    prediction_data_dir = '../data/prediction/sp500_test_30'
+
+    #prediction_data_dir = '../data/prediction/sp500_test_30'
 
     print('Reading prediction data from %s' % prediction_data_dir)
     predicted_dfs, summary_df = read_prediction_files(prediction_data_dir)

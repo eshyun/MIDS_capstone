@@ -11,9 +11,12 @@ import sys
 sys.path.append('../code/')
 import lstm2
 
-def generate_png(predicted_df, stock):
-	fig = predicted_df[stock].plot().get_figure()
-	stock_png = 'static/' + stock + '.png'
+def generate_png(predicted_df, stock, days):
+	ax = predicted_df[stock].plot(title=stock)
+	ax.set_xlabel('Days')
+	ax.set_ylabel('Price')
+	fig = ax.get_figure()
+	stock_png = 'static/%s_%s.png' % (stock, days)
 	fig.savefig('app/' + stock_png)
 	return '/' + stock_png
 
@@ -29,8 +32,8 @@ def run_model(amount, days, risk):
 	summary_df, predicted_df = lstm2.recommend_stocks(days, risk)
 	stock1 = summary_df['Stock Model'].iloc[0]
 	stock2 = summary_df['Stock Model'].iloc[1]
-	png1 = generate_png(predicted_df, stock1)
-	png2 = generate_png(predicted_df, stock2)
+	png1 = generate_png(predicted_df, stock1, days)
+	png2 = generate_png(predicted_df, stock2, days)
 
 	print(stock1, stock2, png1, png2)
 	return stock1, stock2, png1, png2
