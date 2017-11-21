@@ -1,7 +1,7 @@
 from math import sqrt
 import os, sys
 import glob
-
+import gc
 from numpy import concatenate
 from matplotlib import pyplot
 import pandas as pd
@@ -452,6 +452,9 @@ def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv,
         print("Writing to", predicted_file)
         predicted_dfs[ticker].to_csv(predicted_file, index=False)
 
+        # garbage collection memory
+        gc.collect()
+
     summary_df = DataFrame(summary_list, columns=['Stock Model', 'rsme', 'predicted_std', 'actual_std',
                                                   'Day 0 predicted gain', 'Day 0 actual gain',
                                                   'Avg predicted gain', 'Avg actual gain'
@@ -475,7 +478,7 @@ def recommend_stocks(days, risk_level):
 
     source_dir, nlp_dir, revenue_dir, models_dir, supervised_data_dir, prediction_data_dir, rmse_csv, n_lags, n_forecast, n_test, n_neurons = read_config(config_file)
 
-    #prediction_data_dir = '../data/prediction/sp500_test_30'
+    prediction_data_dir = '../data/prediction/sp500_test_30'
 
     print('Reading prediction data from %s' % prediction_data_dir)
     predicted_dfs, summary_df = read_prediction_files(prediction_data_dir)
