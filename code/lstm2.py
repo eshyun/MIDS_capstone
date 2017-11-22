@@ -453,6 +453,8 @@ def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv,
         predicted_dfs[ticker].to_csv(predicted_file, index=False)
 
         # garbage collection memory
+        model = None
+        data = None
         gc.collect()
 
     summary_df = DataFrame(summary_list, columns=['Stock Model', 'rsme', 'predicted_std', 'actual_std',
