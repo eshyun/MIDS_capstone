@@ -4,7 +4,7 @@ from flask_wtf import Form
 from wtforms import StringField, BooleanField
 from wtforms.validators import DataRequired
 from .forms import LoginForm
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import os
 
 import sys
@@ -13,8 +13,16 @@ import lstm2
 
 def generate_png(predicted_df, stock, days):
 	ax = predicted_df[stock].plot(title=stock)
+	column = str(days) + '-day prediction'
+	mean = predicted_df[stock][column].mean()
+	std = predicted_df[stock][column].std()
+	ax.axhline(y=mean,color = 'k', ls='--', lw=0.5, label=column + ' mean')
+	ax.axhline(y=mean+std,color = 'b', ls='-.', lw=0.5, label=column + ' + std')
+	ax.axhline(y=mean-std,color = 'b', ls='-.', lw=0.5, label=column + ' - std')
 	ax.set_xlabel('Days')
 	ax.set_ylabel('Price')
+	ax.legend()
+
 	fig = ax.get_figure()
 	stock_png = 'static/%s_%s.png' % (stock, days)
 	fig.savefig('app/' + stock_png)

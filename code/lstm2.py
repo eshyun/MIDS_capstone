@@ -382,7 +382,7 @@ def read_prediction_files(prediction_data_dir):
                                                   'Day 0 predicted gain', 'Day 0 actual gain',
                                                   'Avg predicted gain', 'Avg actual gain'
                                                  ])
-    summary_df = summary_df.sort_values(by='Avg predicted gain', ascending=False)
+    summary_df = summary_df.sort_values(by='rsme')
     return predicted_dfs, summary_df
 
 def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv, 
@@ -480,7 +480,7 @@ def recommend_stocks(days, risk_level):
 
     source_dir, nlp_dir, revenue_dir, models_dir, supervised_data_dir, prediction_data_dir, rmse_csv, n_lags, n_forecast, n_test, n_neurons = read_config(config_file)
 
-    prediction_data_dir = '../data/prediction/sp500_test_30'
+    #prediction_data_dir = '../data/prediction/sp500_test_30'
 
     print('Reading prediction data from %s' % prediction_data_dir)
     predicted_dfs, summary_df = read_prediction_files(prediction_data_dir)
@@ -493,18 +493,21 @@ def recommend_stocks(days, risk_level):
     # Translate risk level -> std
     if (risk_level == 'low'):
         filter = ((summary_df['Avg actual gain'] > 0 ) &
+                  (summary_df['Avg predicted gain'] > 0) &
                   (summary_df['Day 0 predicted gain'] > 0) &
                   (summary_df['predicted_std'] < q1))
     elif (risk_level == 'medium'):
         filter = ((summary_df['Avg actual gain'] > 0) &
+                  (summary_df['Avg predicted gain'] > 0) &
                   (summary_df['Day 0 predicted gain'] > 0) &
                   (summary_df['predicted_std'] >= q1) &
                   (summary_df['predicted_std'] <= q2))
     else:
         filter = ((summary_df['Avg actual gain'] > 0) &
+                  (summary_df['Avg predicted gain'] > 0) &
                   (summary_df['Day 0 predicted gain'] > 0) &
                   (summary_df['predicted_std'] > q2))
 
-    print(summary_df[filter].sort_values('rsme'))
+    #print(summary_df[filter].sort_values('rsme'))
     # filter the data based on risk AND push the best predictions (lowest rsme) on top
-    return summary_df[filter].sort_values('rsme'), predicted_dfs
+    return summary_df[filter], predicted_dfs
