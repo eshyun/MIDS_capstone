@@ -13,6 +13,7 @@ import lstm2
 
 def generate_png(predicted_df, stock, days):
 	ax = predicted_df[stock].plot(title=stock)
+	print(predicted_df[stock])
 	column = str(days) + '-day prediction'
 	mean = predicted_df[stock][column].mean()
 	std = predicted_df[stock][column].std()
@@ -39,28 +40,33 @@ def run_model(amount, days, risk):
 
 	summary_df, predicted_df = lstm2.recommend_stocks(days, risk)
 	stock1 = summary_df['Stock Model'].iloc[0]
+	rmse1 = summary_df['rsme'].iloc[0]
 	stock2 = summary_df['Stock Model'].iloc[1]
+	rmse2 = summary_df['rsme'].iloc[1]
+
 	png1 = generate_png(predicted_df, stock1, days)
 	png2 = generate_png(predicted_df, stock2, days)
 
 	print(stock1, stock2, png1, png2)
-	return stock1, stock2, png1, png2
+	return stock1, rmse1, png1, stock2, rmse2, png2
 
 
 @app.route('/', methods=['POST', 'GET'])
 def test():
 	form = LoginForm()
 	if form.validate_on_submit():
-		stock, alt, stock_plot, alt_plot = run_model(form.amount.data, int(form.date.data),
+		stock, stock_rmse, stock_plot, alt, alt_rmse, alt_plot = run_model(form.amount.data, int(form.date.data),
 													 form.risk_tolerance.data)
 		return render_template('recommendation.html',form=form, amount = form.amount.data,
-			date = str(form.date.data), risk = form.risk_tolerance.data,
-			plot_name=stock_plot, alternative_plot_name=alt_plot, recommended = stock, alternate = alt)
+			date = str(form.date.data), risk = form.risk_tolerance.data, main_rmse = stock_rmse,
+			plot_name=stock_plot, alternative_plot_name=alt_plot, recommended = stock, alternate = alt, alternate_rmse = alt_rmse)
 
 	print(form.amount.data, form.date.data, form.risk_tolerance.data)
-	return render_template('recommendation.html',form=form, amount = "___", date = "__", risk = "__",
+	return render_template('recommendation.html',form=form, amount = "___", date = "__", risk = "__", main_rmse = '__',
 			plot_name="/static/question.png", 
-			alternative_plot_name="/static/question.png")
+			alternative_plot_name="/static/question.png",
+			alternate_rmse = '__'
+			)
 
 
 
