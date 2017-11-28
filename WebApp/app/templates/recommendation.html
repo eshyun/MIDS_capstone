@@ -3,8 +3,9 @@
     <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"-->
 <head>
 <section class = "container">
-	<div class ="title"> 
+	<div class ="title" >
 		<h1> Algorithmic Stock Recommender </h1>
+        <p>Thong Bui, Natarajan Shankar, Sarah Kelly, Zhongqiao Jin</p>
 	</div>
 </section>
 <section class="container">
@@ -14,7 +15,7 @@
       {{ form.hidden_tag() }}
       <p>
           How much would you like to invest?:<br>
-          {{ form.amount(size=40) }}<br>
+          {{ form.amount(size=30) }}<br>
       </p>
       <p>
           When would you like returns?:<br>
@@ -48,4 +49,4 @@
 		<img src={{alternative_plot_name}} alt="Problem with Image" width="500" height="400">
     </div>
 </section>
-<footer> c. Thong Bui, Shankar, Sarah, Zhongqiao, 2017 </footer>
+<footer class="footer"> c. Thong Bui, Shankar, Sarah, Zhongqiao, 2017 </footer>
