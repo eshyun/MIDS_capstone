@@ -4,7 +4,9 @@ from flask_wtf import Form
 from wtforms import StringField, BooleanField
 from wtforms.validators import DataRequired
 from .forms import LoginForm
-#import matplotlib.pyplot as plt
+
+import matplotlib.pyplot as plt
+plt.switch_backend('agg')
 import os
 
 import sys
