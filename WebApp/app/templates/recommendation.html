@@ -25,7 +25,7 @@
           What does your risk tolerance look like?:<br>
           {{ form.risk_tolerance(size=40) }}<br>
       </p>
-      <p><input type="submit" value="Get Recommendations"></p>
+      <p><button class="button" type=submit>Pick Top Stocks<br>from S&P500</button></p>
       </form>
     </div>
     <div> 
@@ -49,4 +49,8 @@
 		<img src={{alternative_plot_name}} alt="Problem with Image" width="500" height="400">
     </div>
 </section>
+<body class="table">
+    <h1 style="text-align: center;">Top 10 stocks</h1>
+    {{dataframe | safe}}
+</body>
 <footer class="footer"> c. Thong Bui, Shankar, Sarah, Zhongqiao, 2017 </footer>

@@ -48,24 +48,27 @@ def run_model(amount, days, risk):
 	png2 = generate_png(predicted_df, stock2, days)
 
 	print(stock1, stock2, png1, png2)
-	return stock1, rmse1, png1, stock2, rmse2, png2
+	print(summary_df)
+	return stock1, rmse1, png1, stock2, rmse2, png2, summary_df
 
 
 @app.route('/', methods=['POST', 'GET'])
 def test():
 	form = LoginForm()
 	if form.validate_on_submit():
-		stock, stock_rmse, stock_plot, alt, alt_rmse, alt_plot = run_model(form.amount.data, int(form.date.data),
+		stock, stock_rmse, stock_plot, alt, alt_rmse, alt_plot,summary_df = run_model(form.amount.data, int(form.date.data),
 													 form.risk_tolerance.data)
 		return render_template('recommendation.html',form=form, amount = form.amount.data,
 			date = str(form.date.data), risk = form.risk_tolerance.data, main_rmse = stock_rmse,
-			plot_name=stock_plot, alternative_plot_name=alt_plot, recommended = stock, alternate = alt, alternate_rmse = alt_rmse)
+			plot_name=stock_plot, alternative_plot_name=alt_plot, recommended = stock, alternate = alt, alternate_rmse = alt_rmse,
+			dataframe=summary_df.head(10).to_html(index=False))
 
 	print(form.amount.data, form.date.data, form.risk_tolerance.data)
 	return render_template('recommendation.html',form=form, amount = "___", date = "__", risk = "__", main_rmse = '__',
 			plot_name="/static/question.png", 
 			alternative_plot_name="/static/question.png",
-			alternate_rmse = '__'
+			alternate_rmse = '__',
+			dataframe=None
 			)
 
 

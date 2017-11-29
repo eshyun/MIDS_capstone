@@ -510,4 +510,5 @@ def recommend_stocks(days, risk_level):
 
     #print(summary_df[filter].sort_values('rsme'))
     # filter the data based on risk AND push the best predictions (lowest rsme) on top
-    return summary_df[filter], predicted_dfs
+    return summary_df[filter][['Stock Model', 'rsme', 'Avg predicted gain', 'Avg actual gain',
+                               'predicted_std', 'actual_std']], predicted_dfs
