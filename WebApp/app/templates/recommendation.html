@@ -47,26 +47,10 @@
 		<img src={{alternative_plot_name}} alt="Problem with Image" width="500" height="400">
     </div-->
     <div style="text-align:left;">
-        <h4>Based on your input, we are making the predictions on the stock prices of the last 90 days.</h4>
-        <h3>Notes on the data table below:</h3>
-        <li>
-            "RMSE" (<a href="http://www.statisticshowto.com/rmse/">Root Mean Squared Error</a>) measures <b>accuracy</b> of prediction.
-            The smaller the number, the more accurate the prediction measured against actual values
-        </li>
-        <li>
-            "Predicted Gain %": the percentage gain from the predicted stock price during this period (last 90 days).
-        </li>
-        <li>
-            "Actual Gain %": the percentage gain from the actual stock price during this period (last 90 days).
-        </li>
-        <li>
-            "Predicted SD" (predicted standard deviation): how much price fluctuates for predicted values during this period.
-            This measures the <b>risk</b> of predicted values.
-        </li>
-        <li>
-            "Actual SD" (actual standard deviation): how much price fluctuates for actual values during this period.
-            This measures the <b>risk</b> of the actual values
-        </li>
+        <h4>Based on your input, we will pick the best stocks that:</h4>
+        <li>return the highest predicted gain rate during the last 90 days.</li>
+        <li>and have the closest match to the actual gain for this period.</li>
+
 
         <h1>Here are our top choices:</h1>
         <p>Please mouse over stock symbols to see more details of their performance</p>
@@ -185,6 +169,25 @@
                 //.on("mouseout", function(){return tooltip.style("visibility", "hidden");});
 */
         </script>
+        <h3>Notes:</h3>
+        <li>
+            "RMSE" (<a href="http://www.statisticshowto.com/rmse/">Root Mean Squared Error</a>) measures <b>accuracy</b> of prediction.
+            The smaller the number, the more accurate the prediction measured against actual values
+        </li>
+        <li>
+            "Predicted Gain %": the percentage gain from the predicted stock price during this period (last 90 days).
+        </li>
+        <li>
+            "Actual Gain %": the percentage gain from the actual stock price during this period (last 90 days).
+        </li>
+        <li>
+            "Predicted SD" (predicted standard deviation): how much price fluctuates for predicted values during this period.
+            This measures the <b>risk</b> of predicted values.
+        </li>
+        <li>
+            "Actual SD" (actual standard deviation): how much price fluctuates for actual values during this period.
+            This measures the <b>risk</b> of the actual values
+        </li>
     </div>
 
 </section>
@@ -193,4 +196,4 @@
     {{dataframe | safe}}
 </section-->
 
-<footer class="footer"> c. Thong Bui, Shankar, Sarah, Zhongqiao, 2017 </footer>
+<!--footer class="footer"> c. Thong Bui, Shankar, Sarah, Zhongqiao, 2017 </footer-->
