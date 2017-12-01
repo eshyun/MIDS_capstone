@@ -1,9 +1,11 @@
 <head>
     <link rel="stylesheet" href="../static/style.css">
+    <!--script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script-->
+
     <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"-->
 <head>
-<section class = "container">
-	<div class ="title" >
+<section>
+	<div class ="title">
 		<h1> Algorithmic Stock Recommender </h1>
         <p>Thong Bui, Natarajan Shankar, Sarah Kelly, Zhongqiao Jin</p>
 	</div>
@@ -13,10 +15,6 @@
     <h1>Enter Preferences </h1> 
       <form action="" method="post" name="login">
       {{ form.hidden_tag() }}
-      <p>
-          How much would you like to invest?:<br>
-          {{ form.amount(size=30) }}<br>
-      </p>
       <p>
           When would you like returns?:<br>
           {{ form.date(size=40) }}<br>
@@ -28,7 +26,7 @@
       <p><button class="button" type=submit>Pick Top Stocks<br>from S&P500</button></p>
       </form>
     </div>
-    <div> 
+    <!--div>
       <h1> Primary Recommendation: {{recommended}} </h1>
       <h3> You want to invest {{amount}} dollars</h3>
       <h3> You want returns in {{date}} days.</h3>
@@ -47,10 +45,152 @@
 		<h2> An alternative recommendation: {{alternate}} </h2>
         <h3> rmse = {{alternate_rmse}}</h3>
 		<img src={{alternative_plot_name}} alt="Problem with Image" width="500" height="400">
+    </div-->
+    <div style="text-align:left;">
+        <h4>Based on your input, we are making the predictions on the stock prices of the last 90 days.</h4>
+        <h3>Notes on the data table below:</h3>
+        <li>
+            "RMSE" (<a href="http://www.statisticshowto.com/rmse/">Root Mean Squared Error</a>) measures <b>accuracy</b> of prediction.
+            The smaller the number, the more accurate the prediction measured against actual values
+        </li>
+        <li>
+            "Predicted Gain %": the percentage gain from the predicted stock price during this period (last 90 days).
+        </li>
+        <li>
+            "Actual Gain %": the percentage gain from the actual stock price during this period (last 90 days).
+        </li>
+        <li>
+            "Predicted SD" (predicted standard deviation): how much price fluctuates for predicted values during this period.
+            This measures the <b>risk</b> of predicted values.
+        </li>
+        <li>
+            "Actual SD" (actual standard deviation): how much price fluctuates for actual values during this period.
+            This measures the <b>risk</b> of the actual values
+        </li>
+
+        <h1>Here are our top choices:</h1>
+        <p>Please mouse over stock symbols to see more details of their performance</p>
+
+        <!--p>
+            <a class="tooltip" href="">
+               Demonstration
+               <span><img src="http://www.scriptol.com/images/apache.png">
+               <h3>How use my site</h3>
+                The description with an image.
+               </span>
+            </a>
+        </p-->
+        <!--div class="tooltip">Hover over me
+          <span class="tooltiptext">Tooltip text</span>
+        </div-->
+
+        <p id="showData"></p>
+
+
+
+        <script type="text/javascript">
+            var df_obj = JSON.parse('{{df_json | safe}}');
+            console.log(df_obj);
+            var newcol = ["Stocks", "RSME", "Predicted Gain %", "Actual Gain %", "Predicted SD", "Actual SD"];
+            var col = [];
+            for (var i = 0; i < df_obj.length; i++) {
+                for (var key in df_obj[i]) {
+                    if (col.indexOf(key) === -1) {
+                        col.push(key);
+                    }
+                }
+            }
+            //console.log(col);
+
+            // CREATE DYNAMIC TABLE.
+            var table = document.createElement("table");
+            // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+
+            var tr = table.insertRow(-1);                   // TABLE ROW.
+            for (var i = 0; i < newcol.length; i++) {
+                var th = document.createElement("th");      // TABLE HEADER.
+                th.innerHTML = newcol[i];
+                tr.appendChild(th);
+            }
+            // ADD JSON DATA TO THE TABLE AS ROWS.
+            for (var i = 0; i < df_obj.length; i++) {
+                tr = table.insertRow(-1);
+
+                for (var j = 1; j < col.length; j++) {
+                    var tabCell = tr.insertCell(-1);
+                    if (j == 3 | j == 4) {
+                        tabCell.innerHTML = (df_obj[i][col[j]] * 100).toFixed(2);
+                    }
+                    else if (j > 1) {
+                        tabCell.innerHTML = (df_obj[i][col[j]]).toFixed(4);
+                    }
+                    else { // j == 1 (stock symbol)
+                        stock = df_obj[i][col[j]]
+                        var a = document.createElement("a")
+                        var typ = document.createAttribute("class");
+                        typ.value = "tooltip";
+                        a.attributes.setNamedItem(typ);
+
+                        var href = document.createAttribute("href");
+                        href.value="#";
+                        a.attributes.setNamedItem(href);
+
+                        a.innerHTML = stock;
+                        // Add <span><img src="..."></span>
+                        var span = document.createElement("span");
+                        //var c = document.createAttribute("class");
+                        //c.value = "tooltipimage";
+                        //span.attributes.setNamedItem(c);
+                        var image = document.createElement("img");
+                        var src = document.createAttribute("src");
+                        src.value = '/static/' + stock + '_{{date}}.png';
+                        image.attributes.setNamedItem(src);
+                        span.appendChild(image);
+                        a.appendChild(span)
+
+                        tabCell.appendChild(a);
+                        //console.log('tabCell', j, tabCell);
+                    }
+                }
+            }
+            // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+            var divContainer = document.getElementById("showData");
+            divContainer.innerHTML = "";
+            divContainer.appendChild(table);
+            console.log(table)
+/*
+
+            var tooltip = d3.select("body");
+
+            d3.select("#showData").selectAll("tr")
+                .on("mouseover", function(){
+                    var list = d3.select(this).selectAll("td");
+                    var stock = list[0][0].innerText;
+                    var image_file = '/static/' + stock + '_{{date}}.png';
+                    var tooltip = d3.select(this)
+
+                    console.log('SelectRow:', image_file);
+
+                    tooltip.append("img")
+                        .attr("src", image_file)
+                        //.attr("x", -8)
+                        //.attr("y", -8)
+                        .attr("width","120px")
+                        .attr("height","80px");
+
+                    tooltip.style("visibility", "visible");
+                 });
+                //.on("mousemove", function(){return tooltip.style("top", (event.pageY-
+                //                          10)+"px").style("left",(event.pageX+10)+"px");})
+                //.on("mouseout", function(){return tooltip.style("visibility", "hidden");});
+*/
+        </script>
     </div>
+
 </section>
-<body class="table">
+<!--section class="table">
     <h1 style="text-align: center;">Top 10 stocks</h1>
     {{dataframe | safe}}
-</body>
+</section-->
+
 <footer class="footer"> c. Thong Bui, Shankar, Sarah, Zhongqiao, 2017 </footer>

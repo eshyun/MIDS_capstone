@@ -374,15 +374,18 @@ def read_prediction_files(prediction_data_dir):
         current = values[:,2]
         
         rmse, predicted_std, actual_std, predict_gain, actual_gain, avg_predict_gain, avg_actual_gain = get_predict_actual_stats(actual, predicted, current)
-
-        summary_list += [[ticker,rmse,predicted_std, actual_std, predict_gain,actual_gain, avg_predict_gain, avg_actual_gain]]
+        # create sort column: best predicted gain (highest gain) & least error (lowest error)
+        sort_value = avg_predict_gain / rmse
+        summary_list += [[ticker,rmse,predicted_std, actual_std, predict_gain,actual_gain, avg_predict_gain, avg_actual_gain, sort_value]]
         predicted_dfs[ticker] = df
         
     summary_df = DataFrame(summary_list, columns=['Stock Model', 'rsme', 'predicted_std', 'actual_std',
                                                   'Day 0 predicted gain', 'Day 0 actual gain',
-                                                  'Avg predicted gain', 'Avg actual gain'
+                                                  'Avg predicted gain', 'Avg actual gain', 'sort'
                                                  ])
-    summary_df = summary_df.sort_values(by='rsme')
+    summary_df = summary_df.sort_values(by='sort', ascending=False)
+    #print("summary_df", summary_df)
+
     return predicted_dfs, summary_df
 
 def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv, 
@@ -487,7 +490,7 @@ def recommend_stocks(days, risk_level):
     print(summary_df)
     print(summary_df.describe())
 
-    q1 = summary_df['predicted_std'].quantile(.45)
+    q1 = summary_df['predicted_std'].quantile(.25)
     q2 = summary_df['predicted_std'].quantile(.75)
     #print(q25, q75)
     # Translate risk level -> std
