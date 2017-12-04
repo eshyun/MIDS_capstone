@@ -19,9 +19,9 @@ def generate_png(predicted_df, stock, days):
 	column = str(days) + '-day prediction'
 	actual_col = str(days) + '-day actual'
 	predicted_gains = deepcopy(predicted_df[stock])
-	predicted_gains['pred_gain'] = 100*(predicted_gains[column] - predicted_gains['current price'])/predicted_gains['current price']
-	predicted_gains['actual_gain'] = 100*(predicted_gains[actual_col] - predicted_gains['current price'])/predicted_gains['current price']
-	to_plot = predicted_gains[['pred_gain', 'actual_gain']]
+	predicted_gains['Predicted Gain'] = 100*(predicted_gains[column] - predicted_gains['current price'])/predicted_gains['current price']
+	predicted_gains['Actual Gain'] = 100*(predicted_gains[actual_col] - predicted_gains['current price'])/predicted_gains['current price']
+	to_plot = predicted_gains[['Predicted Gain', 'Actual Gain']]
 	title_text = "Predicted and Actual returns to " + stock +" after holding for " + str(days) + " days during the previous quarter"
 
 	ax = to_plot.plot()
