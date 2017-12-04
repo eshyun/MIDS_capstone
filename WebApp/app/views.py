@@ -1,9 +1,11 @@
 from app import app
+from copy import deepcopy
 from flask import Flask, render_template, flash, redirect
 from flask_wtf import Form
 from wtforms import StringField, BooleanField
 from wtforms.validators import DataRequired
 from .forms import LoginForm
+from textwrap import wrap
 
 import matplotlib.pyplot as plt
 plt.switch_backend('agg')
@@ -14,16 +16,23 @@ sys.path.append('../code/')
 import lstm2
 
 def generate_png(predicted_df, stock, days):
-	ax = predicted_df[stock].plot(title=stock)
-	#print(predicted_df[stock])
 	column = str(days) + '-day prediction'
-	mean = predicted_df[stock][column].mean()
-	std = predicted_df[stock][column].std()
-	ax.axhline(y=mean,color = 'k', ls='--', lw=0.5, label=column + ' mean')
-	ax.axhline(y=mean+std,color = 'b', ls='-.', lw=0.5, label=column + ' + std')
-	ax.axhline(y=mean-std,color = 'b', ls='-.', lw=0.5, label=column + ' - std')
-	ax.set_xlabel('Days')
-	ax.set_ylabel('Price')
+	actual_col = str(days) + '-day actual'
+	predicted_gains = deepcopy(predicted_df[stock])
+	predicted_gains['pred_gain'] = 100*(predicted_gains[column] - predicted_gains['current price'])/predicted_gains['current price']
+	predicted_gains['actual_gain'] = 100*(predicted_gains[actual_col] - predicted_gains['current price'])/predicted_gains['current price']
+	to_plot = predicted_gains[['pred_gain', 'actual_gain']]
+	title_text = "Predicted and Actual returns to " + stock +" after holding for " + str(days) + " days during the previous quarter"
+
+	ax = to_plot.plot()
+	ax.set_title("\n".join(wrap(title_text, 60)))
+	# mean = predicted_df[stock][column].mean()
+	# std = predicted_df[stock][column].std()
+	#ax.axhline(y=mean,color = 'k', ls='--', lw=0.5, label=column + ' mean')
+	#ax.axhline(y=mean+std,color = 'b', ls='-.', lw=0.5, label=column + ' + std')
+	#ax.axhline(y=mean-std,color = 'b', ls='-.', lw=0.5, label=column + ' - std')
+	ax.set_xlabel("Day")
+	ax.set_ylabel('Percent gain over 30 days')
 	ax.legend()
 
 	fig = ax.get_figure()
@@ -43,7 +52,6 @@ def run_model(days, risk):
 	inputs: the amount ($), 30/45/60 for the days, and low/medium/high for risk level
 	outputs: recommended and alternative stock pick, graphs for each of them
 	'''
-	#temporary example code, change to fill these with actual values based on model prediction
 	print(days, risk)
 
 	summary_df, predicted_df = lstm2.recommend_stocks(days, risk)
