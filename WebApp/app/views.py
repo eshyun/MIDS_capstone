@@ -32,7 +32,7 @@ def generate_png(predicted_df, stock, days):
 	#ax.axhline(y=mean+std,color = 'b', ls='-.', lw=0.5, label=column + ' + std')
 	#ax.axhline(y=mean-std,color = 'b', ls='-.', lw=0.5, label=column + ' - std')
 	ax.set_xlabel("Day")
-	ax.set_ylabel('Percent gain over 30 days')
+	ax.set_ylabel('Percent gain over ' + str(days) + ' days')
 	ax.legend()
 
 	fig = ax.get_figure()
