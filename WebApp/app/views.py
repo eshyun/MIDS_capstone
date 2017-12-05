@@ -1,9 +1,7 @@
 from app import app
 from copy import deepcopy
 from flask import Flask, render_template, flash, redirect
-from flask_wtf import Form
-from wtforms import StringField, BooleanField
-from wtforms.validators import DataRequired
+import numpy as np
 from .forms import LoginForm
 from textwrap import wrap
 
@@ -15,13 +13,15 @@ import sys
 sys.path.append('../code/')
 import lstm2
 
-def generate_png(predicted_df, stock, days):
+def generate_png(predicted_df, stock, days, index_fund_pct_gain):
 	column = str(days) + '-day prediction'
 	actual_col = str(days) + '-day actual'
 	predicted_gains = deepcopy(predicted_df[stock])
 	predicted_gains['Predicted Gain'] = 100*(predicted_gains[column] - predicted_gains['current price'])/predicted_gains['current price']
 	predicted_gains['Actual Gain'] = 100*(predicted_gains[actual_col] - predicted_gains['current price'])/predicted_gains['current price']
-	to_plot = predicted_gains[['Predicted Gain', 'Actual Gain']]
+	predicted_gains['S&P500 Index Gain'] = index_fund_pct_gain
+	to_plot = predicted_gains[['Predicted Gain', 'Actual Gain', 'S&P500 Index Gain']]
+	#print(to_plot)
 	title_text = "Predicted and Actual returns to " + stock +" after holding for " + str(days) + " days during the previous quarter"
 
 	ax = to_plot.plot()
@@ -46,6 +46,7 @@ def generate_png(predicted_df, stock, days):
 def get_image_key(stock, days):
 	return "%s_%s" % (stock,days)
 
+
 def run_model(days, risk):
 	'''
 	Hook this into the algorithm to return the predicitons associated with given amount, returns and tolerance
@@ -64,36 +65,38 @@ def run_model(days, risk):
 	top_10 = summary_df.head(10)
 	images = {}
 
+	sp500_index_gain = lstm2.read_index_fund(days)
 	# Generates all images
 	for index, row in top_10.iterrows():
 		stock = row['Stock Model']
 		key = get_image_key(stock, days)
-		images[key] = generate_png(predicted_df, stock, days)
+		images[key] = generate_png(predicted_df, stock, days, sp500_index_gain)
 
 	png1 = images[get_image_key(stock1, days)]
 	png2 = images[get_image_key(stock2, days)]
 
-	print(stock1, stock2, png1, png2)
-	return stock1, rmse1, png1, stock2, rmse2, png2, top_10
+	#print(stock1, stock2, png1, png2)
+	print(type(sp500_index_gain))
+	return stock1, rmse1, png1, stock2, rmse2, png2, top_10, "%.2f" % np.mean(sp500_index_gain)
 
 
 @app.route('/', methods=['POST', 'GET'])
 def test():
 	form = LoginForm()
 	if form.validate_on_submit():
-		stock, stock_rmse, stock_plot, alt, alt_rmse, alt_plot,summary_df = run_model(int(form.date.data),
+		stock, stock_rmse, stock_plot, alt, alt_rmse, alt_plot,summary_df, index_avg_gain = run_model(int(form.date.data),
 													 form.risk_tolerance.data)
 		return render_template('recommendation.html',form=form,
 			date = str(form.date.data), risk = form.risk_tolerance.data, main_rmse = stock_rmse,
 			plot_name=stock_plot, alternative_plot_name=alt_plot, recommended = stock, alternate = alt, alternate_rmse = alt_rmse,
-			dataframe=summary_df.to_html(index=False),
+			dataframe=summary_df.to_html(index=False), sp500_index_avg_gain = index_avg_gain,
 			df_json=summary_df.reset_index().to_json(orient='records'))
 
 	print(form.date.data, form.risk_tolerance.data)
 	return render_template('recommendation.html',form=form, date = "__", risk = "__", main_rmse = '__',
 			plot_name="/static/question.png", 
 			alternative_plot_name="/static/question.png",
-			alternate_rmse = '__',
+			alternate_rmse = '__', sp500_index_avg_gain = None,
 			dataframe=None, df_json=None
 			)
 

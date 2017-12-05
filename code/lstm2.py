@@ -343,13 +343,18 @@ def get_predict_actual_stats(actual, predicted, current):
 
     predict_gain = (predicted[0] - current[0]) / current[0]
     actual_gain = (actual[0] - current[0]) / current[0]
-        
+    '''
     X_avg = current.mean()
     pred_avg = predicted.mean()
     y_avg = actual.mean()
+
     #print('X_avg, pred_avg, y_avg', X_avg, pred_avg, y_avg)
     avg_predict_gain = (pred_avg - X_avg) / X_avg
-    avg_actual_gain = (y_avg - X_avg) / X_avg 
+    avg_actual_gain = (y_avg - X_avg) / X_avg
+    '''
+    # (df['var2(t+59)']/df['var2(t-1)']).mean() - 1
+    avg_predict_gain = (predicted / current).mean() - 1
+    avg_actual_gain = (actual / current).mean() - 1
     return rmse, predicted_std, actual_std, predict_gain, actual_gain, avg_predict_gain, avg_actual_gain
 
 # After prediction files are generated, use them to build the dataframes
@@ -515,3 +520,17 @@ def recommend_stocks(days, risk_level):
     # filter the data based on risk AND push the best predictions (lowest rsme) on top
     return summary_df[filter][['Stock Model', 'rsme', 'Avg predicted gain', 'Avg actual gain',
                                'predicted_std', 'actual_std']], predicted_dfs
+
+
+def get_percentage_gain(current_price, new_price):
+	return 100*(new_price - current_price)/current_price
+
+def read_index_fund(days):
+    csv_name = '../data/bm/' + str(days) + 'day/^GSPC_supervised.csv'
+    print('Reading', csv_name)
+    df = pd.read_csv(csv_name)
+    #print(df)
+    # Index fund's gain from the last 90 days
+    return get_percentage_gain(df['var2(t-1)'], df['var2(t+' + str(days-1) +')']).tail(90).tolist()
+
+
