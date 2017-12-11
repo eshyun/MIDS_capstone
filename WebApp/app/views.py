@@ -1,6 +1,6 @@
 from app import app
 from copy import deepcopy
-from flask import Flask, render_template, flash, redirect
+from flask import Flask, render_template, flash, redirect, url_for
 import numpy as np
 from .forms import LoginForm
 from textwrap import wrap
@@ -80,8 +80,19 @@ def run_model(days, risk):
 	return stock1, rmse1, png1, stock2, rmse2, png2, top_10, "%.2f" % np.mean(sp500_index_gain)
 
 
+@app.route('/background', methods=['POST', 'GET'])
+def background():
+	form = LoginForm()
+	if form.validate_on_submit():
+		return redirect(url_for('main_form'))
+	else:
+		return render_template('background.html', form=form)
+@app.route("/testing")
+def example():
+	return redirect(url_for('main_form'))
+
 @app.route('/', methods=['POST', 'GET'])
-def test():
+def main_form():
 	form = LoginForm()
 	if form.validate_on_submit():
 		stock, stock_rmse, stock_plot, alt, alt_rmse, alt_plot,summary_df, index_avg_gain = run_model(int(form.date.data),

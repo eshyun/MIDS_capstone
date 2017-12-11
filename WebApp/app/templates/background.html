@@ -1,0 +1,32 @@
+<head>
+    <link rel="stylesheet" href="../static/style.css">
+    <!--script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script-->
+
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"-->
+<head>
+<section>
+	<div class ="title">
+		<h1> Algorithmic Stock Recommender Background </h1>
+        <p>Thong Bui, Natarajan Shankar, Sarah Kelly, Zhongqiao Jin</p>
+	</div>
+</section>
+<section class="container">
+    <div>
+    <h1>Our Vision </h1> 
+      <p> There is more to investing than picking the lowest cost index fund for your 401k or dying of boredom while Uncle Fred goes on about the stock market at Thanksgiving dinner. We aim to empower ordinary people to get started in the stock market by using cutting-edge neural net technology to guide your investment decisions and allow you to maximize returns. Our simple tool recommends stocks for you based on your risk tolerance and timeframe. </p>
+    <h1> How it Works </h1>
+      <p>Our proprietary algorithm starts by leveraging insights from text data that most traditional stock recommendation algorithms miss. We used natural language processing to find signals in news data that we combine with traditional stock and market indicators. Then, we use deep learning to train a model to predict the returns to each stock over a given time period (30, 45, or 60 days). We test our model on the most recent 90 days of data and show you the test results so you can feel confident in our predictions!</p>
+    <h1> Risks </h1>
+    <p> All investing carries an element of risk and we strongly suggest that you do not invest money that you can't afford to loose. The higher the risk category you choose, the greater the chance that you will loose money on that investent. </p>
+    <p style="color:#ef0404" > Our model is still in beta - so take everything with a grain of salt!  </p>
+    </div>
+</section>
+<section class="container">
+    <div>
+      <form action="" method="post" name="goto">
+      {{ form.hidden_tag() }}
+      <p><button class="button" type="button" onclick="window.location.href='{{ url_for('main_form')}}'">Go to Tool</button></p>
+      </form>
+    </div>
+</submit>
+
