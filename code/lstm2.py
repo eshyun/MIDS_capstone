@@ -495,8 +495,8 @@ def recommend_stocks(days, risk_level):
     print(summary_df)
     print(summary_df.describe())
 
-    q1 = summary_df['predicted_std'].quantile(.25)
-    q2 = summary_df['predicted_std'].quantile(.75)
+    q1 = summary_df['predicted_std'].quantile(.3333)
+    q2 = summary_df['predicted_std'].quantile(.6666)
     #print(q25, q75)
     # Translate risk level -> std
     if (risk_level == 'low'):
