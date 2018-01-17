@@ -19,7 +19,9 @@ import numpy as np
 import ConfigParser
 import dateutil.parser
 
-
+'''
+Read a configuration file's parameters and return them
+'''
 def read_config(config_filename):
     config = ConfigParser.RawConfigParser()
     config.read(config_filename)
@@ -42,7 +44,9 @@ def read_config(config_filename):
     print('n_lags, n_forecast, n_test, n_neurons', n_lags, n_forecast, n_test, n_neurons)
     return source_dir, nlp_dir, revenue_dir, models_dir, supervised_data_dir, prediction_data_dir, rmse_csv,n_lags, n_forecast, n_test, n_neurons
  
-# convert series to supervised learning
+'''
+Create time-series supervised data from the original data
+'''
 def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
     n_vars = 1 if type(data) is list else data.shape[1]
     df = DataFrame(data)
@@ -67,11 +71,15 @@ def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
         agg.dropna(inplace=True)
     return agg
 
-
+'''
+Create supervised data filename for a stock
+'''
 def create_supervised_filename(directory, ticker):
     return os.path.join(directory, '{}_supervised.csv'.format(ticker))
 
-
+'''
+Map quarter names to a date
+'''
 def quarters_to_date(year, quarter):
     #print(year, quarter)
     q2d = {'Q1': '-05-01',
@@ -227,8 +235,9 @@ def set_up_data(source_dir, nlp_dir, revenue_dir, dest_dir, n_lags, n_forecast):
     return n_features, orig_dfs, datasets
 
 
-
-# split into train and test sets
+'''
+Create train and test sets using input 'values'
+'''
 def create_train_test(values, n_test, n_lags, n_features):
     scaler = MinMaxScaler(feature_range=(0, 1))
     scaled_values = scaler.fit_transform(values)
@@ -258,7 +267,10 @@ def create_train_test(values, n_test, n_lags, n_features):
     return values[n_train:, :], scaler, train_X, train_y, test_X, test_y
 
 
-
+'''
+For each stock data in supervised_data_dir, build and train LSTM model
+and save it in models_dir
+'''
 # n_test = last 90 days of the data
 def build_models(supervised_data_dir,
                  models_dir,
@@ -324,9 +336,8 @@ def build_models(supervised_data_dir,
     return histories
 
 
-
 '''
-inverse scaling for a forecasted value
+Inverse scaling for a forecasted value to restore the original price values
 '''
 def invert_scale(scaler, X, y, result_shape):
     new_row = X
@@ -336,6 +347,9 @@ def invert_scale(scaler, X, y, result_shape):
     inverted = scaler.inverse_transform(new_row)
     return inverted[:, -1]
 
+'''
+Get the statistic info for predicted values measured against actual values
+'''
 def get_predict_actual_stats(actual, predicted, current):
     rmse = sqrt(mean_squared_error(actual, predicted))
     actual_std = np.std(actual)
@@ -357,7 +371,9 @@ def get_predict_actual_stats(actual, predicted, current):
     avg_actual_gain = (actual / current).mean() - 1
     return rmse, predicted_std, actual_std, predict_gain, actual_gain, avg_predict_gain, avg_actual_gain
 
-# After prediction files are generated, use them to build the dataframes
+'''
+After prediction files are generated, use them to build the dataframes
+'''
 def read_prediction_files(prediction_data_dir):
     pred_files = glob.glob(os.path.join(prediction_data_dir, "*.csv"))
     summary_list = list()
@@ -393,6 +409,10 @@ def read_prediction_files(prediction_data_dir):
 
     return predicted_dfs, summary_df
 
+'''
+Use supervised data and saved model files to make predictions.
+Also, evaluate the predictions
+'''
 def predict_evaluate(models_dir, supervised_data_dir, predicted_dir, rsme_csv, 
                      n_test, n_lags, n_features, n_forecast):
     model_file_pattern = os.path.join(models_dir, "*.h5")
@@ -521,10 +541,15 @@ def recommend_stocks(days, risk_level):
     return summary_df[filter][['Stock Model', 'rsme', 'Avg predicted gain', 'Avg actual gain',
                                'predicted_std', 'actual_std']], predicted_dfs
 
-
+'''
+Calculate percentage gain
+'''
 def get_percentage_gain(current_price, new_price):
 	return 100*(new_price - current_price)/current_price
 
+'''
+Read S&P500 index fund data and calculate % gain for the last 90 days
+'''
 def read_index_fund(days):
     csv_name = '../data/bm/' + str(days) + 'day/^GSPC_supervised.csv'
     print('Reading', csv_name)
