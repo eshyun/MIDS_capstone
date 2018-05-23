@@ -16,14 +16,14 @@ from keras.layers import Dense, Dropout
 from keras.layers import LSTM
 from keras.callbacks import EarlyStopping
 import numpy as np
-import ConfigParser
+import configparser
 import dateutil.parser
 
 '''
 Read a configuration file's parameters and return them
 '''
 def read_config(config_filename):
-    config = ConfigParser.RawConfigParser()
+    config = configparser.RawConfigParser()
     config.read(config_filename)
     #print(config.sections())
 
@@ -121,17 +121,16 @@ def set_up_data(source_dir, nlp_dir, revenue_dir, dest_dir, n_lags, n_forecast):
         df = read_csv(filename, header=0, parse_dates=[0], index_col=0, squeeze=True) #, date_parser=parser)
         print(df.head())
         # Only after 2015
-        df = df[df.index > dateutil.parser.parse("2015-01-01")]
+        df = df[df.index > "2015-01-01"]
 
         print(ticker)
         cols = list(df)
         # Move 'Adj Close' (predicted column) to last column
         cols.insert(len(cols)-1, cols.pop(cols.index('Adj Close')))
-        dataset = df.ix[:, cols]
+        dataset = df.loc[:, cols]
         # Drop these cols
         dropped_cols = ['Open', 'High', 'Low', 'Close']
-        for col in dropped_cols:
-            dataset = dataset.drop(col, axis=1)
+        dataset = dataset.drop(dropped_cols, axis=1)
         print('%s has %s rows' % (filename, len(dataset)))
         print(dataset.head())
 
