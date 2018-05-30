@@ -556,5 +556,3 @@ def read_index_fund(days):
     #print(df)
     # Index fund's gain from the last 90 days
     return get_percentage_gain(df['var2(t-1)'], df['var2(t+' + str(days-1) +')']).tail(90).tolist()
-
-
